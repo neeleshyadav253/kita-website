@@ -3,6 +3,7 @@ import { ArrowRight, Clock, MapPin, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../i18n/LanguageContext';
 import { SectionWrapper, itemVariants } from '../components/SectionWrapper';
+import { BUILDING } from '../lib/images';
 
 const ICONS = [Clock, Users, MapPin];
 const ACCENT = [
@@ -31,7 +32,38 @@ export function About({ linkTo }: { linkTo?: string }) {
         </motion.p>
       </div>
 
-      <div className="mt-14 grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-3 [&>*:last-child:nth-child(odd)]:col-span-2 md:[&>*:last-child:nth-child(odd)]:col-span-1">
+      <div className="mt-12 grid gap-4 sm:gap-6 md:grid-cols-[1.4fr,1fr]">
+        <motion.figure
+          variants={itemVariants}
+          className="relative overflow-hidden rounded-3xl shadow-card ring-1 ring-awo-grey/10"
+        >
+          <img
+            src={BUILDING.corner}
+            alt="AWO Kita Sonnenschein – Außenansicht mit Wandkunst"
+            className="h-72 w-full object-cover sm:h-96 md:h-full"
+            loading="lazy"
+          />
+          <figcaption className="absolute bottom-3 left-3 right-3 rounded-2xl bg-white/95 px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-awo-ink shadow-card backdrop-blur">
+            Unser Haus · Eingang &amp; Garten
+          </figcaption>
+        </motion.figure>
+        <motion.figure
+          variants={itemVariants}
+          className="relative overflow-hidden rounded-3xl shadow-card ring-1 ring-awo-grey/10"
+        >
+          <img
+            src={BUILDING.mural}
+            alt="Wandkunst an der Kita-Fassade – verspielte Figuren"
+            className="h-72 w-full object-cover sm:h-96 md:h-full"
+            loading="lazy"
+          />
+          <figcaption className="absolute bottom-3 left-3 right-3 rounded-2xl bg-white/95 px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-awo-ink shadow-card backdrop-blur">
+            Wandkunst · seit 1978
+          </figcaption>
+        </motion.figure>
+      </div>
+
+      <div className="mt-10 grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-3 [&>*:last-child:nth-child(odd)]:col-span-2 md:[&>*:last-child:nth-child(odd)]:col-span-1">
         {t.about.cards.map((card, i) => {
           const Icon = ICONS[i] ?? Clock;
           return (

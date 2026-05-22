@@ -45,11 +45,7 @@ export function Footer() {
   };
 
   return (
-    <footer className="relative overflow-hidden bg-awo-ink text-white/85">
-      <div className="absolute inset-0 -z-10 opacity-25 bg-grain mix-blend-overlay" aria-hidden="true" />
-      <div className="absolute -left-32 -top-32 -z-10 h-72 w-72 rounded-full bg-awo-red/20 blur-3xl" aria-hidden="true" />
-      <div className="absolute -right-24 -bottom-24 -z-10 h-72 w-72 rounded-full bg-awo-lavender/15 blur-3xl" aria-hidden="true" />
-
+    <footer className="relative overflow-hidden border-t border-awo-grey/10 bg-white text-awo-grey">
       <div className="mx-auto grid w-full max-w-7xl 2xl:max-w-[88rem] 3xl:max-w-[100rem] grid-cols-2 gap-x-6 gap-y-10 px-4 py-14 sm:gap-x-8 sm:px-6 sm:py-16 md:grid-cols-12 md:gap-10 md:px-10 md:py-20">
         <div className="col-span-2 md:col-span-4">
           <Link
@@ -59,15 +55,15 @@ export function Footer() {
           >
             <Logo className="h-11 w-11 sm:h-12 sm:w-12" variant="color" />
             <div className="leading-tight">
-              <div className="font-display text-base font-extrabold text-white sm:text-lg">
+              <div className="font-display text-base font-extrabold text-awo-ink sm:text-lg">
                 {t.brand.name}
               </div>
-              <div className="text-[10px] font-semibold uppercase tracking-[0.2em] text-awo-sun-light">
+              <div className="text-[10px] font-semibold uppercase tracking-[0.2em] text-awo-red">
                 {t.brand.tagline}
               </div>
             </div>
           </Link>
-          <p className="mt-5 max-w-md text-sm leading-relaxed text-white/75">
+          <p className="mt-5 max-w-md text-sm leading-relaxed text-awo-grey">
             {t.footer.about}
           </p>
 
@@ -75,9 +71,9 @@ export function Footer() {
             {t.footer.badges.map((b) => (
               <span
                 key={b}
-                className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-widest text-white/85 ring-1 ring-white/15"
+                className="inline-flex items-center gap-1.5 rounded-full bg-awo-cream px-3 py-1 text-[10px] font-semibold uppercase tracking-widest text-awo-red ring-1 ring-awo-red/10"
               >
-                <ShieldCheck className="h-3 w-3 text-awo-sun-light" />
+                <ShieldCheck className="h-3 w-3 text-awo-red" />
                 {b}
               </span>
             ))}
@@ -87,21 +83,21 @@ export function Footer() {
             <a
               href="#"
               aria-label="Facebook"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white ring-1 ring-white/15 transition hover:bg-awo-red hover:ring-awo-red"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-awo-cream text-awo-red ring-1 ring-awo-red/10 transition hover:bg-awo-red hover:text-white hover:ring-awo-red"
             >
               <FacebookIcon className="h-4 w-4" />
             </a>
             <a
               href="#"
               aria-label="Instagram"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white ring-1 ring-white/15 transition hover:bg-awo-blush hover:ring-awo-blush"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-awo-blush-soft text-awo-blush ring-1 ring-awo-blush/15 transition hover:bg-awo-blush hover:text-white hover:ring-awo-blush"
             >
               <InstagramIcon className="h-4 w-4" />
             </a>
             <a
               href="#"
               aria-label="LinkedIn"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white ring-1 ring-white/15 transition hover:bg-awo-red-light hover:ring-awo-red-light"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-awo-cream text-awo-red ring-1 ring-awo-red/10 transition hover:bg-awo-red-light hover:text-white hover:ring-awo-red-light"
             >
               <LinkedInIcon className="h-4 w-4" />
             </a>
@@ -109,60 +105,60 @@ export function Footer() {
         </div>
 
         <div className="col-span-1 md:col-span-2">
-          <h4 className="font-display text-sm font-bold uppercase tracking-widest text-white">
+          <h4 className="font-display text-sm font-bold uppercase tracking-widest text-awo-ink">
             {t.footer.sitemap}
           </h4>
           <ul className="mt-4 space-y-2 text-sm">
-            <li><Link to={ROUTES.about} className="hover:text-white">{t.nav.about}</Link></li>
-            <li><Link to={ROUTES.pedagogy} className="hover:text-white">{t.nav.pedagogy}</Link></li>
-            <li><Link to={ROUTES.groups} className="hover:text-white">{t.nav.groups}</Link></li>
-            <li><Link to={ROUTES.team} className="hover:text-white">{t.nav.team}</Link></li>
-            <li><Link to={ROUTES.enrollment} className="hover:text-white">{t.nav.enrollment}</Link></li>
-            <li><Link to={ROUTES.news} className="hover:text-white">{t.news.eyebrow}</Link></li>
+            <li><Link to={ROUTES.about} className="text-awo-grey hover:text-awo-red">{t.nav.about}</Link></li>
+            <li><Link to={ROUTES.pedagogy} className="text-awo-grey hover:text-awo-red">{t.nav.pedagogy}</Link></li>
+            <li><Link to={ROUTES.groups} className="text-awo-grey hover:text-awo-red">{t.nav.groups}</Link></li>
+            <li><Link to={ROUTES.team} className="text-awo-grey hover:text-awo-red">{t.nav.team}</Link></li>
+            <li><Link to={ROUTES.enrollment} className="text-awo-grey hover:text-awo-red">{t.nav.enrollment}</Link></li>
+            <li><Link to={ROUTES.news} className="text-awo-grey hover:text-awo-red">{t.news.eyebrow}</Link></li>
           </ul>
         </div>
 
         <div className="col-span-1 md:col-span-3">
-          <h4 className="font-display text-sm font-bold uppercase tracking-widest text-white">
+          <h4 className="font-display text-sm font-bold uppercase tracking-widest text-awo-ink">
             {t.footer.contact}
           </h4>
           <ul className="mt-4 space-y-3 text-sm">
             <li className="flex items-start gap-3">
-              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-awo-sun-light" />
-              <Link to={ROUTES.contact} className="hover:text-white">
+              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-awo-red" />
+              <Link to={ROUTES.contact} className="text-awo-grey hover:text-awo-red">
                 {t.footer.address}
               </Link>
             </li>
             <li className="flex items-start gap-3">
-              <Phone className="mt-0.5 h-4 w-4 shrink-0 text-awo-sun-light" />
-              <a href={`tel:${t.footer.phone.replace(/\s+/g, '')}`} className="hover:text-white">
+              <Phone className="mt-0.5 h-4 w-4 shrink-0 text-awo-red" />
+              <a href={`tel:${t.footer.phone.replace(/\s+/g, '')}`} className="text-awo-grey hover:text-awo-red">
                 {t.footer.phone}
               </a>
             </li>
             <li className="flex items-start gap-3">
-              <Mail className="mt-0.5 h-4 w-4 shrink-0 text-awo-sun-light" />
-              <a href={`mailto:${t.footer.email}`} className="break-all hover:text-white">
+              <Mail className="mt-0.5 h-4 w-4 shrink-0 text-awo-red" />
+              <a href={`mailto:${t.footer.email}`} className="break-all text-awo-grey hover:text-awo-red">
                 {t.footer.email}
               </a>
             </li>
           </ul>
 
-          <h4 className="mt-7 font-display text-sm font-bold uppercase tracking-widest text-white">
+          <h4 className="mt-7 font-display text-sm font-bold uppercase tracking-widest text-awo-ink">
             {t.footer.links}
           </h4>
           <ul className="mt-3 space-y-2 text-sm">
-            <li><a href="#" className="hover:text-white">{t.footer.imprint}</a></li>
-            <li><a href="#" className="hover:text-white">{t.footer.privacy}</a></li>
-            <li><a href="#" className="hover:text-white">{t.footer.accessibility}</a></li>
+            <li><a href="#" className="text-awo-grey hover:text-awo-red">{t.footer.imprint}</a></li>
+            <li><a href="#" className="text-awo-grey hover:text-awo-red">{t.footer.privacy}</a></li>
+            <li><a href="#" className="text-awo-grey hover:text-awo-red">{t.footer.accessibility}</a></li>
           </ul>
         </div>
 
         <div className="col-span-2 md:col-span-3">
-          <h4 className="inline-flex items-center gap-2 font-display text-sm font-bold uppercase tracking-widest text-white">
-            <Sparkles className="h-3.5 w-3.5 text-awo-sun-light" />
+          <h4 className="inline-flex items-center gap-2 font-display text-sm font-bold uppercase tracking-widest text-awo-ink">
+            <Sparkles className="h-3.5 w-3.5 text-awo-sun" />
             {t.footer.newsletter.title}
           </h4>
-          <p className="mt-3 text-sm text-white/75">{t.footer.newsletter.text}</p>
+          <p className="mt-3 text-sm text-awo-grey">{t.footer.newsletter.text}</p>
           <form onSubmit={handleSubscribe} className="mt-4 flex flex-col gap-2">
             <input
               type="email"
@@ -170,7 +166,7 @@ export function Footer() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder={t.footer.newsletter.placeholder}
-              className="rounded-full bg-white/10 px-4 py-2.5 text-sm text-white placeholder-white/50 ring-1 ring-white/15 backdrop-blur transition focus:bg-white/15 focus:outline-none focus:ring-2 focus:ring-awo-sun-light"
+              className="rounded-full border border-awo-grey/15 bg-white px-4 py-2.5 text-sm text-awo-ink placeholder-awo-grey-soft outline-none transition focus:border-awo-red focus:ring-4 focus:ring-awo-red/15"
             />
             <button
               type="submit"
@@ -180,7 +176,7 @@ export function Footer() {
               <Heart className="h-3.5 w-3.5" />
             </button>
             {subscribed ? (
-              <span className="inline-flex items-center gap-2 text-xs text-emerald-300">
+              <span className="inline-flex items-center gap-2 text-xs text-awo-grass">
                 <CheckCircle2 className="h-3.5 w-3.5" />
                 {t.footer.newsletter.success}
               </span>
@@ -189,8 +185,8 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-white/10">
-        <div className="mx-auto flex w-full max-w-7xl 2xl:max-w-[88rem] 3xl:max-w-[100rem] flex-col items-center justify-between gap-2 px-4 py-5 text-xs text-white/60 sm:px-6 md:flex-row md:px-10">
+      <div className="border-t border-awo-grey/10">
+        <div className="mx-auto flex w-full max-w-7xl 2xl:max-w-[88rem] 3xl:max-w-[100rem] flex-col items-center justify-between gap-2 px-4 py-5 text-xs text-awo-grey-light sm:px-6 md:flex-row md:px-10">
           <span className="text-center md:text-left">
             © {year} {t.brand.name}. {t.footer.rights}
           </span>

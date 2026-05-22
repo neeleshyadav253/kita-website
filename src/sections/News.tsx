@@ -16,7 +16,7 @@ type Props = {
   bottomWaveTo?: string;
 };
 
-export function News({ linkTo, withWaves = true, bottomWaveTo = '#1F2937' }: Props) {
+export function News({ linkTo, withWaves = true, bottomWaveTo = '#ffffff' }: Props) {
   const { t } = useLanguage();
 
   return (

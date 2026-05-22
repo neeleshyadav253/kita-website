@@ -5,6 +5,17 @@
  * (`?lock=N` keeps each call stable across reloads). Portraits use pravatar.
  */
 
+import buildingFront from '../assets/kita-building-front.jpeg';
+import buildingMural from '../assets/kita-building-mural.jpeg';
+import buildingCorner from '../assets/kita-building-corner.jpeg';
+
+/** Real exterior photos of the AWO Kita building. */
+export const BUILDING = {
+  front: buildingFront,
+  mural: buildingMural,
+  corner: buildingCorner,
+};
+
 type Size = { w: number; h: number };
 
 const hashSeed = (s: string) => {
@@ -26,6 +37,28 @@ const TAGS = {
   scene: 'kindergarten,nursery,children',
   card: 'kindergarten,children,toddler',
 } as const;
+
+/**
+ * Per-slot gallery tags. Order matches `gallery.captions` in
+ * src/i18n/translations.ts:
+ *   0 Im Atelier        — art / painting / kids
+ *   1 Garten im Sommer  — garden / outdoor / kids
+ *   2 Frühstücksbuffet  — breakfast / healthy food
+ *   3 Bauecke           — wooden blocks / toys
+ *   4 Waldtag           — forest / outdoor / kids
+ *   5 Lese-Ecke         — books / reading / kids
+ */
+// 2-tag combos verified to return real photos for these locks.
+// 3-tag combos (e.g. kindergarten,garden,outdoor) hit Lorem Flickr's
+// defaultImage fallback for many locks because the intersection is empty.
+const GALLERY_TAGS = [
+  'kindergarten,art',
+  'kindergarten,garden',
+  'kindergarten,breakfast',
+  'kindergarten,blocks',
+  'kindergarten,forest',
+  'kindergarten,books',
+];
 
 export const img = {
   scene: (seed: string, size: Size = { w: 900, h: 600 }) =>
@@ -51,7 +84,8 @@ export const img = {
       { w: 800, h: 800 },
       { w: 700, h: 1000 },
     ];
-    return flickr(TAGS.gallery, `${seed}-${idx}`, presets[idx % presets.length]);
+    const tags = GALLERY_TAGS[idx % GALLERY_TAGS.length] ?? TAGS.gallery;
+    return flickr(tags, `${seed}-${idx}`, presets[idx % presets.length]);
   },
 
   /** pravatar provides indexed real-looking faces (1..70 are stable) */
