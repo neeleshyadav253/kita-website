@@ -40,7 +40,7 @@ export function News({ linkTo, withWaves = true, bottomWaveTo = '#1F2937' }: Pro
           </div>
         </div>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 md:grid-cols-3">
           {t.news.items.map((item, i) => (
             <motion.article
               key={item.title}

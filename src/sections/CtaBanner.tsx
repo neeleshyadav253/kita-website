@@ -32,12 +32,18 @@ export function CtaBanner() {
             <p className="mt-4 max-w-xl text-base leading-relaxed text-white/85 md:text-lg">
               {t.cta.description}
             </p>
-            <div className="mt-7 flex flex-wrap gap-3">
-              <Link to={ROUTES.enrollment} className="btn-sun">
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <Link
+                to={ROUTES.enrollment}
+                className="btn-sun w-full justify-center sm:w-auto"
+              >
                 {t.cta.primary}
                 <ArrowRight className="h-4 w-4" />
               </Link>
-              <a href={`tel:${phoneClean}`} className="btn-secondary">
+              <a
+                href={`tel:${phoneClean}`}
+                className="btn-secondary w-full justify-center sm:w-auto"
+              >
                 <Phone className="h-4 w-4" />
                 {t.cta.secondary}
               </a>

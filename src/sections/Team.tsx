@@ -30,19 +30,19 @@ export function Team({ linkTo, withWaves = true }: { linkTo?: string; withWaves?
           </motion.p>
         </div>
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        <div className="mt-14 grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-3 lg:grid-cols-4">
           {t.team.members.map((m, i) => (
             <motion.div
               key={m.name}
               variants={itemVariants}
-              className="group relative flex flex-col items-center rounded-3xl bg-white p-6 text-center shadow-card ring-1 ring-awo-grey/5 transition duration-300 hover:-translate-y-1 hover:shadow-card-hover"
+              className="group relative flex flex-col items-center rounded-3xl bg-white p-4 text-center shadow-card ring-1 ring-awo-grey/5 transition duration-300 hover:-translate-y-1 hover:shadow-card-hover sm:p-6"
             >
               <div className="relative">
                 <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-awo-red via-awo-blush to-awo-sun opacity-0 blur transition duration-300 group-hover:opacity-60" />
                 <img
                   src={img.avatar(AVATAR_IDX[i] ?? i + 1)}
                   alt={m.name}
-                  className="relative h-24 w-24 rounded-full object-cover ring-4 ring-white"
+                  className="relative h-20 w-20 rounded-full object-cover ring-4 ring-white sm:h-24 sm:w-24"
                   loading="lazy"
                 />
               </div>

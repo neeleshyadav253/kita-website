@@ -42,25 +42,29 @@ export function WhyUs() {
           </motion.p>
         </div>
 
-        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14 grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-3">
           {t.whyUs.items.map((item, i) => {
             const Icon = ICONS[i % ICONS.length];
             return (
               <motion.article
                 key={item.title}
                 variants={itemVariants}
-                className="group relative flex flex-col overflow-hidden rounded-3xl bg-white p-7 shadow-card ring-1 ring-awo-grey/5 transition duration-300 hover:-translate-y-1 hover:shadow-card-hover"
+                className="group relative flex flex-col overflow-hidden rounded-3xl bg-white p-5 shadow-card ring-1 ring-awo-grey/5 transition duration-300 hover:-translate-y-1 hover:shadow-card-hover sm:p-7"
               >
                 <div className="pointer-events-none absolute -right-12 -top-12 h-32 w-32 rounded-full bg-awo-cream opacity-0 transition group-hover:opacity-100" />
-                <div className="relative">
+                <div className="relative flex items-start justify-between gap-2">
                   <span
-                    className={`inline-flex h-14 w-14 items-center justify-center rounded-2xl ${ACCENT[i % ACCENT.length]} ring-1 ring-current/10`}
+                    className={`inline-flex h-12 w-12 items-center justify-center rounded-2xl sm:h-14 sm:w-14 ${ACCENT[i % ACCENT.length]} ring-1 ring-current/10`}
                   >
-                    <Icon className="h-7 w-7" />
+                    <Icon className="h-6 w-6 sm:h-7 sm:w-7" />
                   </span>
-                  <span className="absolute right-0 top-1 chip">{item.pill}</span>
+                  <span className="chip shrink-0 max-w-[55%] truncate justify-center">
+                    {item.pill}
+                  </span>
                 </div>
-                <h3 className="mt-6 text-lg font-bold text-awo-ink">{item.title}</h3>
+                <h3 className="mt-5 text-base font-bold text-awo-ink sm:mt-6 sm:text-lg">
+                  {item.title}
+                </h3>
                 <p className="mt-2 text-sm leading-relaxed text-awo-grey-light">
                   {item.text}
                 </p>

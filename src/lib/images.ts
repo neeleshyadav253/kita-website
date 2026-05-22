@@ -1,31 +1,46 @@
 /**
- * Image URL helpers — centralizes all imagery so we can swap CDN later
- * without touching every component.
+ * Image URL helpers — centralized so the CDN/source can be swapped in one place.
  *
- * For the demo we use:
- *   - picsum.photos for scenes (real, colorful photos with stable seeds)
- *   - i.pravatar.cc for team portraits (real-looking diverse faces)
- *
- * CSS overlays / rings in components do the visual unification.
+ * Scenes use Lorem Flickr with kindergarten/children-themed tag queries
+ * (`?lock=N` keeps each call stable across reloads). Portraits use pravatar.
  */
 
 type Size = { w: number; h: number };
 
-const pic = (seed: string, { w, h }: Size) =>
-  `https://picsum.photos/seed/${encodeURIComponent(seed)}/${w}/${h}`;
+const hashSeed = (s: string) => {
+  let h = 0;
+  for (let i = 0; i < s.length; i++) h = ((h << 5) - h + s.charCodeAt(i)) | 0;
+  return Math.abs(h) || 1;
+};
+
+const flickr = (tags: string, seed: string, { w, h }: Size) =>
+  `https://loremflickr.com/${w}/${h}/${tags}?lock=${hashSeed(seed)}`;
+
+const TAGS = {
+  hero: 'kindergarten,classroom,children',
+  pageHero: 'kindergarten,preschool,children',
+  group: 'kindergarten,children,playing',
+  pedagogy: 'preschool,teacher,children',
+  gallery: 'kindergarten,children,art',
+  news: 'children,school,activity',
+  scene: 'kindergarten,nursery,children',
+  card: 'kindergarten,children,toddler',
+} as const;
 
 export const img = {
-  scene: (seed: string, size: Size = { w: 900, h: 600 }) => pic(seed, size),
+  scene: (seed: string, size: Size = { w: 900, h: 600 }) =>
+    flickr(TAGS.scene, seed, size),
 
-  hero: (seed = 'kita-hero-main') => pic(seed, { w: 1200, h: 1400 }),
+  hero: (seed = 'kita-hero-main') =>
+    flickr(TAGS.hero, seed, { w: 1200, h: 1400 }),
 
-  pageHero: (seed: string) => pic(seed, { w: 1800, h: 700 }),
+  pageHero: (seed: string) => flickr(TAGS.pageHero, seed, { w: 1800, h: 700 }),
 
-  card: (seed: string) => pic(seed, { w: 800, h: 600 }),
+  card: (seed: string) => flickr(TAGS.card, seed, { w: 800, h: 600 }),
 
-  newsCard: (seed: string) => pic(seed, { w: 800, h: 520 }),
+  newsCard: (seed: string) => flickr(TAGS.news, seed, { w: 800, h: 520 }),
 
-  newsBody: (seed: string) => pic(seed, { w: 1400, h: 700 }),
+  newsBody: (seed: string) => flickr(TAGS.news, seed, { w: 1400, h: 700 }),
 
   gallery: (seed: string, idx: number) => {
     const presets: Size[] = [
@@ -36,7 +51,7 @@ export const img = {
       { w: 800, h: 800 },
       { w: 700, h: 1000 },
     ];
-    return pic(`${seed}-${idx}`, presets[idx % presets.length]);
+    return flickr(TAGS.gallery, `${seed}-${idx}`, presets[idx % presets.length]);
   },
 
   /** pravatar provides indexed real-looking faces (1..70 are stable) */

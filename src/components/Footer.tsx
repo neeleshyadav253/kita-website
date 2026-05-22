@@ -50,8 +50,8 @@ export function Footer() {
       <div className="absolute -left-32 -top-32 -z-10 h-72 w-72 rounded-full bg-awo-red/20 blur-3xl" aria-hidden="true" />
       <div className="absolute -right-24 -bottom-24 -z-10 h-72 w-72 rounded-full bg-awo-lavender/15 blur-3xl" aria-hidden="true" />
 
-      <div className="mx-auto grid w-full max-w-7xl gap-10 px-4 py-14 sm:px-6 sm:py-16 md:grid-cols-12 md:gap-10 md:px-10 md:py-20">
-        <div className="md:col-span-4">
+      <div className="mx-auto grid w-full max-w-7xl 2xl:max-w-[88rem] 3xl:max-w-[100rem] grid-cols-2 gap-x-6 gap-y-10 px-4 py-14 sm:gap-x-8 sm:px-6 sm:py-16 md:grid-cols-12 md:gap-10 md:px-10 md:py-20">
+        <div className="col-span-2 md:col-span-4">
           <Link
             to={ROUTES.home}
             className="flex items-center gap-3"
@@ -108,7 +108,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="md:col-span-2">
+        <div className="col-span-1 md:col-span-2">
           <h4 className="font-display text-sm font-bold uppercase tracking-widest text-white">
             {t.footer.sitemap}
           </h4>
@@ -122,7 +122,7 @@ export function Footer() {
           </ul>
         </div>
 
-        <div className="md:col-span-3">
+        <div className="col-span-1 md:col-span-3">
           <h4 className="font-display text-sm font-bold uppercase tracking-widest text-white">
             {t.footer.contact}
           </h4>
@@ -157,7 +157,7 @@ export function Footer() {
           </ul>
         </div>
 
-        <div className="md:col-span-3">
+        <div className="col-span-2 md:col-span-3">
           <h4 className="inline-flex items-center gap-2 font-display text-sm font-bold uppercase tracking-widest text-white">
             <Sparkles className="h-3.5 w-3.5 text-awo-sun-light" />
             {t.footer.newsletter.title}
@@ -190,7 +190,7 @@ export function Footer() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-between gap-2 px-4 py-5 text-xs text-white/60 sm:px-6 md:flex-row md:px-10">
+        <div className="mx-auto flex w-full max-w-7xl 2xl:max-w-[88rem] 3xl:max-w-[100rem] flex-col items-center justify-between gap-2 px-4 py-5 text-xs text-white/60 sm:px-6 md:flex-row md:px-10">
           <span className="text-center md:text-left">
             © {year} {t.brand.name}. {t.footer.rights}
           </span>

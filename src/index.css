@@ -13,6 +13,7 @@
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
     -webkit-text-size-adjust: 100%;
+    font-size: clamp(14.5px, 14px + 0.2vw, 17.5px);
   }
 
   body {

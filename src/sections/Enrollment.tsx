@@ -68,14 +68,14 @@ export function Enrollment({ linkTo, showForm = true }: Props) {
         </motion.p>
       </div>
 
-      <div className="mt-14 grid gap-6 md:grid-cols-3">
+      <div className="mt-14 grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-3 [&>*:last-child:nth-child(odd)]:col-span-2 md:[&>*:last-child:nth-child(odd)]:col-span-1">
         {t.enrollment.steps.map((step, i) => {
           const Icon = STEP_ICONS[i] ?? MessageSquare;
           return (
             <motion.div
               key={step.title}
               variants={itemVariants}
-              className="relative rounded-3xl bg-awo-cream p-7 ring-1 ring-awo-grey/5 md:p-8"
+              className="relative rounded-3xl bg-awo-cream p-5 ring-1 ring-awo-grey/5 sm:p-7 md:p-8"
             >
               <span className="absolute -top-4 right-6 inline-flex h-9 w-9 items-center justify-center rounded-full bg-white text-sm font-extrabold text-awo-ink shadow-card ring-2 ring-awo-grey/10">
                 {i + 1}

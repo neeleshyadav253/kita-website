@@ -119,7 +119,13 @@ export function AboutPage() {
                   className="relative md:grid md:grid-cols-2 md:gap-10"
                 >
                   <span className="absolute left-3 top-3 -ml-[7px] h-4 w-4 rounded-full bg-awo-red ring-4 ring-awo-cream md:left-1/2 md:-ml-2" />
-                  <div className={`md:${i % 2 === 0 ? 'pr-10 text-right' : 'col-start-2 pl-10'}`}>
+                  <div
+                    className={
+                      i % 2 === 0
+                        ? 'md:pr-10 md:text-right'
+                        : 'md:col-start-2 md:pl-10'
+                    }
+                  >
                     <div className="rounded-3xl bg-white p-6 shadow-card ring-1 ring-awo-grey/10">
                       <span className="font-display text-3xl font-extrabold gradient-text">
                         {item.year}

@@ -35,14 +35,14 @@ export function Pedagogy({ linkTo, withWaves = true }: { linkTo?: string; withWa
           </motion.p>
         </div>
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-14 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
           {t.pedagogy.cards.map((card, i) => {
             const Icon = ICONS[i] ?? BookOpen;
             return (
               <motion.article
                 key={card.title}
                 variants={itemVariants}
-                className="group flex flex-col rounded-3xl bg-white p-7 shadow-card ring-1 ring-awo-grey/5 transition duration-300 hover:-translate-y-1.5 hover:shadow-card-hover"
+                className="group flex flex-col rounded-3xl bg-white p-5 shadow-card ring-1 ring-awo-grey/5 transition duration-300 hover:-translate-y-1.5 hover:shadow-card-hover sm:p-7"
               >
                 <span
                   className={`inline-flex h-14 w-14 items-center justify-center rounded-2xl shadow-card-hover ${ACCENT[i % ACCENT.length]}`}

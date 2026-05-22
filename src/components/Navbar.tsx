@@ -33,31 +33,30 @@ export function Navbar() {
 
   useEffect(() => {
     let lastY = window.scrollY;
-    let ticking = false;
+    let rafId = 0;
 
     const update = () => {
+      rafId = 0;
       const y = window.scrollY;
       const delta = y - lastY;
-      setScrolled(y > 12);
-      // only react to meaningful movement to avoid jitter
+      const nextScrolled = y > 12;
+      setScrolled((prev) => (prev === nextScrolled ? prev : nextScrolled));
       if (Math.abs(delta) > 6) {
-        // never hide near the top, never while menu open
-        if (y > 120 && delta > 0) setHidden(true);
-        else if (delta < 0) setHidden(false);
+        if (y > 120 && delta > 0) setHidden((prev) => (prev ? prev : true));
+        else if (delta < 0) setHidden((prev) => (prev ? false : prev));
         lastY = y;
       }
-      ticking = false;
     };
 
     const onScroll = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(update);
-        ticking = true;
-      }
+      if (!rafId) rafId = window.requestAnimationFrame(update);
     };
-    onScroll();
+    update();
     window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      if (rafId) window.cancelAnimationFrame(rafId);
+    };
   }, []);
 
   useEffect(() => {
@@ -69,16 +68,16 @@ export function Navbar() {
   }, [open]);
 
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        hidden && !open ? '-translate-y-full' : 'translate-y-0'
-      } ${
+    <motion.header
+      animate={{ y: hidden && !open ? '-100%' : '0%' }}
+      transition={{ type: 'spring', stiffness: 280, damping: 30, mass: 0.6 }}
+      className={`fixed inset-x-0 top-0 z-50 transition-colors duration-500 ease-out ${
         scrolled
           ? 'bg-white/95 shadow-card backdrop-blur'
           : 'bg-white/80 backdrop-blur'
       }`}
     >
-      <nav className="mx-auto flex h-14 w-full max-w-7xl items-center justify-between gap-3 px-4 sm:h-16 sm:px-6 md:h-20 md:px-10">
+      <nav className="mx-auto flex h-14 w-full max-w-7xl 2xl:max-w-[88rem] 3xl:max-w-[100rem] items-center justify-between gap-3 px-4 sm:h-16 sm:px-6 md:h-20 md:px-10">
         <Link
           to={ROUTES.home}
           className="flex min-w-0 items-center gap-2 text-awo-grey sm:gap-3"
@@ -103,14 +102,25 @@ export function Navbar() {
                 to={item.to}
                 end={item.to === ROUTES.home}
                 className={({ isActive }) =>
-                  `rounded-full px-2.5 py-2 text-sm font-medium transition xl:px-3 ${
+                  `relative rounded-full px-2.5 py-2 text-sm font-medium transition-colors duration-200 xl:px-3 ${
                     isActive
-                      ? 'bg-awo-cream text-awo-red'
-                      : 'text-awo-grey hover:bg-awo-cream hover:text-awo-red'
+                      ? 'text-awo-red'
+                      : 'text-awo-grey hover:text-awo-red'
                   }`
                 }
               >
-                {t.nav[item.key]}
+                {({ isActive }) => (
+                  <>
+                    {isActive && (
+                      <motion.span
+                        layoutId="nav-indicator"
+                        className="absolute inset-0 -z-10 rounded-full bg-awo-cream"
+                        transition={{ type: 'spring', stiffness: 380, damping: 32 }}
+                      />
+                    )}
+                    <span className="relative">{t.nav[item.key]}</span>
+                  </>
+                )}
               </NavLink>
             </li>
           ))}
@@ -144,58 +154,62 @@ export function Navbar() {
         </div>
       </nav>
 
-      <AnimatePresence>
+      <AnimatePresence initial={false}>
         {open && (
           <motion.div
-            initial={{ opacity: 0, y: -8 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -8 }}
-            transition={{ duration: 0.2 }}
-            className="max-h-[calc(100vh-3.5rem)] overflow-y-auto border-t border-awo-grey/10 bg-white px-4 py-5 shadow-card sm:px-6 lg:hidden"
+            key="mobile-menu"
+            initial={{ height: 0 }}
+            animate={{ height: 'auto' }}
+            exit={{ height: 0 }}
+            transition={{ duration: 0.32, ease: [0.32, 0.72, 0, 1] }}
+            style={{ overflow: 'hidden' }}
+            className="border-t border-awo-grey/10 bg-white shadow-card lg:hidden"
           >
-            <ul className="flex flex-col gap-1">
-              {NAV_ITEMS.map((item) => (
-                <li key={item.to}>
-                  <NavLink
-                    to={item.to}
-                    end={item.to === ROUTES.home}
-                    onClick={() => setOpen(false)}
-                    className={({ isActive }) =>
-                      `block rounded-2xl px-4 py-3 text-base font-medium transition ${
-                        isActive
-                          ? 'bg-awo-cream text-awo-red'
-                          : 'text-awo-grey hover:bg-awo-cream hover:text-awo-red'
-                      }`
-                    }
-                  >
-                    {t.nav[item.key]}
-                  </NavLink>
-                </li>
-              ))}
-            </ul>
-            <div className="mt-5 flex flex-col-reverse items-stretch gap-3 sm:flex-row sm:items-center sm:justify-between">
-              <button
-                type="button"
-                onClick={() => {
-                  toggle();
-                  setOpen(false);
-                }}
-                className="inline-flex items-center justify-center gap-1.5 rounded-full border border-awo-grey/15 px-4 py-2.5 text-sm font-semibold text-awo-grey"
-              >
-                <Globe className="h-4 w-4" />
-                {t.nav.langToggle}
-              </button>
-              <Link
-                to={ROUTES.enrollment}
-                onClick={() => setOpen(false)}
-                className="btn-primary justify-center"
-              >
-                {t.nav.cta}
-              </Link>
+            <div className="max-h-[calc(100vh-3.5rem)] overflow-y-auto px-4 py-5 sm:px-6">
+              <ul className="flex flex-col gap-1">
+                {NAV_ITEMS.map((item) => (
+                  <li key={item.to}>
+                    <NavLink
+                      to={item.to}
+                      end={item.to === ROUTES.home}
+                      onClick={() => setOpen(false)}
+                      className={({ isActive }) =>
+                        `block rounded-2xl px-4 py-3 text-base font-medium transition-colors duration-200 ${
+                          isActive
+                            ? 'bg-awo-cream text-awo-red'
+                            : 'text-awo-grey hover:bg-awo-cream hover:text-awo-red'
+                        }`
+                      }
+                    >
+                      {t.nav[item.key]}
+                    </NavLink>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-5 flex flex-col-reverse items-stretch gap-3 sm:flex-row sm:items-center sm:justify-between">
+                <button
+                  type="button"
+                  onClick={() => {
+                    toggle();
+                    setOpen(false);
+                  }}
+                  className="inline-flex items-center justify-center gap-1.5 rounded-full border border-awo-grey/15 px-4 py-2.5 text-sm font-semibold text-awo-grey"
+                >
+                  <Globe className="h-4 w-4" />
+                  {t.nav.langToggle}
+                </button>
+                <Link
+                  to={ROUTES.enrollment}
+                  onClick={() => setOpen(false)}
+                  className="btn-primary justify-center"
+                >
+                  {t.nav.cta}
+                </Link>
+              </div>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
-    </header>
+    </motion.header>
   );
 }

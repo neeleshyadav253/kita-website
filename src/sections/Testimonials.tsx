@@ -30,35 +30,35 @@ export function Testimonials() {
           </motion.p>
         </div>
 
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
+        <div className="mt-14 grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-3 [&>*:last-child:nth-child(odd)]:col-span-2 sm:[&>*:last-child:nth-child(odd)]:col-span-1">
           {t.testimonials.items.map((item, i) => (
             <motion.article
               key={item.name}
               variants={itemVariants}
-              className="relative flex flex-col rounded-3xl bg-white p-7 shadow-card ring-1 ring-awo-grey/5 transition duration-300 hover:-translate-y-1 hover:shadow-card-hover md:p-8"
+              className="relative flex flex-col rounded-3xl bg-white p-4 shadow-card ring-1 ring-awo-grey/5 transition duration-300 hover:-translate-y-1 hover:shadow-card-hover sm:p-7 md:p-8"
             >
               <Quote
-                className="absolute right-6 top-6 h-10 w-10 text-awo-cream-dark"
+                className="absolute right-4 top-4 h-7 w-7 text-awo-cream-dark sm:right-6 sm:top-6 sm:h-10 sm:w-10"
                 aria-hidden="true"
               />
               <div className="flex items-center gap-1 text-awo-sun">
                 {Array.from({ length: item.rating }).map((_, k) => (
-                  <Star key={k} className="h-4 w-4 fill-current" />
+                  <Star key={k} className="h-3.5 w-3.5 fill-current sm:h-4 sm:w-4" />
                 ))}
               </div>
-              <blockquote className="mt-5 text-base leading-relaxed text-awo-ink md:text-[17px]">
+              <blockquote className="mt-4 text-sm leading-relaxed text-awo-ink sm:mt-5 sm:text-base md:text-[17px]">
                 „{item.quote}"
               </blockquote>
-              <div className="mt-7 flex items-center gap-4 border-t border-awo-grey/10 pt-5">
+              <div className="mt-5 flex items-center gap-3 border-t border-awo-grey/10 pt-4 sm:mt-7 sm:gap-4 sm:pt-5">
                 <img
                   src={img.avatar(AVATAR_NUMS[i] ?? 5)}
                   alt={item.name}
-                  className="h-12 w-12 rounded-full object-cover ring-4 ring-awo-cream"
+                  className="h-10 w-10 rounded-full object-cover ring-4 ring-awo-cream sm:h-12 sm:w-12"
                   loading="lazy"
                 />
                 <div className="min-w-0">
-                  <div className="text-sm font-bold text-awo-ink">{item.name}</div>
-                  <div className="text-xs font-semibold uppercase tracking-widest text-awo-grey-light">
+                  <div className="text-xs font-bold text-awo-ink sm:text-sm">{item.name}</div>
+                  <div className="text-[10px] font-semibold uppercase tracking-widest text-awo-grey-light sm:text-xs">
                     {item.role}
                   </div>
                 </div>

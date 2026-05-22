@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import { ChevronRight, Home } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { ROUTES } from '../routes';
@@ -34,11 +33,8 @@ export function PageHero({ eyebrow, title, description, crumbs = [], imageSeed }
       <div className="blob -left-20 top-20 h-64 w-64 bg-awo-sun/30 animate-float-slow" aria-hidden="true" />
       <div className="blob right-0 bottom-0 h-72 w-72 bg-awo-blush/20 animate-float-slower" aria-hidden="true" />
 
-      <div className="mx-auto w-full max-w-7xl px-6 pb-20 pt-10 text-white md:px-10 md:pb-28 md:pt-16">
-        <motion.nav
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
+      <div className="mx-auto w-full max-w-7xl 2xl:max-w-[88rem] 3xl:max-w-[100rem] px-6 pb-20 pt-10 text-white md:px-10 md:pb-28 md:pt-16">
+        <nav
           className="flex flex-wrap items-center gap-1.5 text-xs font-medium text-white/75"
           aria-label="Breadcrumb"
         >
@@ -58,33 +54,24 @@ export function PageHero({ eyebrow, title, description, crumbs = [], imageSeed }
               )}
             </span>
           ))}
-        </motion.nav>
+        </nav>
 
-        <motion.span
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.05 }}
+        <span
           className="mt-7 inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em] backdrop-blur ring-1 ring-white/20"
         >
           {eyebrow}
-        </motion.span>
-        <motion.h1
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
+        </span>
+        <h1
           className="mt-5 max-w-3xl font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-white md:text-5xl lg:text-6xl"
         >
           {title}
-        </motion.h1>
+        </h1>
         {description ? (
-          <motion.p
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.15 }}
+          <p
             className="mt-5 max-w-2xl text-base leading-relaxed text-white/85 md:text-lg"
           >
             {description}
-          </motion.p>
+          </p>
         ) : null}
       </div>
       <div className="-mb-px leading-[0]" aria-hidden="true">
