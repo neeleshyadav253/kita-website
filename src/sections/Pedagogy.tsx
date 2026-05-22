@@ -8,9 +8,9 @@ import { WaveDivider } from '../components/WaveDivider';
 const ICONS = [BookOpen, Leaf, MessageCircle, Vote];
 const ACCENT = [
   'bg-gradient-to-br from-awo-red to-awo-red-dark text-white',
-  'bg-gradient-to-br from-awo-grass to-emerald-700 text-white',
-  'bg-gradient-to-br from-awo-lavender to-violet-700 text-white',
-  'bg-gradient-to-br from-awo-sun to-awo-blush text-white',
+  'bg-gradient-to-br from-awo-red-dark to-emerald-700 text-white',
+  'bg-gradient-to-br from-awo-red-dark to-violet-700 text-white',
+  'bg-gradient-to-br from-awo-red to-awo-red text-white',
 ];
 
 export function Pedagogy({ linkTo, withWaves = true }: { linkTo?: string; withWaves?: boolean }) {

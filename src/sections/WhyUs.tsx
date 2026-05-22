@@ -13,11 +13,11 @@ import { SectionWrapper, itemVariants } from '../components/SectionWrapper';
 const ICONS = [Users, Salad, Leaf, MessageCircle, Sparkles, HeartHandshake];
 const ACCENT = [
   'bg-awo-red/10 text-awo-red',
-  'bg-awo-sun-soft text-awo-sun',
-  'bg-awo-grass-soft text-awo-grass',
-  'bg-awo-lavender-soft text-awo-lavender',
+  'bg-awo-red-soft text-awo-red',
+  'bg-awo-red-soft text-awo-red-dark',
+  'bg-awo-red-soft text-awo-red-dark',
   'bg-awo-cream-dark text-awo-red-dark',
-  'bg-awo-blush-soft text-awo-blush',
+  'bg-awo-red-soft text-awo-red',
 ];
 
 export function WhyUs() {

@@ -15,8 +15,8 @@ import { SectionWrapper, itemVariants } from '../components/SectionWrapper';
 const STEP_ICONS = [MessageSquare, FileText, CheckCircle2];
 const STEP_TONE = [
   'bg-awo-red text-white',
-  'bg-awo-sun text-awo-ink',
-  'bg-awo-grass text-white',
+  'bg-awo-red text-white',
+  'bg-awo-red-dark text-white',
 ];
 
 type Props = { linkTo?: string; showForm?: boolean };
@@ -108,11 +108,11 @@ export function Enrollment({ linkTo, showForm = true }: Props) {
       {showForm ? (
         <motion.div
           variants={itemVariants}
-          className="mt-16 overflow-hidden rounded-[2rem] bg-gradient-to-br from-awo-red via-awo-lavender to-awo-blush p-[2px] shadow-card-hover"
+          className="mt-16 overflow-hidden rounded-[2rem] bg-gradient-to-br from-awo-red via-awo-red-dark to-awo-red p-[2px] shadow-card-hover"
         >
           <div className="rounded-[1.85rem] bg-white p-8 md:p-12">
             <div className="flex items-start gap-3">
-              <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-awo-sun-soft text-awo-sun">
+              <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-awo-red-soft text-awo-red">
                 <Sparkles className="h-6 w-6" />
               </span>
               <div>

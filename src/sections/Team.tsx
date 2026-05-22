@@ -38,7 +38,7 @@ export function Team({ linkTo, withWaves = true }: { linkTo?: string; withWaves?
               className="group relative flex flex-col items-center rounded-3xl bg-white p-4 text-center shadow-card ring-1 ring-awo-grey/5 transition duration-300 hover:-translate-y-1 hover:shadow-card-hover sm:p-6"
             >
               <div className="relative">
-                <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-awo-red via-awo-blush to-awo-sun opacity-0 blur transition duration-300 group-hover:opacity-60" />
+                <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-awo-red via-awo-red to-awo-red opacity-0 blur transition duration-300 group-hover:opacity-60" />
                 <img
                   src={img.avatar(AVATAR_IDX[i] ?? i + 1)}
                   alt={m.name}

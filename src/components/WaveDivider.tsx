@@ -13,7 +13,7 @@ export function WaveDivider({
 }: Props) {
   return (
     <div
-      className={`pointer-events-none -mb-px w-full leading-[0] ${className}`}
+      className={`wave-divider pointer-events-none -mb-px w-full leading-[0] ${className}`}
       style={{ background: fromColor }}
       aria-hidden="true"
     >

@@ -8,8 +8,8 @@ import { BUILDING } from '../lib/images';
 const ICONS = [Clock, Users, MapPin];
 const ACCENT = [
   'bg-awo-red/10 text-awo-red',
-  'bg-awo-grass-soft text-awo-grass',
-  'bg-awo-sun-soft text-awo-sun',
+  'bg-awo-red-soft text-awo-red-dark',
+  'bg-awo-red-soft text-awo-red',
 ];
 
 export function About({ linkTo }: { linkTo?: string }) {
@@ -32,32 +32,46 @@ export function About({ linkTo }: { linkTo?: string }) {
         </motion.p>
       </div>
 
-      <div className="mt-12 grid gap-4 sm:gap-6 md:grid-cols-[1.4fr,1fr]">
+      <div className="mt-12 grid gap-4 sm:gap-5 md:grid-cols-3">
         <motion.figure
           variants={itemVariants}
-          className="relative overflow-hidden rounded-3xl shadow-card ring-1 ring-awo-grey/10"
+          className="relative overflow-hidden rounded-2xl shadow-card ring-1 ring-awo-grey/10"
         >
           <img
-            src={BUILDING.corner}
-            alt="AWO Kita Sonnenschein – Außenansicht mit Wandkunst"
-            className="h-72 w-full object-cover sm:h-96 md:h-full"
+            src={BUILDING.front}
+            alt="AWO Kita Sonnenschein – Vorderansicht"
+            className="h-60 w-full object-cover sm:h-72 md:h-80"
             loading="lazy"
           />
-          <figcaption className="absolute bottom-3 left-3 right-3 rounded-2xl bg-white/95 px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-awo-ink shadow-card backdrop-blur">
-            Unser Haus · Eingang &amp; Garten
+          <figcaption className="absolute bottom-2.5 left-2.5 right-2.5 rounded-xl bg-white/95 px-2.5 py-1 text-[10px] font-bold uppercase tracking-widest text-awo-ink shadow-card backdrop-blur">
+            Unser Haus · Eingang
           </figcaption>
         </motion.figure>
         <motion.figure
           variants={itemVariants}
-          className="relative overflow-hidden rounded-3xl shadow-card ring-1 ring-awo-grey/10"
+          className="relative overflow-hidden rounded-2xl shadow-card ring-1 ring-awo-grey/10"
+        >
+          <img
+            src={BUILDING.corner}
+            alt="AWO Kita Sonnenschein – Außenansicht mit Garten"
+            className="h-60 w-full object-cover sm:h-72 md:h-80"
+            loading="lazy"
+          />
+          <figcaption className="absolute bottom-2.5 left-2.5 right-2.5 rounded-xl bg-white/95 px-2.5 py-1 text-[10px] font-bold uppercase tracking-widest text-awo-ink shadow-card backdrop-blur">
+            Eingang &amp; Garten
+          </figcaption>
+        </motion.figure>
+        <motion.figure
+          variants={itemVariants}
+          className="relative overflow-hidden rounded-2xl shadow-card ring-1 ring-awo-grey/10"
         >
           <img
             src={BUILDING.mural}
             alt="Wandkunst an der Kita-Fassade – verspielte Figuren"
-            className="h-72 w-full object-cover sm:h-96 md:h-full"
+            className="h-60 w-full object-cover sm:h-72 md:h-80"
             loading="lazy"
           />
-          <figcaption className="absolute bottom-3 left-3 right-3 rounded-2xl bg-white/95 px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-awo-ink shadow-card backdrop-blur">
+          <figcaption className="absolute bottom-2.5 left-2.5 right-2.5 rounded-xl bg-white/95 px-2.5 py-1 text-[10px] font-bold uppercase tracking-widest text-awo-ink shadow-card backdrop-blur">
             Wandkunst · seit 1978
           </figcaption>
         </motion.figure>

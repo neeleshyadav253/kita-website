@@ -7,19 +7,19 @@ import { WaveDivider } from '../components/WaveDivider';
 type Accent = 'sun' | 'red' | 'grass' | 'blush' | 'lavender';
 
 const DOT: Record<Accent, string> = {
-  sun: 'bg-awo-sun',
+  sun: 'bg-awo-red',
   red: 'bg-awo-red',
-  grass: 'bg-awo-grass',
-  blush: 'bg-awo-blush',
-  lavender: 'bg-awo-lavender',
+  grass: 'bg-awo-red-dark',
+  blush: 'bg-awo-red',
+  lavender: 'bg-awo-red-dark',
 };
 
 const RING: Record<Accent, string> = {
-  sun: 'ring-awo-sun/30',
+  sun: 'ring-awo-red/30',
   red: 'ring-awo-red/30',
-  grass: 'ring-awo-grass/30',
-  blush: 'ring-awo-blush/30',
-  lavender: 'ring-awo-lavender/30',
+  grass: 'ring-awo-red-dark/30',
+  blush: 'ring-awo-red/30',
+  lavender: 'ring-awo-red-dark/30',
 };
 
 export function DailySchedule({ withWaves = true }: { withWaves?: boolean }) {
@@ -64,7 +64,7 @@ export function DailySchedule({ withWaves = true }: { withWaves?: boolean }) {
           </div>
 
           <div className="relative">
-            <div className="absolute left-[19px] top-2 bottom-2 w-0.5 bg-gradient-to-b from-awo-red via-awo-sun to-awo-blush opacity-40" aria-hidden="true" />
+            <div className="absolute left-[19px] top-2 bottom-2 w-0.5 bg-gradient-to-b from-awo-red via-awo-red to-awo-red opacity-40" aria-hidden="true" />
             <ul className="space-y-5">
               {t.schedule.items.map((item) => {
                 const acc = (item.accent as Accent) ?? 'red';

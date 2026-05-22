@@ -8,9 +8,13 @@ import { img, SEEDS } from '../lib/images';
 
 const GROUP_ICONS = [Baby, Smile];
 const SEED_LIST = [SEEDS.groupKrippe, SEEDS.groupKindergarten];
+const GROUP_IMAGES = [
+  'https://media.istockphoto.com/id/670838952/photo/young-boy-holding-a-stag-beetle.jpg?s=1024x1024&w=is&k=20&c=OvrfUYMQMi7u6ROlwyiVxKgcp6Q7ZCw4wSLcKLj19aA=',
+  'https://i.etsystatic.com/30289585/r/il/9b9cac/4067469116/il_1140xN.4067469116_6wsz.jpg',
+];
 const TONE = [
-  'from-awo-sun/60 via-awo-sun/10',
-  'from-awo-grass/60 via-awo-grass/10',
+  'from-awo-red/60 via-awo-red/10',
+  'from-awo-red-dark/60 via-awo-red-dark/10',
 ];
 
 export function Groups({ linkPerCard = false }: { linkPerCard?: boolean }) {
@@ -44,7 +48,7 @@ export function Groups({ linkPerCard = false }: { linkPerCard?: boolean }) {
             >
               <div className="relative h-64 overflow-hidden">
                 <img
-                  src={img.card(SEED_LIST[i] ?? SEEDS.groupKrippe)}
+                  src={GROUP_IMAGES[i] ?? img.card(SEED_LIST[i] ?? SEEDS.groupKrippe)}
                   alt={g.name}
                   className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                   loading="lazy"
@@ -74,7 +78,7 @@ export function Groups({ linkPerCard = false }: { linkPerCard?: boolean }) {
                 <ul className="mt-5 grid gap-2.5 sm:grid-cols-2">
                   {g.features.map((feat) => (
                     <li key={feat} className="flex items-start gap-2 text-sm text-awo-ink">
-                      <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-awo-grass" />
+                      <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-awo-red-dark" />
                       <span>{feat}</span>
                     </li>
                   ))}

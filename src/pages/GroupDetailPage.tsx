@@ -51,7 +51,7 @@ export function GroupDetailPage() {
                   variants={itemVariants}
                   className="flex items-start gap-3 rounded-2xl bg-awo-cream/60 px-5 py-4 text-base text-awo-ink ring-1 ring-awo-grey/5"
                 >
-                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-awo-grass" />
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-awo-red-dark" />
                   <span>{item}</span>
                 </motion.li>
               ))}
@@ -71,7 +71,7 @@ export function GroupDetailPage() {
             <ul className="mt-5 space-y-1.5 border-t border-awo-grey/10 pt-5">
               {summary.features.map((f) => (
                 <li key={f} className="flex items-center gap-2 text-xs font-semibold text-awo-ink">
-                  <Sparkles className="h-3 w-3 text-awo-sun" />
+                  <Sparkles className="h-3 w-3 text-awo-red" />
                   {f}
                 </li>
               ))}
@@ -94,7 +94,7 @@ export function GroupDetailPage() {
             >
               <span
                 className={`inline-flex h-14 w-14 items-center justify-center rounded-2xl text-white shadow-card-hover ${
-                  ['bg-awo-red', 'bg-awo-sun', 'bg-awo-grass'][i % 3]
+                  ['bg-awo-red', 'bg-awo-red', 'bg-awo-red-dark'][i % 3]
                 }`}
               >
                 <Sparkles className="h-7 w-7" />
@@ -112,7 +112,7 @@ export function GroupDetailPage() {
       <SectionWrapper className="bg-white">
         <div className="mx-auto max-w-4xl">
           <motion.div variants={itemVariants} className="flex items-center gap-3">
-            <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-awo-lavender-soft text-awo-lavender">
+            <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-awo-red-soft text-awo-red-dark">
               <CalendarRange className="h-5 w-5" />
             </span>
             <h2 className="section-title">{detail.weekTitle}</h2>

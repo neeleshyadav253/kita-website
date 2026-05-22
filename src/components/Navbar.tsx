@@ -73,8 +73,8 @@ export function Navbar() {
       transition={{ type: 'spring', stiffness: 280, damping: 30, mass: 0.6 }}
       className={`fixed inset-x-0 top-0 z-50 transition-colors duration-500 ease-out ${
         scrolled
-          ? 'bg-white/95 shadow-card backdrop-blur'
-          : 'bg-white/80 backdrop-blur'
+          ? 'bg-awo-fog/95 shadow-card backdrop-blur-md border-b border-awo-grey/10'
+          : 'bg-awo-fog/85 backdrop-blur border-b border-awo-grey/5'
       }`}
     >
       <nav className="mx-auto flex h-14 w-full max-w-7xl 2xl:max-w-[88rem] 3xl:max-w-[100rem] items-center justify-between gap-3 px-4 sm:h-16 sm:px-6 md:h-20 md:px-10">

@@ -41,17 +41,17 @@ export function ContactPage() {
                 <InfoRow icon={MapPin} label="Adresse" tone="bg-awo-red/10 text-awo-red">
                   <span className="whitespace-pre-line">{p.contact.visit.address}</span>
                 </InfoRow>
-                <InfoRow icon={Phone} label="Telefon" tone="bg-awo-grass-soft text-awo-grass">
+                <InfoRow icon={Phone} label="Telefon" tone="bg-awo-red-soft text-awo-red-dark">
                   <a href={`tel:${t.footer.phone.replace(/\s+/g, '')}`} className="hover:text-awo-red">
                     {t.footer.phone}
                   </a>
                 </InfoRow>
-                <InfoRow icon={Mail} label="E-Mail" tone="bg-awo-sun-soft text-awo-sun">
+                <InfoRow icon={Mail} label="E-Mail" tone="bg-awo-red-soft text-awo-red">
                   <a href={`mailto:${t.footer.email}`} className="break-all hover:text-awo-red">
                     {t.footer.email}
                   </a>
                 </InfoRow>
-                <InfoRow icon={Train} label="Anfahrt" tone="bg-awo-lavender-soft text-awo-lavender">
+                <InfoRow icon={Train} label="Anfahrt" tone="bg-awo-red-soft text-awo-red-dark">
                   <span className="whitespace-pre-line">{p.contact.visit.transport}</span>
                 </InfoRow>
               </div>

@@ -8,7 +8,7 @@ import { NEWS_SLUGS, ROUTES } from '../routes';
 import { img, SEEDS } from '../lib/images';
 
 const SEED_LIST = [SEEDS.newsSommerfest, SEEDS.newsNaschgarten, SEEDS.newsPlaetze];
-const TAG_TONE = ['bg-awo-sun text-awo-ink', 'bg-awo-grass text-white', 'bg-awo-red text-white'];
+const TAG_TONE = ['bg-awo-red text-white', 'bg-awo-red-dark text-white', 'bg-awo-red text-white'];
 
 type Props = {
   linkTo?: string;

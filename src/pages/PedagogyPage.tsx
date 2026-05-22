@@ -19,11 +19,11 @@ import { SEEDS } from '../lib/images';
 const PILLAR_ICONS = [HeartHandshake, BookOpen, Sprout, Music, Vote, Salad];
 const PILLAR_TONE = [
   'bg-awo-red/10 text-awo-red',
-  'bg-awo-lavender-soft text-awo-lavender',
-  'bg-awo-grass-soft text-awo-grass',
-  'bg-awo-blush-soft text-awo-blush',
+  'bg-awo-red-soft text-awo-red-dark',
+  'bg-awo-red-soft text-awo-red-dark',
+  'bg-awo-red-soft text-awo-red',
   'bg-awo-cream-dark text-awo-red-dark',
-  'bg-awo-sun-soft text-awo-sun',
+  'bg-awo-red-soft text-awo-red',
 ];
 
 export function PedagogyPage() {
@@ -77,7 +77,7 @@ export function PedagogyPage() {
       <SectionWrapper className="bg-white">
         <motion.figure
           variants={itemVariants}
-          className="mx-auto max-w-3xl rounded-[2rem] bg-gradient-to-br from-awo-red via-awo-lavender to-awo-blush p-10 text-white shadow-card-hover md:p-14"
+          className="mx-auto max-w-3xl rounded-[2rem] bg-gradient-to-br from-awo-red via-awo-red-dark to-awo-red p-10 text-white shadow-card-hover md:p-14"
         >
           <Quote className="h-9 w-9 text-white/70" />
           <blockquote className="mt-4 font-display text-3xl font-extrabold leading-snug md:text-4xl">

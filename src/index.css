@@ -17,7 +17,7 @@
   }
 
   body {
-    @apply font-sans bg-white text-awo-grey;
+    @apply font-sans bg-awo-paper text-awo-grey;
     margin: 0;
     overflow-x: hidden;
   }
@@ -78,7 +78,7 @@
   }
 
   .btn-sun {
-    @apply inline-flex items-center justify-center gap-2 rounded-full bg-awo-sun px-6 py-3 text-sm font-extrabold text-awo-ink shadow-card transition hover:bg-awo-sun-light focus:outline-none focus:ring-4 focus:ring-awo-sun/30;
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-awo-red px-6 py-3 text-sm font-extrabold text-white shadow-card transition hover:bg-awo-red-dark focus:outline-none focus:ring-4 focus:ring-awo-red/30;
   }
 
   .section-title {
@@ -90,11 +90,11 @@
   }
 
   .eyebrow-sun {
-    @apply inline-flex items-center gap-2 rounded-full bg-awo-sun-soft px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-awo-sun;
+    @apply inline-flex items-center gap-2 rounded-full bg-awo-red-soft px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-awo-red;
   }
 
   .eyebrow-grass {
-    @apply inline-flex items-center gap-2 rounded-full bg-awo-grass-soft px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-awo-grass;
+    @apply inline-flex items-center gap-2 rounded-full bg-awo-red-soft px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-awo-red-dark;
   }
 
   .card {
@@ -118,7 +118,7 @@
   }
 
   .gradient-text {
-    background: linear-gradient(90deg, #2563EB 0%, #8B5CF6 50%, #EC4899 100%);
+    background: linear-gradient(90deg, #2563EB 0%, #1E40AF 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -126,7 +126,7 @@
   }
 
   .gradient-text-sun {
-    background: linear-gradient(90deg, #F59E0B 0%, #EC4899 100%);
+    background: linear-gradient(90deg, #2563EB 0%, #1E40AF 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -155,11 +155,11 @@
   background: #eff6ff;
 }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #2563eb 0%, #8b5cf6 100%);
+  background: linear-gradient(180deg, #2563eb 0%, #1e40af 100%);
   border-radius: 6px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #1e40af 0%, #7c3aed 100%);
+  background: linear-gradient(180deg, #1e40af 0%, #1e3a8a 100%);
 }
 
 /* Decorative dotted grid for backgrounds */
@@ -172,15 +172,15 @@
 .bg-mesh {
   background:
     radial-gradient(at 20% 20%, rgba(37, 99, 235, 0.12) 0px, transparent 50%),
-    radial-gradient(at 80% 0%, rgba(245, 158, 11, 0.10) 0px, transparent 45%),
-    radial-gradient(at 0% 80%, rgba(236, 72, 153, 0.10) 0px, transparent 45%),
-    radial-gradient(at 80% 90%, rgba(22, 163, 74, 0.08) 0px, transparent 45%);
+    radial-gradient(at 80% 0%, rgba(37, 99, 235, 0.10) 0px, transparent 45%),
+    radial-gradient(at 0% 80%, rgba(30, 64, 175, 0.10) 0px, transparent 45%),
+    radial-gradient(at 80% 90%, rgba(30, 64, 175, 0.08) 0px, transparent 45%);
 }
 
 .bg-mesh-dark {
   background:
     radial-gradient(at 20% 20%, rgba(37, 99, 235, 0.55) 0px, transparent 55%),
-    radial-gradient(at 80% 20%, rgba(139, 92, 246, 0.40) 0px, transparent 55%),
-    radial-gradient(at 50% 90%, rgba(236, 72, 153, 0.35) 0px, transparent 55%),
+    radial-gradient(at 80% 20%, rgba(30, 64, 175, 0.40) 0px, transparent 55%),
+    radial-gradient(at 50% 90%, rgba(37, 99, 235, 0.35) 0px, transparent 55%),
     #0F172A;
 }

@@ -10,8 +10,8 @@ export function NotFoundPage() {
     <section className="relative isolate flex min-h-[80vh] items-center justify-center overflow-hidden px-6 pt-24 md:pt-32">
       <div className="absolute inset-0 -z-20 bg-mesh" />
       <div className="absolute inset-0 -z-10 opacity-40 bg-dot-grid" aria-hidden="true" />
-      <div className="blob -left-20 top-10 h-72 w-72 bg-awo-sun/30 animate-float-slow" aria-hidden="true" />
-      <div className="blob right-0 bottom-10 h-72 w-72 bg-awo-blush/30 animate-float-slower" aria-hidden="true" />
+      <div className="blob -left-20 top-10 h-72 w-72 bg-awo-red/30 animate-float-slow" aria-hidden="true" />
+      <div className="blob right-0 bottom-10 h-72 w-72 bg-awo-red/30 animate-float-slower" aria-hidden="true" />
 
       <div className="mx-auto max-w-xl text-center">
         <span className="font-display text-[7rem] font-extrabold leading-none gradient-text md:text-[12rem]">

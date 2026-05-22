@@ -42,12 +42,12 @@ export function Partners() {
 
 const PALETTES = [
   'from-awo-red to-awo-red-dark',
-  'from-awo-sun to-awo-blush',
-  'from-awo-grass to-emerald-700',
-  'from-awo-lavender to-pink-500',
-  'from-awo-red to-awo-lavender',
-  'from-awo-sun-light to-awo-grass',
-  'from-awo-blush to-rose-600',
+  'from-awo-red to-awo-red',
+  'from-awo-red-dark to-emerald-700',
+  'from-awo-red-dark to-pink-500',
+  'from-awo-red to-awo-red-dark',
+  'from-awo-red-light to-awo-red-dark',
+  'from-awo-red to-rose-600',
   'from-sky-500 to-awo-red',
 ];
 

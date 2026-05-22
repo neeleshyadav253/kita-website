@@ -92,7 +92,7 @@ export function TeamPage() {
                 variants={itemVariants}
                 className="flex items-start gap-3 rounded-2xl bg-white px-5 py-4 text-base text-awo-ink shadow-soft ring-1 ring-awo-grey/5"
               >
-                <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-awo-grass" />
+                <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-awo-red-dark" />
                 <span>{item}</span>
               </motion.li>
             ))}

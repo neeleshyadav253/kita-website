@@ -1,5 +1,15 @@
 import { motion } from 'framer-motion';
-import { Heart, Scale, Sparkles, UsersRound } from 'lucide-react';
+import {
+  Award,
+  HandHeart,
+  Heart,
+  Salad,
+  Scale,
+  Sparkles,
+  Star,
+  TreePine,
+  UsersRound,
+} from 'lucide-react';
 import { PageHero } from '../components/PageHero';
 import { SectionWrapper, itemVariants } from '../components/SectionWrapper';
 import { WaveDivider } from '../components/WaveDivider';
@@ -8,11 +18,12 @@ import { useLanguage } from '../i18n/LanguageContext';
 import { SEEDS } from '../lib/images';
 
 const VALUE_ICONS = [UsersRound, Heart, Scale, Sparkles];
+const TIMELINE_ICONS = [Sparkles, TreePine, Award, HandHeart, Salad, Star];
 const VALUE_ACCENT = [
   'bg-awo-red text-white',
-  'bg-awo-blush text-white',
-  'bg-awo-grass text-white',
-  'bg-awo-sun text-awo-ink',
+  'bg-awo-red text-white',
+  'bg-awo-red-dark text-white',
+  'bg-awo-red text-white',
 ];
 
 export function AboutPage() {
@@ -104,42 +115,95 @@ export function AboutPage() {
       </SectionWrapper>
       <WaveDivider fromColor="#EFF6FF" toColor="#ffffff" />
 
-      <SectionWrapper className="bg-white">
-        <div className="mx-auto max-w-4xl">
-          <motion.h2 variants={itemVariants} className="section-title text-center">
-            {p.about.timelineTitle}
-          </motion.h2>
-          <div className="relative mt-12 pl-10 md:pl-0">
-            <div className="absolute left-3 top-2 bottom-2 w-0.5 bg-gradient-to-b from-awo-red via-awo-sun to-awo-blush md:left-1/2 md:-ml-px" />
-            <ul className="space-y-6 md:space-y-10">
-              {p.about.timeline.map((item, i) => (
-                <motion.li
-                  key={item.year}
-                  variants={itemVariants}
-                  className="relative md:grid md:grid-cols-2 md:gap-10"
-                >
-                  <span className="absolute left-3 top-3 -ml-[7px] h-4 w-4 rounded-full bg-awo-red ring-4 ring-awo-cream md:left-1/2 md:-ml-2" />
-                  <div
-                    className={
-                      i % 2 === 0
-                        ? 'md:pr-10 md:text-right'
-                        : 'md:col-start-2 md:pl-10'
-                    }
+      <SectionWrapper className="bg-gradient-to-b from-white via-awo-cream/30 to-white">
+        <div className="mx-auto max-w-5xl">
+          <div className="text-center">
+            <motion.span variants={itemVariants} className="section-eyebrow">
+              <Sparkles className="h-3.5 w-3.5" />
+              Est. 1998
+            </motion.span>
+            <motion.h2 variants={itemVariants} className="section-title mt-4">
+              {p.about.timelineTitle}
+            </motion.h2>
+          </div>
+
+          <div className="relative mt-16">
+            <div
+              aria-hidden="true"
+              className="absolute left-6 top-6 bottom-6 w-0.5 rounded-full bg-gradient-to-b from-awo-red via-awo-red-dark to-awo-red md:left-1/2 md:-translate-x-1/2"
+            />
+
+            <ul className="space-y-10 md:space-y-16">
+              {p.about.timeline.map((item, i) => {
+                const Icon = TIMELINE_ICONS[i] ?? Sparkles;
+                const isLast = i === p.about.timeline.length - 1;
+                const sideRight = i % 2 === 1;
+                return (
+                  <motion.li
+                    key={item.year}
+                    variants={itemVariants}
+                    className="relative md:grid md:grid-cols-2 md:gap-12"
                   >
-                    <div className="rounded-3xl bg-white p-6 shadow-card ring-1 ring-awo-grey/10">
-                      <span className="font-display text-3xl font-extrabold gradient-text">
-                        {item.year}
+                    <span
+                      className={`absolute left-6 top-7 z-10 -translate-x-1/2 md:left-1/2 ${
+                        isLast ? '' : ''
+                      }`}
+                    >
+                      <span className="relative flex h-12 w-12 items-center justify-center">
+                        {isLast && (
+                          <span className="absolute inset-0 animate-ping rounded-full bg-awo-red/40" />
+                        )}
+                        <span className="relative inline-flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-awo-red to-awo-red-dark text-white shadow-card-hover ring-4 ring-white">
+                          <Icon className="h-5 w-5" />
+                        </span>
                       </span>
-                      <h3 className="mt-2 text-lg font-bold text-awo-ink">
-                        {item.title}
-                      </h3>
-                      <p className="mt-2 text-sm leading-relaxed text-awo-grey-light">
-                        {item.text}
-                      </p>
+                    </span>
+
+                    <div
+                      className={`pl-16 md:pl-0 ${
+                        sideRight ? 'md:col-start-2 md:pl-12' : 'md:pr-12'
+                      }`}
+                    >
+                      <motion.div
+                        whileHover={{ y: -4 }}
+                        transition={{ type: 'spring', stiffness: 280, damping: 22 }}
+                        className={`group relative overflow-hidden rounded-3xl bg-white p-6 shadow-card ring-1 ring-awo-grey/10 transition hover:shadow-card-hover sm:p-7 ${
+                          sideRight ? 'md:text-left' : 'md:text-right'
+                        }`}
+                      >
+                        <span
+                          aria-hidden="true"
+                          className={`pointer-events-none absolute -top-10 h-28 w-28 rounded-full bg-awo-red/10 blur-2xl ${
+                            sideRight ? '-left-10' : '-right-10'
+                          }`}
+                        />
+                        <div
+                          className={`flex items-center gap-3 ${
+                            sideRight ? '' : 'md:flex-row-reverse'
+                          }`}
+                        >
+                          <span className="inline-flex items-center gap-1.5 rounded-full bg-awo-red-soft px-3 py-1 text-[11px] font-bold uppercase tracking-[0.18em] text-awo-red-dark ring-1 ring-awo-red/15">
+                            {isLast ? 'Today' : `Chapter ${String(i + 1).padStart(2, '0')}`}
+                          </span>
+                        </div>
+                        <div
+                          className={`mt-3 font-display text-5xl font-extrabold leading-none gradient-text-sun sm:text-6xl ${
+                            sideRight ? '' : 'md:text-right'
+                          }`}
+                        >
+                          {item.year}
+                        </div>
+                        <h3 className="mt-3 font-display text-xl font-extrabold text-awo-ink">
+                          {item.title}
+                        </h3>
+                        <p className="mt-2 text-sm leading-relaxed text-awo-grey-light sm:text-base">
+                          {item.text}
+                        </p>
+                      </motion.div>
                     </div>
-                  </div>
-                </motion.li>
-              ))}
+                  </motion.li>
+                );
+              })}
             </ul>
           </div>
         </div>

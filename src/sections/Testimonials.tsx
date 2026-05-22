@@ -41,7 +41,7 @@ export function Testimonials() {
                 className="absolute right-4 top-4 h-7 w-7 text-awo-cream-dark sm:right-6 sm:top-6 sm:h-10 sm:w-10"
                 aria-hidden="true"
               />
-              <div className="flex items-center gap-1 text-awo-sun">
+              <div className="flex items-center gap-1 text-awo-red">
                 {Array.from({ length: item.rating }).map((_, k) => (
                   <Star key={k} className="h-3.5 w-3.5 fill-current sm:h-4 sm:w-4" />
                 ))}
@@ -71,7 +71,7 @@ export function Testimonials() {
           variants={itemVariants}
           className="mx-auto mt-12 flex max-w-fit items-center gap-4 rounded-full bg-white px-5 py-3 shadow-card ring-1 ring-awo-grey/5"
         >
-          <div className="flex items-center gap-0.5 text-awo-sun">
+          <div className="flex items-center gap-0.5 text-awo-red">
             {Array.from({ length: 5 }).map((_, k) => (
               <Star key={k} className="h-4 w-4 fill-current" />
             ))}

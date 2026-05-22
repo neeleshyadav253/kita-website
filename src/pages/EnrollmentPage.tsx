@@ -55,7 +55,7 @@ export function EnrollmentPage() {
                 variants={itemVariants}
                 className="flex flex-col rounded-3xl bg-white p-7 shadow-card ring-1 ring-awo-grey/5"
               >
-                <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-awo-grass-soft text-awo-grass">
+                <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-awo-red-soft text-awo-red-dark">
                   <Icon className="h-6 w-6" />
                 </span>
                 <div className="mt-5 text-xs font-bold uppercase tracking-widest text-awo-grey-light">

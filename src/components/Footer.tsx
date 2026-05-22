@@ -45,7 +45,7 @@ export function Footer() {
   };
 
   return (
-    <footer className="relative overflow-hidden border-t border-awo-grey/10 bg-white text-awo-grey">
+    <footer className="relative overflow-hidden border-t border-awo-grey/10 bg-awo-fog text-awo-grey">
       <div className="mx-auto grid w-full max-w-7xl 2xl:max-w-[88rem] 3xl:max-w-[100rem] grid-cols-2 gap-x-6 gap-y-10 px-4 py-14 sm:gap-x-8 sm:px-6 sm:py-16 md:grid-cols-12 md:gap-10 md:px-10 md:py-20">
         <div className="col-span-2 md:col-span-4">
           <Link
@@ -90,7 +90,7 @@ export function Footer() {
             <a
               href="#"
               aria-label="Instagram"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-awo-blush-soft text-awo-blush ring-1 ring-awo-blush/15 transition hover:bg-awo-blush hover:text-white hover:ring-awo-blush"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-awo-red-soft text-awo-red ring-1 ring-awo-red/15 transition hover:bg-awo-red hover:text-white hover:ring-awo-red"
             >
               <InstagramIcon className="h-4 w-4" />
             </a>
@@ -155,7 +155,7 @@ export function Footer() {
 
         <div className="col-span-2 md:col-span-3">
           <h4 className="inline-flex items-center gap-2 font-display text-sm font-bold uppercase tracking-widest text-awo-ink">
-            <Sparkles className="h-3.5 w-3.5 text-awo-sun" />
+            <Sparkles className="h-3.5 w-3.5 text-awo-red" />
             {t.footer.newsletter.title}
           </h4>
           <p className="mt-3 text-sm text-awo-grey">{t.footer.newsletter.text}</p>
@@ -170,13 +170,13 @@ export function Footer() {
             />
             <button
               type="submit"
-              className="inline-flex items-center justify-center gap-1.5 rounded-full bg-awo-sun px-4 py-2.5 text-sm font-extrabold text-awo-ink transition hover:bg-awo-sun-light"
+              className="inline-flex items-center justify-center gap-1.5 rounded-full bg-awo-red px-4 py-2.5 text-sm font-extrabold text-white transition hover:bg-awo-red-dark"
             >
               {t.footer.newsletter.cta}
               <Heart className="h-3.5 w-3.5" />
             </button>
             {subscribed ? (
-              <span className="inline-flex items-center gap-2 text-xs text-awo-grass">
+              <span className="inline-flex items-center gap-2 text-xs text-awo-red-dark">
                 <CheckCircle2 className="h-3.5 w-3.5" />
                 {t.footer.newsletter.success}
               </span>
@@ -191,7 +191,7 @@ export function Footer() {
             © {year} {t.brand.name}. {t.footer.rights}
           </span>
           <span className="inline-flex items-center gap-1.5">
-            Made with <Heart className="h-3 w-3 fill-current text-awo-blush" /> · AWO Berlin
+            Made with <Heart className="h-3 w-3 fill-current text-awo-red" /> · AWO Berlin
           </span>
         </div>
       </div>
