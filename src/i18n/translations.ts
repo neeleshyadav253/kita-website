@@ -45,6 +45,10 @@ export const translations = {
       microQuoteAuthor: 'Familie Becker',
       microQuote: '„Unsere Tochter rennt jeden Morgen in die Kita.“',
       trustLine: 'Träger: AWO Kreisverband Berlin · Anerkannt nach SGB VIII',
+      foodLabel: 'Mittagessen',
+      foodValue: '90 % Bio · frisch',
+      ratingLabel: 'Eltern-Bewertung',
+      ratingValue: '4,9 / 5 · 56 Stimmen',
     },
     about: {
       eyebrow: 'Über uns',
@@ -68,6 +72,7 @@ export const translations = {
           sub: '2 Min. zum Rosenthaler Platz · U8',
         },
       ],
+      imageCaptions: ['Unser Haus · Eingang', 'Eingang & Garten', 'Wandkunst · seit 1978'],
     },
     whyUs: {
       eyebrow: 'Warum Eltern uns wählen',
@@ -121,6 +126,9 @@ export const translations = {
         { time: '14:30', title: 'Snack & Projektzeit', text: 'Vorschule, Musik, Werkstatt — die Großen vertiefen Interessen.', accent: 'sun' },
         { time: '16:00 – 17:00', title: 'Abholzeit', text: 'Im Garten, mit kurzen Tür-und-Angel-Gesprächen mit Ihnen.', accent: 'red' },
       ],
+      weekdays: 'Mo–Fr',
+      openingHours: '07:00 – 17:00',
+      openingNote: 'Flexible Bring- und Abholzeiten. Freitags bis 16 Uhr.',
     },
     gallery: {
       eyebrow: 'Einblicke',
@@ -136,6 +144,7 @@ export const translations = {
         'Lese-Ecke',
       ],
       cta: 'Lust auf einen Rundgang? Wir zeigen Ihnen gerne alles persönlich.',
+      locationsTag: 'Garten · Werkstatt · Wald',
     },
     testimonials: {
       eyebrow: 'Stimmen von Eltern',
@@ -165,6 +174,8 @@ export const translations = {
           rating: 5,
         },
       ],
+      ratingValue: '4,9 / 5',
+      ratingSubtitle: 'aus 56 Eltern-Bewertungen',
     },
     partners: {
       eyebrow: 'Anerkennung & Kooperationen',
@@ -184,7 +195,7 @@ export const translations = {
     },
     pedagogy: {
       eyebrow: 'Unsere Pädagogik',
-      title: 'Wie wir Kinder begleiten.',
+      title: 'Lernen, das sich wie Spielen anfühlt.',
       description:
         'Unser pädagogisches Handeln orientiert sich an den Bedürfnissen, Interessen und Lebenswelten der Kinder — basierend auf dem Berliner Bildungsprogramm.',
       cards: [
@@ -229,10 +240,12 @@ export const translations = {
           text: 'Freies Spiel, gezielte Lernangebote und gemeinsame Projekte bereiten die Kinder spielerisch auf die Schule und das Leben vor.',
         },
       ],
+      sizeLabel: 'Gruppengröße',
+      staffLabel: 'Betreuung',
     },
     team: {
       eyebrow: 'Unser Team',
-      title: 'Menschen, die Kinder lieben.',
+      title: 'Erzieher:innen mit Herz und Erfahrung.',
       description:
         'Unser engagiertes, multiprofessionelles Team begleitet Ihr Kind mit Herz, Erfahrung und stetiger Weiterbildung. Alle Fachkräfte mit erweitertem Führungszeugnis.',
       members: [
@@ -280,6 +293,7 @@ export const translations = {
         send: 'Anfrage senden',
         consent: 'Ich stimme der Verarbeitung meiner Daten gemäß Datenschutzerklärung zu.',
         success: 'Vielen Dank! Wir melden uns innerhalb von 48 Stunden.',
+        requiredNote: '* Pflichtfelder · Antwortzeit ca. 48 h',
       },
     },
     news: {
@@ -315,6 +329,12 @@ export const translations = {
         'Vereinbaren Sie ein unverbindliches Kennenlernen — wir zeigen Ihnen alles persönlich und beantworten Ihre Fragen.',
       primary: 'Platz anfragen',
       secondary: 'Anrufen: +49 30 1234 5678',
+      stats: [
+        { value: '48 h', label: 'Antwortzeit' },
+        { value: '0 €', label: 'Beiträge in Berlin' },
+        { value: '14 Tg', label: 'bis zum Erstgespräch' },
+        { value: '4,9 ★', label: 'Eltern-Bewertung' },
+      ],
     },
     footer: {
       about:
@@ -384,6 +404,10 @@ export const translations = {
       microQuoteAuthor: 'The Becker family',
       microQuote: '“Our daughter literally runs into the nursery every morning.”',
       trustLine: 'Operated by AWO Kreisverband Berlin · Recognized under SGB VIII',
+      foodLabel: 'Lunch',
+      foodValue: '90% organic · fresh',
+      ratingLabel: 'Parent rating',
+      ratingValue: '4.9 / 5 · 56 reviews',
     },
     about: {
       eyebrow: 'About us',
@@ -407,6 +431,7 @@ export const translations = {
           sub: '2 min from Rosenthaler Platz · U8',
         },
       ],
+      imageCaptions: ['Our building · entrance', 'Entrance & garden', 'Wall art · since 1978'],
     },
     whyUs: {
       eyebrow: 'Why parents choose us',
@@ -460,6 +485,9 @@ export const translations = {
         { time: '2:30 PM', title: 'Snack & project time', text: 'Pre-school group, music, workshops — older kids dive deeper.', accent: 'sun' },
         { time: '4:00 – 5:00 PM', title: 'Pick-up', text: 'In the garden, with short door-and-hinge chats with you.', accent: 'red' },
       ],
+      weekdays: 'Mon–Fri',
+      openingHours: '7:00 AM – 5:00 PM',
+      openingNote: 'Flexible drop-off and pickup. Until 4 PM on Fridays.',
     },
     gallery: {
       eyebrow: 'Inside our nursery',
@@ -475,6 +503,7 @@ export const translations = {
         'Reading nook',
       ],
       cta: 'Want to see it in person? We’d love to show you around.',
+      locationsTag: 'Garden · Workshop · Forest',
     },
     testimonials: {
       eyebrow: 'Parent voices',
@@ -504,6 +533,8 @@ export const translations = {
           rating: 5,
         },
       ],
+      ratingValue: '4.9 / 5',
+      ratingSubtitle: 'from 56 parent reviews',
     },
     partners: {
       eyebrow: 'Recognition & partners',
@@ -523,7 +554,7 @@ export const translations = {
     },
     pedagogy: {
       eyebrow: 'Our pedagogy',
-      title: 'How we accompany children.',
+      title: 'Learning that feels like play.',
       description:
         'Our pedagogical work is oriented to the needs, interests and life worlds of the children — based on the Berlin Education Program.',
       cards: [
@@ -568,10 +599,12 @@ export const translations = {
           text: 'Free play, focused learning activities and joint projects playfully prepare the children for school and life.',
         },
       ],
+      sizeLabel: 'Group size',
+      staffLabel: 'Caregivers',
     },
     team: {
       eyebrow: 'Our team',
-      title: 'People who love children.',
+      title: 'Educators with heart and experience.',
       description:
         'Our dedicated, multi-professional team supports your child with heart, experience and continuous training. All staff hold an extended certificate of good conduct.',
       members: [
@@ -619,6 +652,7 @@ export const translations = {
         send: 'Send inquiry',
         consent: 'I agree to the processing of my data per the privacy policy.',
         success: 'Thank you! We will get back to you within 48 hours.',
+        requiredNote: '* Required · Response within ~48 h',
       },
     },
     news: {
@@ -654,6 +688,12 @@ export const translations = {
         'Arrange a no-obligation visit — we’ll show you around personally and answer all your questions.',
       primary: 'Request a place',
       secondary: 'Call: +49 30 1234 5678',
+      stats: [
+        { value: '48 h', label: 'Response time' },
+        { value: '€0', label: 'Fees in Berlin' },
+        { value: '14 days', label: 'to first meeting' },
+        { value: '4.9 ★', label: 'Parent rating' },
+      ],
     },
     footer: {
       about:

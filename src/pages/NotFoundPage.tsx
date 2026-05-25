@@ -4,7 +4,7 @@ import { ROUTES } from '../routes';
 import { useLanguage } from '../i18n/LanguageContext';
 
 export function NotFoundPage() {
-  const { p } = useLanguage();
+  const { p, t } = useLanguage();
 
   return (
     <section className="relative isolate flex min-h-[80vh] items-center justify-center overflow-hidden px-6 pt-24 md:pt-32">
@@ -30,7 +30,7 @@ export function NotFoundPage() {
           </Link>
           <Link to={ROUTES.contact} className="btn-ghost">
             <Sparkles className="h-4 w-4" />
-            Kontakt
+            {t.nav.contact}
           </Link>
         </div>
       </div>

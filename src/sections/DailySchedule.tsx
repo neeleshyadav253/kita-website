@@ -51,14 +51,14 @@ export function DailySchedule({ withWaves = true }: { withWaves?: boolean }) {
             >
               <div className="flex items-center justify-between gap-3">
                 <span className="text-xs font-bold uppercase tracking-widest text-awo-grey-light">
-                  Mo–Fr
+                  {t.schedule.weekdays}
                 </span>
                 <span className="font-display text-2xl font-extrabold text-awo-ink">
-                  07:00 – 17:00
+                  {t.schedule.openingHours}
                 </span>
               </div>
               <p className="mt-2 text-sm text-awo-grey-light">
-                Flexible Bring- und Abholzeiten. Freitags bis 16 Uhr.
+                {t.schedule.openingNote}
               </p>
             </motion.div>
           </div>

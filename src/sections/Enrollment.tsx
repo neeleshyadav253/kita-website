@@ -213,7 +213,7 @@ export function Enrollment({ linkTo, showForm = true }: Props) {
                   </span>
                 ) : (
                   <span className="text-xs text-awo-grey-light">
-                    * Pflichtfelder · Antwortzeit ca. 48 h
+                    {t.enrollment.form.requiredNote}
                   </span>
                 )}
                 <button type="submit" className="btn-primary">

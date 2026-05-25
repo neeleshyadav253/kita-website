@@ -76,7 +76,7 @@ export function Gallery() {
             </span>
             <span className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-bold uppercase tracking-widest text-awo-red-dark ring-1 ring-awo-red/20">
               <Sparkles className="h-3.5 w-3.5 text-awo-red" />
-              Garten · Werkstatt · Wald
+              {t.gallery.locationsTag}
             </span>
           </motion.div>
 

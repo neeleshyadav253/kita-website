@@ -113,10 +113,10 @@ export function Hero() {
               </span>
               <div className="leading-tight">
                 <div className="text-[11px] uppercase tracking-widest text-awo-grey-light">
-                  Mittagessen
+                  {t.hero.foodLabel}
                 </div>
                 <div className="text-sm font-bold text-awo-ink">
-                  90 % Bio · frisch
+                  {t.hero.foodValue}
                 </div>
               </div>
             </div>
@@ -127,10 +127,10 @@ export function Hero() {
               </span>
               <div className="leading-tight">
                 <div className="text-[11px] uppercase tracking-widest text-awo-grey-light">
-                  Eltern-Bewertung
+                  {t.hero.ratingLabel}
                 </div>
                 <div className="text-sm font-bold text-awo-ink">
-                  4,9 / 5 · 56 Stimmen
+                  {t.hero.ratingValue}
                 </div>
               </div>
             </div>

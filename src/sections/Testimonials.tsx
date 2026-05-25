@@ -76,8 +76,8 @@ export function Testimonials() {
               <Star key={k} className="h-4 w-4 fill-current" />
             ))}
           </div>
-          <span className="text-sm font-bold text-awo-ink">4,9 / 5</span>
-          <span className="text-sm text-awo-grey-light">aus 56 Eltern-Bewertungen</span>
+          <span className="text-sm font-bold text-awo-ink">{t.testimonials.ratingValue}</span>
+          <span className="text-sm text-awo-grey-light">{t.testimonials.ratingSubtitle}</span>
         </motion.div>
       </SectionWrapper>
       <WaveDivider fromColor="#EFF6FF" toColor="#ffffff" />

@@ -38,20 +38,20 @@ export function ContactPage() {
                 {p.contact.visit.title}
               </h2>
               <div className="mt-6 space-y-5 text-sm md:text-base">
-                <InfoRow icon={MapPin} label="Adresse" tone="bg-awo-red/10 text-awo-red">
+                <InfoRow icon={MapPin} label={p.contact.labels.address} tone="bg-awo-red/10 text-awo-red">
                   <span className="whitespace-pre-line">{p.contact.visit.address}</span>
                 </InfoRow>
-                <InfoRow icon={Phone} label="Telefon" tone="bg-awo-red-soft text-awo-red-dark">
+                <InfoRow icon={Phone} label={p.contact.labels.phone} tone="bg-awo-red-soft text-awo-red-dark">
                   <a href={`tel:${t.footer.phone.replace(/\s+/g, '')}`} className="hover:text-awo-red">
                     {t.footer.phone}
                   </a>
                 </InfoRow>
-                <InfoRow icon={Mail} label="E-Mail" tone="bg-awo-red-soft text-awo-red">
+                <InfoRow icon={Mail} label={p.contact.labels.email} tone="bg-awo-red-soft text-awo-red">
                   <a href={`mailto:${t.footer.email}`} className="break-all hover:text-awo-red">
                     {t.footer.email}
                   </a>
                 </InfoRow>
-                <InfoRow icon={Train} label="Anfahrt" tone="bg-awo-red-soft text-awo-red-dark">
+                <InfoRow icon={Train} label={p.contact.labels.directions} tone="bg-awo-red-soft text-awo-red-dark">
                   <span className="whitespace-pre-line">{p.contact.visit.transport}</span>
                 </InfoRow>
               </div>

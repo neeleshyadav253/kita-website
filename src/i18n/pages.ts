@@ -33,6 +33,8 @@ type PageBundle = {
     timelineTitle: string;
     timeline: { year: string; title: string; text: string }[];
     facts: { label: string; value: string }[];
+    factsTitle: string;
+    valuesEyebrow: string;
   };
   pedagogy: {
     intro: string;
@@ -51,6 +53,7 @@ type PageBundle = {
     bios: TeamBio[];
     statsTitle: string;
     stats: { number: string; label: string }[];
+    voicesTitle: string;
   };
   enrollment: {
     fullIntro: string;
@@ -77,6 +80,7 @@ type PageBundle = {
     mapAlt: string;
     formTitle: string;
     formIntro: string;
+    labels: { address: string; phone: string; email: string; directions: string };
   };
   notFound: {
     title: string;
@@ -129,6 +133,8 @@ export const pages: Record<Lang, PageBundle> = {
         { label: 'Team', value: '12 Fachkräfte' },
         { label: 'Träger', value: 'AWO Kreisverband' },
       ],
+      factsTitle: 'Kita in Zahlen',
+      valuesEyebrow: 'AWO',
     },
     pedagogy: {
       intro:
@@ -259,6 +265,7 @@ export const pages: Record<Lang, PageBundle> = {
         { number: '14', label: 'Fortbildungen pro Jahr' },
         { number: '7 Jahre', label: 'Ø Betriebszugehörigkeit' },
       ],
+      voicesTitle: 'Stimmen aus dem Team',
     },
     enrollment: {
       fullIntro:
@@ -354,6 +361,12 @@ export const pages: Record<Lang, PageBundle> = {
       mapAlt: 'Karte zum Standort der Kita',
       formTitle: 'Schreiben Sie uns',
       formIntro: 'Antwort innerhalb von 48 Stunden — versprochen.',
+      labels: {
+        address: 'Adresse',
+        phone: 'Telefon',
+        email: 'E-Mail',
+        directions: 'Anfahrt',
+      },
     },
     notFound: {
       title: 'Seite nicht gefunden',
@@ -404,6 +417,8 @@ export const pages: Record<Lang, PageBundle> = {
         { label: 'Team', value: '12 professionals' },
         { label: 'Operator', value: 'AWO Kreisverband' },
       ],
+      factsTitle: 'Nursery in numbers',
+      valuesEyebrow: 'AWO',
     },
     pedagogy: {
       intro:
@@ -534,6 +549,7 @@ export const pages: Record<Lang, PageBundle> = {
         { number: '14', label: 'Trainings per year' },
         { number: '7 years', label: 'Avg. tenure' },
       ],
+      voicesTitle: 'Voices from the team',
     },
     enrollment: {
       fullIntro:
@@ -629,6 +645,12 @@ export const pages: Record<Lang, PageBundle> = {
       mapAlt: 'Map of the nursery location',
       formTitle: 'Write to us',
       formIntro: 'A response within 48 hours — we promise.',
+      labels: {
+        address: 'Address',
+        phone: 'Phone',
+        email: 'Email',
+        directions: 'Directions',
+      },
     },
     notFound: {
       title: 'Page not found',

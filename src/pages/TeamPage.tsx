@@ -49,7 +49,7 @@ export function TeamPage() {
       <SectionWrapper className="bg-white">
         <div className="mx-auto max-w-3xl text-center">
           <motion.h2 variants={itemVariants} className="section-title">
-            Stimmen aus dem Team
+            {p.team.voicesTitle}
           </motion.h2>
         </div>
         <div className="mt-12 grid gap-6 md:grid-cols-2">

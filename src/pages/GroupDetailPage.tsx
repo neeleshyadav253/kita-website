@@ -65,8 +65,8 @@ export function GroupDetailPage() {
             <h3 className="font-display text-lg font-bold text-awo-ink">{summary.name}</h3>
             <dl className="mt-5 space-y-3 text-sm">
               <Row label={t.nav.groups} value={summary.age} />
-              <Row label="Gruppengröße" value={summary.size} />
-              <Row label="Betreuung" value={summary.ratio} />
+              <Row label={t.groups.sizeLabel} value={summary.size} />
+              <Row label={t.groups.staffLabel} value={summary.ratio} />
             </dl>
             <ul className="mt-5 space-y-1.5 border-t border-awo-grey/10 pt-5">
               {summary.features.map((f) => (

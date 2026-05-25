@@ -71,7 +71,7 @@ export function AboutPage() {
             className="self-start rounded-3xl bg-gradient-to-br from-awo-cream to-white p-7 shadow-card ring-1 ring-awo-grey/5"
           >
             <h3 className="font-display text-sm font-bold uppercase tracking-widest text-awo-grey-light">
-              Kita in Zahlen
+              {p.about.factsTitle}
             </h3>
             <dl className="mt-5 space-y-4">
               {p.about.facts.map((f) => (
@@ -96,7 +96,7 @@ export function AboutPage() {
       <SectionWrapper className="bg-awo-cream">
         <div className="mx-auto max-w-3xl text-center">
           <motion.span variants={itemVariants} className="section-eyebrow">
-            AWO
+            {p.about.valuesEyebrow}
           </motion.span>
           <motion.h2 variants={itemVariants} className="section-title mt-4">
             {p.about.values.title}

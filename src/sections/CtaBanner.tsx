@@ -47,10 +47,18 @@ export function CtaBanner() {
 
           <div className="relative">
             <div className="grid grid-cols-2 gap-3">
-              <Stat number="48 h" label="Antwortzeit" tone="bg-awo-red-soft text-awo-red ring-awo-red/20" />
-              <Stat number="0 €" label="Beiträge in Berlin" tone="bg-awo-red-soft text-awo-red-dark ring-awo-red-dark/20" />
-              <Stat number="14 Tg" label="bis zum Erstgespräch" tone="bg-awo-red-soft text-awo-red ring-awo-red/20" />
-              <Stat number="4,9 ★" label="Eltern-Bewertung" tone="bg-awo-red-soft text-awo-red-dark ring-awo-red-dark/20" />
+              {t.cta.stats.map((s, i) => (
+                <Stat
+                  key={s.label}
+                  number={s.value}
+                  label={s.label}
+                  tone={
+                    i % 2 === 0
+                      ? 'bg-awo-red-soft text-awo-red ring-awo-red/20'
+                      : 'bg-awo-red-soft text-awo-red-dark ring-awo-red-dark/20'
+                  }
+                />
+              ))}
             </div>
           </div>
         </div>

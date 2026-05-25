@@ -83,7 +83,7 @@ export function About({
             loading="lazy"
           />
           <figcaption className="absolute bottom-2.5 left-2.5 right-2.5 rounded-xl bg-white/95 px-2.5 py-1 text-[10px] font-bold uppercase tracking-widest text-awo-ink shadow-card backdrop-blur">
-            Unser Haus · Eingang
+            {t.about.imageCaptions[0]}
           </figcaption>
         </motion.figure>
         <motion.figure
@@ -97,7 +97,7 @@ export function About({
             loading="lazy"
           />
           <figcaption className="absolute bottom-2.5 left-2.5 right-2.5 rounded-xl bg-white/95 px-2.5 py-1 text-[10px] font-bold uppercase tracking-widest text-awo-ink shadow-card backdrop-blur">
-            Eingang &amp; Garten
+            {t.about.imageCaptions[1]}
           </figcaption>
         </motion.figure>
         <motion.figure
@@ -111,7 +111,7 @@ export function About({
             loading="lazy"
           />
           <figcaption className="absolute bottom-2.5 left-2.5 right-2.5 rounded-xl bg-white/95 px-2.5 py-1 text-[10px] font-bold uppercase tracking-widest text-awo-ink shadow-card backdrop-blur">
-            Wandkunst · seit 1978
+            {t.about.imageCaptions[2]}
           </figcaption>
         </motion.figure>
       </div>
