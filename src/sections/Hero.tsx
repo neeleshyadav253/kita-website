@@ -20,7 +20,7 @@ export function Hero() {
       id="hero"
       className="relative isolate overflow-hidden bg-white pt-20 md:pt-24"
     >
-      <div className="mx-auto grid w-full max-w-7xl 2xl:max-w-[88rem] 3xl:max-w-[100rem] gap-10 px-4 pb-20 pt-4 sm:gap-12 sm:px-6 sm:pb-24 sm:pt-6 md:grid-cols-[1.05fr,1fr] md:gap-16 md:px-10 md:pb-32 md:pt-10">
+      <div className="mx-auto grid w-full max-w-7xl 2xl:max-w-[88rem] 3xl:max-w-[100rem] gap-10 px-4 pb-8 pt-4 sm:gap-12 sm:px-6 sm:pb-10 sm:pt-6 md:grid-cols-[1.05fr,1fr] md:gap-16 md:px-10 md:pb-14 md:pt-10">
         <div className="flex flex-col justify-center text-awo-ink">
           <span className="inline-flex w-fit items-center gap-2 rounded-full bg-awo-red/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-awo-red ring-1 ring-awo-red/15">
             <Sparkles className="h-3.5 w-3.5 text-awo-red" />

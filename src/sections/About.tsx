@@ -12,11 +12,11 @@ const ACCENT = [
   'bg-awo-red-soft text-awo-red',
 ];
 
-export function About({ linkTo }: { linkTo?: string }) {
+export function About({ linkTo, className = '' }: { linkTo?: string; className?: string }) {
   const { t } = useLanguage();
 
   return (
-    <SectionWrapper id="about" className="bg-white">
+    <SectionWrapper id="about" className={`bg-white ${className}`}>
       <div className="mx-auto max-w-3xl text-center">
         <motion.span variants={itemVariants} className="section-eyebrow">
           {t.about.eyebrow}

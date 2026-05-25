@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 import {
   HeartHandshake,
   Leaf,
@@ -6,15 +6,15 @@ import {
   Salad,
   Sparkles,
   Users,
-} from 'lucide-react';
-import { useLanguage } from '../i18n/LanguageContext';
-import { SectionWrapper, itemVariants } from '../components/SectionWrapper';
-import whyUsGroups from '../assets/whyus-1-groups.jpg';
-import whyUsKitchen from '../assets/whyus-2-kitchen.jpg';
-import whyUsForest from '../assets/whyus-3-forest.jpg';
-import whyUsLanguage from '../assets/whyus-4-language.jpg';
-import whyUsSettling from '../assets/whyus-5-settling.jpg';
-import whyUsInclusive from '../assets/whyus-6-inclusive.jpg';
+} from "lucide-react";
+import { useLanguage } from "../i18n/LanguageContext";
+import { SectionWrapper, itemVariants } from "../components/SectionWrapper";
+import whyUsGroups from "../assets/whyus-1-groups.jpg";
+import whyUsKitchen from "../assets/whyus-2-kitchen.jpg";
+import whyUsForest from "../assets/whyus-3-forest.jpg";
+import whyUsLanguage from "../assets/whyus-4-language.jpg";
+import whyUsSettling from "../assets/whyus-5-settling.jpg";
+import whyUsInclusive from "../assets/whyus-6-inclusive.jpg";
 
 const ICONS = [Users, Salad, Leaf, MessageCircle, Sparkles, HeartHandshake];
 
@@ -28,12 +28,12 @@ const IMAGES = [
   whyUsInclusive,
 ];
 const ACCENT = [
-  'bg-awo-red/10 text-awo-red',
-  'bg-awo-red-soft text-awo-red',
-  'bg-awo-red-soft text-awo-red-dark',
-  'bg-awo-red-soft text-awo-red-dark',
-  'bg-awo-cream-dark text-awo-red-dark',
-  'bg-awo-red-soft text-awo-red',
+  "bg-awo-red/10 text-awo-red",
+  "bg-awo-red-soft text-awo-red",
+  "bg-awo-red-soft text-awo-red-dark",
+  "bg-awo-red-soft text-awo-red-dark",
+  "bg-awo-cream-dark text-awo-red-dark",
+  "bg-awo-red-soft text-awo-red",
 ];
 
 export function WhyUs() {
@@ -78,11 +78,11 @@ export function WhyUs() {
                   <span className="chip absolute right-3 top-3 max-w-[60%] truncate justify-center bg-white/90 backdrop-blur">
                     {item.pill}
                   </span>
-                  <span
+                  {/* <span
                     className={`absolute -bottom-5 left-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl shadow-card ring-1 ring-white sm:h-14 sm:w-14 ${ACCENT[i % ACCENT.length]}`}
                   >
                     <Icon className="h-6 w-6 sm:h-7 sm:w-7" />
-                  </span>
+                  </span> */}
                 </div>
                 <div className="flex flex-col p-5 pt-8 sm:p-7 sm:pt-10">
                   <h3 className="text-base font-bold text-awo-ink sm:text-lg">

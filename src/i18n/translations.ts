@@ -452,13 +452,13 @@ export const translations = {
       description:
         'Reliable rituals give children security — and us the freedom to respond spontaneously to whatever the children are interested in right now.',
       items: [
-        { time: '07:00', title: 'Arrival & breakfast', text: 'A soft start with open breakfast and time to settle in.', accent: 'sun' },
-        { time: '09:00', title: 'Morning circle', text: 'Songs, story round, plan for the day — every voice heard.', accent: 'red' },
-        { time: '09:30', title: 'Learning activities', text: 'Project work, free play, garden time — indoors and out.', accent: 'grass' },
-        { time: '11:45', title: 'Lunch', text: 'Freshly cooked, in a family atmosphere, with language impulses at the table.', accent: 'blush' },
-        { time: '12:30', title: 'Rest time', text: 'Nap for the youngest, quiet activities for the older children.', accent: 'lavender' },
-        { time: '14:30', title: 'Snack & project time', text: 'Pre-school group, music, workshops — older kids dive deeper.', accent: 'sun' },
-        { time: '16:00 – 17:00', title: 'Pick-up', text: 'In the garden, with short door-and-hinge chats with you.', accent: 'red' },
+        { time: '7:00 AM', title: 'Arrival & breakfast', text: 'A soft start with open breakfast and time to settle in.', accent: 'sun' },
+        { time: '9:00 AM', title: 'Morning circle', text: 'Songs, story round, plan for the day — every voice heard.', accent: 'red' },
+        { time: '9:30 AM', title: 'Learning activities', text: 'Project work, free play, garden time — indoors and out.', accent: 'grass' },
+        { time: '11:45 AM', title: 'Lunch', text: 'Freshly cooked, in a family atmosphere, with language impulses at the table.', accent: 'blush' },
+        { time: '12:30 PM', title: 'Rest time', text: 'Nap for the youngest, quiet activities for the older children.', accent: 'lavender' },
+        { time: '2:30 PM', title: 'Snack & project time', text: 'Pre-school group, music, workshops — older kids dive deeper.', accent: 'sun' },
+        { time: '4:00 – 5:00 PM', title: 'Pick-up', text: 'In the garden, with short door-and-hinge chats with you.', accent: 'red' },
       ],
     },
     gallery: {

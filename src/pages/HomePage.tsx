@@ -17,7 +17,7 @@ export function HomePage() {
   return (
     <>
       <Hero />
-      <About linkTo={ROUTES.about} />
+      <About linkTo={ROUTES.about} className="!pt-2 sm:!pt-3 md:!pt-4 lg:!pt-6" />
       <WhyUs />
       <Pedagogy linkTo={ROUTES.pedagogy} />
       <DailySchedule />
