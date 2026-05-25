@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 import {
   Award,
   HandHeart,
@@ -9,21 +9,33 @@ import {
   Star,
   TreePine,
   UsersRound,
-} from 'lucide-react';
-import { PageHero } from '../components/PageHero';
-import { SectionWrapper, itemVariants } from '../components/SectionWrapper';
-import { WaveDivider } from '../components/WaveDivider';
-import { About } from '../sections/About';
-import { useLanguage } from '../i18n/LanguageContext';
-import { SEEDS } from '../lib/images';
+} from "lucide-react";
+import { PageHero } from "../components/PageHero";
+import { SectionWrapper, itemVariants } from "../components/SectionWrapper";
+import { WaveDivider } from "../components/WaveDivider";
+import { About } from "../sections/About";
+import { useLanguage } from "../i18n/LanguageContext";
+import { SEEDS } from "../lib/images";
+import valueSolidarity from "../assets/value-1-solidarity.jpg";
+import valueTolerance from "../assets/value-2-tolerance.webp";
+import valueJustice from "../assets/value-3-justice.jpeg";
+import valueFreedom from "../assets/value-4-freedom.jpg";
+
+// Order matches `p.about.values.items` (Solidarity, Tolerance, Justice, Freedom).
+const VALUE_IMAGES = [
+  valueSolidarity,
+  valueTolerance,
+  valueJustice,
+  valueFreedom,
+];
 
 const VALUE_ICONS = [UsersRound, Heart, Scale, Sparkles];
 const TIMELINE_ICONS = [Sparkles, TreePine, Award, HandHeart, Salad, Star];
 const VALUE_ACCENT = [
-  'bg-awo-red text-white',
-  'bg-awo-red text-white',
-  'bg-awo-red-dark text-white',
-  'bg-awo-red text-white',
+  "bg-awo-red text-white",
+  "bg-awo-red text-white",
+  "bg-awo-red-dark text-white",
+  "bg-awo-red text-white",
 ];
 
 export function AboutPage() {
@@ -97,17 +109,28 @@ export function AboutPage() {
               <motion.article
                 key={v.title}
                 variants={itemVariants}
-                className="flex flex-col rounded-3xl bg-white p-7 shadow-card ring-1 ring-awo-grey/5 transition hover:-translate-y-1 hover:shadow-card-hover"
+                className="group relative flex flex-col overflow-hidden rounded-3xl bg-white shadow-card ring-1 ring-awo-grey/5 transition duration-300 hover:-translate-y-1 hover:shadow-card-hover"
               >
-                <span
-                  className={`inline-flex h-14 w-14 items-center justify-center rounded-2xl shadow-card-hover ${VALUE_ACCENT[i % VALUE_ACCENT.length]}`}
-                >
-                  <Icon className="h-7 w-7" />
-                </span>
-                <h3 className="mt-5 text-lg font-bold text-awo-ink">{v.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-awo-grey-light">
-                  {v.text}
-                </p>
+                <div className="relative aspect-[16/10] w-full overflow-hidden">
+                  <img
+                    src={VALUE_IMAGES[i] ?? VALUE_IMAGES[0]}
+                    alt={v.title}
+                    loading="lazy"
+                    className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-black/5 to-transparent" />
+                  {/* <span
+                    className={`absolute -bottom-5 left-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl shadow-card ring-1 ring-white sm:h-14 sm:w-14 ${VALUE_ACCENT[i % VALUE_ACCENT.length]}`}
+                  >
+                    <Icon className="h-6 w-6 sm:h-7 sm:w-7" />
+                  </span> */}
+                </div>
+                <div className="flex flex-col p-5 pt-8 sm:p-7 sm:pt-10">
+                  <h3 className="text-lg font-bold text-awo-ink">{v.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-awo-grey-light">
+                    {v.text}
+                  </p>
+                </div>
               </motion.article>
             );
           })}
@@ -146,7 +169,7 @@ export function AboutPage() {
                   >
                     <span
                       className={`absolute left-6 top-7 z-10 -translate-x-1/2 md:left-1/2 ${
-                        isLast ? '' : ''
+                        isLast ? "" : ""
                       }`}
                     >
                       <span className="relative flex h-12 w-12 items-center justify-center">
@@ -161,34 +184,40 @@ export function AboutPage() {
 
                     <div
                       className={`pl-16 md:pl-0 ${
-                        sideRight ? 'md:col-start-2 md:pl-12' : 'md:pr-12'
+                        sideRight ? "md:col-start-2 md:pl-12" : "md:pr-12"
                       }`}
                     >
                       <motion.div
                         whileHover={{ y: -4 }}
-                        transition={{ type: 'spring', stiffness: 280, damping: 22 }}
+                        transition={{
+                          type: "spring",
+                          stiffness: 280,
+                          damping: 22,
+                        }}
                         className={`group relative overflow-hidden rounded-3xl bg-white p-6 shadow-card ring-1 ring-awo-grey/10 transition hover:shadow-card-hover sm:p-7 ${
-                          sideRight ? 'md:text-left' : 'md:text-right'
+                          sideRight ? "md:text-left" : "md:text-right"
                         }`}
                       >
                         <span
                           aria-hidden="true"
                           className={`pointer-events-none absolute -top-10 h-28 w-28 rounded-full bg-awo-red/10 blur-2xl ${
-                            sideRight ? '-left-10' : '-right-10'
+                            sideRight ? "-left-10" : "-right-10"
                           }`}
                         />
                         <div
                           className={`flex items-center gap-3 ${
-                            sideRight ? '' : 'md:flex-row-reverse'
+                            sideRight ? "" : "md:flex-row-reverse"
                           }`}
                         >
                           <span className="inline-flex items-center gap-1.5 rounded-full bg-awo-red-soft px-3 py-1 text-[11px] font-bold uppercase tracking-[0.18em] text-awo-red-dark ring-1 ring-awo-red/15">
-                            {isLast ? 'Today' : `Chapter ${String(i + 1).padStart(2, '0')}`}
+                            {isLast
+                              ? "Today"
+                              : `Chapter ${String(i + 1).padStart(2, "0")}`}
                           </span>
                         </div>
                         <div
                           className={`mt-3 font-display text-5xl font-extrabold leading-none gradient-text-sun sm:text-6xl ${
-                            sideRight ? '' : 'md:text-right'
+                            sideRight ? "" : "md:text-right"
                           }`}
                         >
                           {item.year}

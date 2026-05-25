@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 import {
   BookOpen,
   HeartHandshake,
@@ -7,23 +7,39 @@ import {
   Salad,
   Sprout,
   Vote,
-} from 'lucide-react';
-import { PageHero } from '../components/PageHero';
-import { SectionWrapper, itemVariants } from '../components/SectionWrapper';
-import { WaveDivider } from '../components/WaveDivider';
-import { Pedagogy } from '../sections/Pedagogy';
-import { DailySchedule } from '../sections/DailySchedule';
-import { useLanguage } from '../i18n/LanguageContext';
-import { SEEDS } from '../lib/images';
+} from "lucide-react";
+import { PageHero } from "../components/PageHero";
+import { SectionWrapper, itemVariants } from "../components/SectionWrapper";
+import { WaveDivider } from "../components/WaveDivider";
+import { Pedagogy } from "../sections/Pedagogy";
+import { DailySchedule } from "../sections/DailySchedule";
+import { useLanguage } from "../i18n/LanguageContext";
+import { SEEDS } from "../lib/images";
+import pillarBonding from "../assets/pillar-1-bonding.jpg";
+import pillarLanguage from "../assets/pillar-2-language.jpg";
+import pillarMovement from "../assets/pillar-3-movement.webp";
+import pillarArt from "../assets/pillar-4-art.png";
+import pillarParticipation from "../assets/pillar-5-participation.jpg";
+import pillarHealth from "../assets/pillar-6-health.jpg";
+
+// Order matches `p.pedagogy.pillars`.
+const PILLAR_IMAGES = [
+  pillarBonding,
+  pillarLanguage,
+  pillarMovement,
+  pillarArt,
+  pillarParticipation,
+  pillarHealth,
+];
 
 const PILLAR_ICONS = [HeartHandshake, BookOpen, Sprout, Music, Vote, Salad];
 const PILLAR_TONE = [
-  'bg-awo-red/10 text-awo-red',
-  'bg-awo-red-soft text-awo-red-dark',
-  'bg-awo-red-soft text-awo-red-dark',
-  'bg-awo-red-soft text-awo-red',
-  'bg-awo-cream-dark text-awo-red-dark',
-  'bg-awo-red-soft text-awo-red',
+  "bg-awo-red/10 text-awo-red",
+  "bg-awo-red-soft text-awo-red-dark",
+  "bg-awo-red-soft text-awo-red-dark",
+  "bg-awo-red-soft text-awo-red",
+  "bg-awo-cream-dark text-awo-red-dark",
+  "bg-awo-red-soft text-awo-red",
 ];
 
 export function PedagogyPage() {
@@ -55,17 +71,30 @@ export function PedagogyPage() {
               <motion.article
                 key={pillar.title}
                 variants={itemVariants}
-                className="flex flex-col rounded-3xl bg-white p-7 shadow-card ring-1 ring-awo-grey/5 transition hover:-translate-y-1 hover:shadow-card-hover"
+                className="group relative flex flex-col overflow-hidden rounded-3xl bg-white shadow-card ring-1 ring-awo-grey/5 transition duration-300 hover:-translate-y-1 hover:shadow-card-hover"
               >
-                <span
-                  className={`inline-flex h-14 w-14 items-center justify-center rounded-2xl ring-1 ring-current/10 ${PILLAR_TONE[i % PILLAR_TONE.length]}`}
-                >
-                  <Icon className="h-7 w-7" />
-                </span>
-                <h3 className="mt-5 text-lg font-bold text-awo-ink">{pillar.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-awo-grey-light">
-                  {pillar.text}
-                </p>
+                <div className="relative aspect-[16/10] w-full overflow-hidden">
+                  <img
+                    src={PILLAR_IMAGES[i] ?? PILLAR_IMAGES[0]}
+                    alt={pillar.title}
+                    loading="lazy"
+                    className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-black/5 to-transparent" />
+                  {/* <span
+                    className={`absolute -bottom-5 left-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl shadow-card ring-1 ring-white sm:h-14 sm:w-14 ${PILLAR_TONE[i % PILLAR_TONE.length]}`}
+                  >
+                    <Icon className="h-6 w-6 sm:h-7 sm:w-7" />
+                  </span> */}
+                </div>
+                <div className="flex flex-col p-5 pt-8 sm:p-7 sm:pt-10">
+                  <h3 className="text-lg font-bold text-awo-ink">
+                    {pillar.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-awo-grey-light">
+                    {pillar.text}
+                  </p>
+                </div>
               </motion.article>
             );
           })}
