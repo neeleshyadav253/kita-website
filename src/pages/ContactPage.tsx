@@ -12,7 +12,7 @@ import {
 import { PageHero } from '../components/PageHero';
 import { SectionWrapper, itemVariants } from '../components/SectionWrapper';
 import { useLanguage } from '../i18n/LanguageContext';
-import { SEEDS } from '../lib/images';
+import pageHeroImage from '../assets/pagehero-contact.jpg';
 
 export function ContactPage() {
   const { t, p } = useLanguage();
@@ -23,7 +23,7 @@ export function ContactPage() {
         eyebrow={p.contact.eyebrow}
         title={p.contact.title}
         description={p.contact.intro}
-        imageSeed={SEEDS.contactHero}
+        image={pageHeroImage}
         crumbs={[{ label: t.nav.contact }]}
       />
 

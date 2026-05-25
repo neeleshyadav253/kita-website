@@ -14,8 +14,8 @@ import { WaveDivider } from "../components/WaveDivider";
 import { Pedagogy } from "../sections/Pedagogy";
 import { DailySchedule } from "../sections/DailySchedule";
 import { useLanguage } from "../i18n/LanguageContext";
-import { SEEDS } from "../lib/images";
 import pillarBonding from "../assets/pillar-1-bonding.jpg";
+import pageHeroImage from "../assets/pagehero-pedagogy.webp";
 import pillarLanguage from "../assets/pillar-2-language.jpg";
 import pillarMovement from "../assets/pillar-3-movement.webp";
 import pillarArt from "../assets/pillar-4-art.png";
@@ -51,7 +51,7 @@ export function PedagogyPage() {
         eyebrow={t.pedagogy.eyebrow}
         title={t.pedagogy.title}
         description={p.pedagogy.intro}
-        imageSeed={SEEDS.pedagogyHero}
+        image={pageHeroImage}
         crumbs={[{ label: t.nav.pedagogy }]}
       />
 

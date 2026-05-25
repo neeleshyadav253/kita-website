@@ -13,7 +13,7 @@ import { SectionWrapper, itemVariants } from '../components/SectionWrapper';
 import { WaveDivider } from '../components/WaveDivider';
 import { Enrollment } from '../sections/Enrollment';
 import { useLanguage } from '../i18n/LanguageContext';
-import { SEEDS } from '../lib/images';
+import pageHeroImage from '../assets/pagehero-enrollment.jpg';
 
 const FEE_ICONS = [Euro, Utensils, Sparkles];
 
@@ -26,7 +26,7 @@ export function EnrollmentPage() {
         eyebrow={t.enrollment.eyebrow}
         title={t.enrollment.title}
         description={p.enrollment.fullIntro}
-        imageSeed={SEEDS.enrollHero}
+        image={pageHeroImage}
         crumbs={[{ label: t.nav.enrollment }]}
       />
 

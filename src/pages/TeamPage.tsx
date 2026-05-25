@@ -5,7 +5,8 @@ import { SectionWrapper, itemVariants } from '../components/SectionWrapper';
 import { WaveDivider } from '../components/WaveDivider';
 import { Team } from '../sections/Team';
 import { useLanguage } from '../i18n/LanguageContext';
-import { img, SEEDS } from '../lib/images';
+import { img } from '../lib/images';
+import pageHeroImage from '../assets/pagehero-team.avif';
 
 const BIO_AVATARS = [12, 5, 26, 60];
 
@@ -18,7 +19,7 @@ export function TeamPage() {
         eyebrow={t.team.eyebrow}
         title={t.team.title}
         description={p.team.intro}
-        imageSeed={SEEDS.teamHero}
+        image={pageHeroImage}
         crumbs={[{ label: t.nav.team }]}
       />
 

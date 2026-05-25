@@ -2,7 +2,7 @@ import { PageHero } from '../components/PageHero';
 import { Groups } from '../sections/Groups';
 import { Pedagogy } from '../sections/Pedagogy';
 import { useLanguage } from '../i18n/LanguageContext';
-import { SEEDS } from '../lib/images';
+import pageHeroImage from '../assets/pagehero-groups.jpg';
 
 export function GroupsPage() {
   const { t } = useLanguage();
@@ -13,7 +13,7 @@ export function GroupsPage() {
         eyebrow={t.groups.eyebrow}
         title={t.groups.title}
         description={t.groups.description}
-        imageSeed={SEEDS.groupsHero}
+        image={pageHeroImage}
         crumbs={[{ label: t.nav.groups }]}
       />
       <Groups linkPerCard />

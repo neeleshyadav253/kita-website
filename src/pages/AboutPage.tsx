@@ -15,11 +15,11 @@ import { SectionWrapper, itemVariants } from "../components/SectionWrapper";
 import { WaveDivider } from "../components/WaveDivider";
 import { About } from "../sections/About";
 import { useLanguage } from "../i18n/LanguageContext";
-import { SEEDS } from "../lib/images";
 import valueSolidarity from "../assets/value-1-solidarity.jpg";
 import valueTolerance from "../assets/value-2-tolerance.webp";
 import valueJustice from "../assets/value-3-justice.jpeg";
 import valueFreedom from "../assets/value-4-freedom.jpg";
+import aboutHeroImage from "../assets/about-heading.jpeg";
 
 // Order matches `p.about.values.items` (Solidarity, Tolerance, Justice, Freedom).
 const VALUE_IMAGES = [
@@ -47,7 +47,7 @@ export function AboutPage() {
         eyebrow={t.about.eyebrow}
         title={t.about.title}
         description={t.about.description}
-        imageSeed={SEEDS.aboutHero}
+        image={aboutHeroImage}
         crumbs={[{ label: t.nav.about }]}
       />
 

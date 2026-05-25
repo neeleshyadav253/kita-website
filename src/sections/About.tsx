@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { useLanguage } from '../i18n/LanguageContext';
 import { SectionWrapper, itemVariants } from '../components/SectionWrapper';
 import { BUILDING } from '../lib/images';
+import aboutHeadingImage from '../assets/about-heading.jpeg';
 
 const ICONS = [Clock, Users, MapPin];
 const ACCENT = [
@@ -12,25 +13,63 @@ const ACCENT = [
   'bg-awo-red-soft text-awo-red',
 ];
 
-export function About({ linkTo, className = '' }: { linkTo?: string; className?: string }) {
+export function About({
+  linkTo,
+  className = '',
+  withHeadingImage = false,
+}: {
+  linkTo?: string;
+  className?: string;
+  withHeadingImage?: boolean;
+}) {
   const { t } = useLanguage();
 
   return (
     <SectionWrapper id="about" className={`bg-white ${className}`}>
-      <div className="mx-auto max-w-3xl text-center">
-        <motion.span variants={itemVariants} className="section-eyebrow">
-          {t.about.eyebrow}
-        </motion.span>
-        <motion.h2 variants={itemVariants} className="section-title mt-4">
-          {t.about.title}
-        </motion.h2>
-        <motion.p
-          variants={itemVariants}
-          className="mt-5 text-base leading-relaxed text-awo-grey-light md:text-lg"
-        >
-          {t.about.description}
-        </motion.p>
-      </div>
+      {withHeadingImage ? (
+        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+          <div className="text-center lg:text-left">
+            <motion.span variants={itemVariants} className="section-eyebrow">
+              {t.about.eyebrow}
+            </motion.span>
+            <motion.h2 variants={itemVariants} className="section-title mt-4">
+              {t.about.title}
+            </motion.h2>
+            <motion.p
+              variants={itemVariants}
+              className="mt-5 text-base leading-relaxed text-awo-grey-light md:text-lg"
+            >
+              {t.about.description}
+            </motion.p>
+          </div>
+          <motion.figure
+            variants={itemVariants}
+            className="relative overflow-hidden rounded-3xl shadow-card ring-1 ring-awo-grey/10"
+          >
+            <img
+              src={aboutHeadingImage}
+              alt={t.about.title}
+              loading="lazy"
+              className="aspect-[4/3] w-full object-cover"
+            />
+          </motion.figure>
+        </div>
+      ) : (
+        <div className="mx-auto max-w-3xl text-center">
+          <motion.span variants={itemVariants} className="section-eyebrow">
+            {t.about.eyebrow}
+          </motion.span>
+          <motion.h2 variants={itemVariants} className="section-title mt-4">
+            {t.about.title}
+          </motion.h2>
+          <motion.p
+            variants={itemVariants}
+            className="mt-5 text-base leading-relaxed text-awo-grey-light md:text-lg"
+          >
+            {t.about.description}
+          </motion.p>
+        </div>
+      )}
 
       <div className="mt-12 grid gap-4 sm:gap-5 md:grid-cols-3">
         <motion.figure
