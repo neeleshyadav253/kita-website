@@ -195,7 +195,7 @@ export const translations = {
     },
     pedagogy: {
       eyebrow: 'Unsere Pädagogik',
-      title: 'Lernen, das sich wie Spielen anfühlt.',
+      title: 'Innovative Lehrmethoden.',
       description:
         'Unser pädagogisches Handeln orientiert sich an den Bedürfnissen, Interessen und Lebenswelten der Kinder — basierend auf dem Berliner Bildungsprogramm.',
       cards: [
@@ -245,7 +245,7 @@ export const translations = {
     },
     team: {
       eyebrow: 'Unser Team',
-      title: 'Erzieher:innen mit Herz und Erfahrung.',
+      title: 'Junge Köpfe für eine bessere Zukunft.',
       description:
         'Unser engagiertes, multiprofessionelles Team begleitet Ihr Kind mit Herz, Erfahrung und stetiger Weiterbildung. Alle Fachkräfte mit erweitertem Führungszeugnis.',
       members: [
@@ -554,7 +554,7 @@ export const translations = {
     },
     pedagogy: {
       eyebrow: 'Our pedagogy',
-      title: 'Learning that feels like play.',
+      title: 'Innovative Approaches to Teaching.',
       description:
         'Our pedagogical work is oriented to the needs, interests and life worlds of the children — based on the Berlin Education Program.',
       cards: [
@@ -604,7 +604,7 @@ export const translations = {
     },
     team: {
       eyebrow: 'Our team',
-      title: 'Educators with heart and experience.',
+      title: 'Nurturing young minds for a brighter future.',
       description:
         'Our dedicated, multi-professional team supports your child with heart, experience and continuous training. All staff hold an extended certificate of good conduct.',
       members: [

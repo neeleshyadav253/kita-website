@@ -188,10 +188,10 @@ export function Footer() {
       <div className="border-t border-awo-grey/10">
         <div className="mx-auto flex w-full max-w-7xl 2xl:max-w-[88rem] 3xl:max-w-[100rem] flex-col items-center justify-between gap-2 px-4 py-5 text-xs text-awo-grey-light sm:px-6 md:flex-row md:px-10">
           <span className="text-center md:text-left">
-            © {year} {t.brand.name}. {t.footer.rights}
+            © {year} EC Fabric Mind. {t.footer.rights}
           </span>
           <span className="inline-flex items-center gap-1.5">
-            Made with <Heart className="h-3 w-3 fill-current text-awo-red" /> · AWO Berlin
+            Made with <Heart className="h-3 w-3 fill-current text-awo-red" /> · EC Fabric Mind
           </span>
         </div>
       </div>
