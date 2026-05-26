@@ -5,13 +5,7 @@ import { PageHero } from '../components/PageHero';
 import { SectionWrapper, itemVariants } from '../components/SectionWrapper';
 import { NEWS_SLUGS, ROUTES, type NewsSlug } from '../routes';
 import { useLanguage } from '../i18n/LanguageContext';
-import { img, SEEDS } from '../lib/images';
-
-const SEED_MAP: Record<NewsSlug, string> = {
-  sommerfest: SEEDS.newsSommerfest,
-  naschgarten: SEEDS.newsNaschgarten,
-  'plaetze-august': SEEDS.newsPlaetze,
-};
+import { NEWS_LOCAL } from '../lib/images';
 
 export function NewsDetailPage() {
   const { slug } = useParams<{ slug: string }>();
@@ -23,7 +17,7 @@ export function NewsDetailPage() {
 
   const newsSlug = slug as NewsSlug;
   const detail = p.news[newsSlug];
-  const seed = SEED_MAP[newsSlug];
+  const image = NEWS_LOCAL[newsSlug];
 
   return (
     <>
@@ -31,7 +25,7 @@ export function NewsDetailPage() {
         eyebrow={detail.tag}
         title={detail.title}
         description={detail.lead}
-        imageSeed={seed}
+        image={image}
         crumbs={[
           { label: t.news.eyebrow, to: ROUTES.news },
           { label: detail.title },
@@ -57,7 +51,7 @@ export function NewsDetailPage() {
 
           <motion.img
             variants={itemVariants}
-            src={img.newsBody(seed)}
+            src={image}
             alt={detail.title}
             className="mt-8 h-64 w-full rounded-3xl object-cover shadow-card ring-1 ring-awo-grey/5 sm:h-80 md:h-96"
             loading="lazy"

@@ -57,7 +57,7 @@ type PageBundle = {
   };
   enrollment: {
     fullIntro: string;
-    documents: { title: string; items: string[] };
+    documents: { title: string; intro: string; items: string[] };
     faq: { question: string; answer: string }[];
     feesTitle: string;
     feesIntro: string;
@@ -238,9 +238,9 @@ export const pages: Record<Lang, PageBundle> = {
       },
       bios: [
         {
-          name: 'Anna Schneider',
-          quote: 'Eine Kita ist erst dann gut, wenn sich Kinder, Eltern und Team gleichermaßen wohlfühlen.',
-          about: 'Anna leitet die Kita seit 2011. Davor war sie 10 Jahre als Erzieherin tätig. Schwerpunkt: Organisationsentwicklung und Kinderschutz.',
+          name: 'Anna Töpfer',
+          quote: 'Ein guter Kindergarten ist ein Ort der Begegnung — für Kinder, Eltern und das gesamte Stadtteil­leben.',
+          about: 'Anna leitet das Thüringer Eltern-Kind-Zentrum (ThEKiZ) im Haus Sonnenschein. Schwerpunkt: Begegnungsarbeit mit Familien, Beratung bei Alltags- und Lebensfragen und die enge Vernetzung mit dem Stadtteil.',
         },
         {
           name: 'Markus Weber',
@@ -272,12 +272,15 @@ export const pages: Record<Lang, PageBundle> = {
         'Sie überlegen, Ihr Kind bei uns anzumelden? Wir freuen uns sehr! Hier finden Sie alle Informationen, die Sie für eine Anmeldung benötigen.',
       documents: {
         title: 'Was Sie für die Anmeldung benötigen',
+        intro:
+          'Bringen Sie diese Unterlagen zum Anmeldegespräch mit — gerne als Original, Kopie oder digitaler Scan. Fehlen Dokumente, melden Sie sich einfach: Wir finden gemeinsam eine Lösung.',
         items: [
           'Ausgefülltes Anmeldeformular',
           'Geburtsurkunde des Kindes',
           'Personalausweis der Sorgeberechtigten',
-          'Kita-Gutschein (Berliner Modell)',
+          'Bescheid des Jugendamtes Eisenach (falls vorhanden)',
           'Impfnachweis (Masernschutz) gemäß § 20 IfSG',
+          'Bei Bedarf: Nachweis Berufstätigkeit / Studium',
         ],
       },
       faq: [
@@ -522,9 +525,9 @@ export const pages: Record<Lang, PageBundle> = {
       },
       bios: [
         {
-          name: 'Anna Schneider',
-          quote: 'A nursery is only good when children, parents and team all feel at home.',
-          about: 'Anna has been leading the nursery since 2011. Before that, 10 years as an educator. Focus: organizational development and child protection.',
+          name: 'Anna Töpfer',
+          quote: 'A good kindergarten is a place of encounter — for children, parents and the whole neighbourhood.',
+          about: 'Anna leads the Thüringer Eltern-Kind-Zentrum (ThEKiZ) at Haus Sonnenschein. Focus: encounter work with families, counseling on everyday and life questions, and close ties with the neighbourhood.',
         },
         {
           name: 'Markus Weber',
@@ -556,12 +559,15 @@ export const pages: Record<Lang, PageBundle> = {
         'Are you thinking about enrolling your child with us? We would love that! Here you will find all the information you need for enrollment.',
       documents: {
         title: 'What you need for enrollment',
+        intro:
+          'Please bring these documents to the enrollment interview — original, copy or digital scan all work. If something is missing, just get in touch and we will find a solution together.',
         items: [
           'Completed enrollment form',
           'Birth certificate of the child',
           'ID of the legal guardians',
-          'Nursery voucher (Berlin Model)',
+          'Notice from Jugendamt Eisenach (if available)',
           'Proof of measles vaccination according to § 20 IfSG',
+          'If needed: proof of employment / studies',
         ],
       },
       faq: [

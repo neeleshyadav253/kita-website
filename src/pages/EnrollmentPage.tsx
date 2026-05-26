@@ -10,7 +10,6 @@ import {
 } from 'lucide-react';
 import { PageHero } from '../components/PageHero';
 import { SectionWrapper, itemVariants } from '../components/SectionWrapper';
-import { WaveDivider } from '../components/WaveDivider';
 import { Enrollment } from '../sections/Enrollment';
 import { useLanguage } from '../i18n/LanguageContext';
 import pageHeroImage from '../assets/pagehero-enrollment.jpg';
@@ -32,7 +31,6 @@ export function EnrollmentPage() {
 
       <Enrollment />
 
-      <WaveDivider fromColor="#ffffff" toColor="#FFFFFF" />
       <SectionWrapper className="bg-awo-cream">
         <div className="mx-auto max-w-3xl text-center">
           <motion.h2 variants={itemVariants} className="section-title">
@@ -70,47 +68,69 @@ export function EnrollmentPage() {
           })}
         </div>
 
-        <motion.div
-          variants={itemVariants}
-          className="mx-auto mt-12 max-w-3xl"
-        >
-          <h3 className="font-display text-xl font-bold text-awo-ink">
+        <div className="mt-20 flex flex-col items-center text-center">
+          <motion.span
+            variants={itemVariants}
+            className="inline-flex items-center gap-2 rounded-full bg-awo-red-soft px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-awo-red-dark"
+          >
+            <CalendarDays className="h-3.5 w-3.5" />
+            Zeitplan
+          </motion.span>
+          <motion.h3
+            variants={itemVariants}
+            className="mt-4 font-display text-2xl font-extrabold tracking-tight text-awo-ink md:text-3xl lg:text-4xl"
+          >
             {p.enrollment.deadlinesTitle}
-          </h3>
-          <ol className="mt-5 grid gap-3 md:grid-cols-3">
-            {p.enrollment.deadlines.map((d) => (
-              <li
-                key={d.title}
-                className="rounded-2xl bg-white p-5 shadow-soft ring-1 ring-awo-grey/5"
-              >
-                <div className="inline-flex items-center gap-1.5 rounded-full bg-awo-red/10 px-3 py-1 text-[11px] font-bold uppercase tracking-widest text-awo-red">
-                  <CalendarDays className="h-3 w-3" />
-                  {d.date}
-                </div>
-                <div className="mt-2 text-base font-bold text-awo-ink">
-                  {d.title}
-                </div>
-                <p className="mt-1 text-xs leading-relaxed text-awo-grey-light">
-                  {d.text}
-                </p>
-              </li>
-            ))}
-          </ol>
-        </motion.div>
+          </motion.h3>
+        </div>
+        <ol className="mt-10 grid gap-5 md:grid-cols-3 md:gap-6">
+          {p.enrollment.deadlines.map((d, i) => (
+            <motion.li
+              key={d.title}
+              variants={itemVariants}
+              className="relative flex flex-col rounded-3xl bg-white p-7 shadow-card ring-1 ring-awo-grey/10 transition hover:-translate-y-1 hover:shadow-card-hover"
+            >
+              <span className="absolute right-5 top-5 font-display text-3xl font-extrabold text-awo-red-soft">
+                {String(i + 1).padStart(2, '0')}
+              </span>
+              <div className="inline-flex w-fit items-center gap-1.5 rounded-full bg-awo-red px-3 py-1 text-[11px] font-bold uppercase tracking-widest text-white">
+                <CalendarDays className="h-3 w-3" />
+                {d.date}
+              </div>
+              <div className="mt-4 text-lg font-bold text-awo-ink">{d.title}</div>
+              <p className="mt-2 text-sm leading-relaxed text-awo-grey-light">
+                {d.text}
+              </p>
+            </motion.li>
+          ))}
+        </ol>
       </SectionWrapper>
-      <WaveDivider fromColor="#FFFFFF" toColor="#ffffff" />
-
       <SectionWrapper className="bg-white">
-        <div className="mx-auto max-w-3xl">
-          <motion.h2 variants={itemVariants} className="section-title">
-            {p.enrollment.documents.title}
-          </motion.h2>
-          <ul className="mt-8 grid gap-3 sm:grid-cols-2">
+        <div className="grid gap-10 lg:grid-cols-[1fr,1.4fr] lg:gap-14">
+          <div>
+            <motion.span
+              variants={itemVariants}
+              className="inline-flex items-center gap-2 rounded-full bg-awo-red-soft px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-awo-red-dark"
+            >
+              <FileCheck2 className="h-3.5 w-3.5" />
+              Checkliste
+            </motion.span>
+            <motion.h2 variants={itemVariants} className="section-title mt-4">
+              {p.enrollment.documents.title}
+            </motion.h2>
+            <motion.p
+              variants={itemVariants}
+              className="mt-5 text-base leading-relaxed text-awo-grey-light md:text-lg"
+            >
+              {p.enrollment.documents.intro}
+            </motion.p>
+          </div>
+          <ul className="grid gap-3 sm:grid-cols-2">
             {p.enrollment.documents.items.map((item) => (
               <motion.li
                 key={item}
                 variants={itemVariants}
-                className="flex items-start gap-3 rounded-2xl bg-awo-cream p-4 ring-1 ring-awo-grey/5"
+                className="flex items-start gap-3 rounded-2xl bg-awo-cream p-4 ring-1 ring-awo-grey/10"
               >
                 <FileCheck2 className="mt-0.5 h-5 w-5 shrink-0 text-awo-red" />
                 <span className="text-sm font-medium text-awo-ink">{item}</span>
@@ -120,7 +140,6 @@ export function EnrollmentPage() {
         </div>
       </SectionWrapper>
 
-      <WaveDivider fromColor="#ffffff" toColor="#FFFFFF" />
       <SectionWrapper className="bg-awo-cream">
         <div className="mx-auto max-w-3xl">
           <motion.h2 variants={itemVariants} className="section-title">
@@ -135,7 +154,6 @@ export function EnrollmentPage() {
           </div>
         </div>
       </SectionWrapper>
-      <WaveDivider fromColor="#FFFFFF" toColor="#ffffff" />
     </>
   );
 }

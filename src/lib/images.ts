@@ -113,3 +113,13 @@ export const SEEDS = {
   whyUs: 'kita-whyus-warm-13',
   testimonialQuote: 'kita-quote-soft-19',
 };
+
+import newsSommerfest from '../assets/news-sommerfest.avif';
+import newsNaschgarten from '../assets/news-naschgarten.jpg';
+import newsPlaetze from '../assets/news-plaetze.avif';
+
+export const NEWS_LOCAL: Record<'sommerfest' | 'naschgarten' | 'plaetze-august', string> = {
+  sommerfest: newsSommerfest,
+  naschgarten: newsNaschgarten,
+  'plaetze-august': newsPlaetze,
+};

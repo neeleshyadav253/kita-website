@@ -2,6 +2,9 @@ import { Hero } from '../sections/Hero';
 import { About } from '../sections/About';
 import { WhyUs } from '../sections/WhyUs';
 import { LifeAtKita } from '../sections/LifeAtKita';
+import { ThekizSection } from '../sections/ThekizSection';
+import { AwoValues } from '../sections/AwoValues';
+import { Careers } from '../sections/Careers';
 import { Pedagogy } from '../sections/Pedagogy';
 import { DailySchedule } from '../sections/DailySchedule';
 import { Groups } from '../sections/Groups';
@@ -19,7 +22,9 @@ export function HomePage() {
     <>
       <Hero />
       <About linkTo={ROUTES.about} className="!pt-2 sm:!pt-3 md:!pt-4 lg:!pt-6" />
+      <AwoValues />
       <WhyUs />
+      <ThekizSection />
       <LifeAtKita />
       <Pedagogy linkTo={ROUTES.pedagogy} withWaves={false} />
       <DailySchedule />
@@ -30,6 +35,7 @@ export function HomePage() {
       <Partners />
       <Enrollment linkTo={ROUTES.enrollment} showForm={false} />
       <News linkTo={ROUTES.news} bottomWaveTo="#ffffff" />
+      <Careers />
       <CtaBanner />
     </>
   );

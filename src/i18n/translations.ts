@@ -3,8 +3,8 @@ export type Lang = 'de' | 'en';
 export const translations = {
   de: {
     brand: {
-      name: 'AWO Kita Sonnenschein',
-      tagline: 'Arbeiterwohlfahrt · Eisenach',
+      name: 'AWO Kindergarten Haus Sonnenschein',
+      tagline: 'Thüringer Eltern-Kind-Zentrum · Eisenach',
     },
     common: {
       learnMore: 'Mehr erfahren',
@@ -44,7 +44,7 @@ export const translations = {
       },
       microQuoteAuthor: 'Familie Becker',
       microQuote: '„Unsere Tochter rennt jeden Morgen in die Kita.“',
-      trustLine: 'Träger: AWO Kreisverband Eisenach · Anerkannt nach SGB VIII',
+      trustLine: 'Träger: AWO Landesverband Thüringen · ThEKiZ · Anerkannt nach SGB VIII',
       foodLabel: 'Mittagessen',
       foodValue: '90 % Bio · frisch',
       ratingLabel: 'Eltern-Bewertung',
@@ -52,9 +52,9 @@ export const translations = {
     },
     about: {
       eyebrow: 'Über uns',
-      title: 'Eine Kita mit Herz und Haltung.',
+      title: 'Ein Ort der Begegnung — für Kinder und Familien.',
       description:
-        'Unsere Kita ist eine Einrichtung der Arbeiterwohlfahrt (AWO). Seit über 100 Jahren steht die AWO für soziale Gerechtigkeit, Toleranz, Freiheit, Gleichheit und Solidarität — Werte, die wir täglich mit den Kindern und Familien leben.',
+        'Das AWO Haus Sonnenschein ist Kindergarten und Thüringer Eltern-Kind-Zentrum (ThEKiZ) in einem. Wir betreuen Kinder ab dem ersten Lebensjahr nach modernsten Standards und sind zugleich ein Ort der Begegnung mit Unterstützung, Begleitung und Beratung bei Alltags- und Lebensfragen. Träger ist die Arbeiterwohlfahrt — seit 1919 stehen wir für Freiheit, Gleichheit, Gerechtigkeit, Solidarität, Emanzipation und Toleranz.',
       cards: [
         {
           title: 'Öffnungszeiten',
@@ -160,6 +160,64 @@ export const translations = {
       durationLabel: '1:24 Min',
       playCta: 'Video abspielen',
     },
+    awoValues: {
+      eyebrow: 'Unsere Werte',
+      title: 'Die sechs Grundwerte der AWO.',
+      description:
+        'Seit 1919 sind die Grundwerte der Arbeiterwohlfahrt unser Kompass — in der Bildungsarbeit ebenso wie im Miteinander mit Familien und Stadtteil.',
+      items: [
+        { name: 'Freiheit', text: 'Jedes Kind darf eigene Wege gehen und Meinungen entwickeln.' },
+        { name: 'Gleichheit', text: 'Wir begegnen jedem Menschen mit gleichem Respekt — unabhängig von Herkunft, Sprache oder Religion.' },
+        { name: 'Gerechtigkeit', text: 'Wir schaffen faire Bildungschancen — von Anfang an.' },
+        { name: 'Solidarität', text: 'Wir stehen füreinander ein — als Team, als Familien, als Nachbarschaft.' },
+        { name: 'Emanzipation', text: 'Wir stärken Kinder und Familien darin, ihr Leben selbstbestimmt zu gestalten.' },
+        { name: 'Toleranz', text: 'Vielfalt ist unsere Normalität. „Anderssein" ist hier kein Thema, sondern Alltag.' },
+      ],
+    },
+    careers: {
+      eyebrow: 'Bei uns arbeiten',
+      title: 'Werden Sie Teil unseres Teams.',
+      description:
+        'Die AWO Thüringen ist mit über 13.000 Beschäftigten einer der größten sozialen Träger im Land. Bei uns in Eisenach suchen wir engagierte Menschen für die Arbeit mit Kindern und Familien.',
+      bullets: [
+        'Erzieher:innen, Heilerziehungspfleger:innen und Sozialpädagog:innen (m/w/d)',
+        'Praktikum, FSJ und Bundesfreiwilligendienst — Quereinstieg willkommen',
+        'Ausbildung über das Institut für Berufsbildung und Sozialmanagement (IBS)',
+      ],
+      primary: 'Offene Stellen ansehen',
+      primaryHref: 'https://awothueringen.de/arbeiten-bei-der-awo/stellenangebote/',
+      secondary: 'Initiativ bewerben',
+    },
+    thekiz: {
+      eyebrow: 'ThEKiZ Haus Sonnenschein',
+      title: 'Thüringer Eltern-Kind-Zentrum.',
+      description:
+        'Neben dem Kindergarten sind wir ein Ort der Begegnung. Im ThEKiZ finden Familien Unterstützung, Begleitung und Beratung bei Alltags- und Lebensfragen — offen, kostenfrei und in Eisenach gut erreichbar.',
+      offers: [
+        {
+          title: 'Begegnung',
+          text: 'Offene Eltern-Treffen, Frühstücks- und Spielgruppen für Familien aus dem Stadtteil.',
+        },
+        {
+          title: 'Beratung',
+          text: 'Vertrauliche Beratung zu Erziehung, Familie, Alltag — auf Wunsch auch in mehreren Sprachen.',
+        },
+        {
+          title: 'Begleitung',
+          text: 'Kurse, Workshops und Veranstaltungen zu Eingewöhnung, Sprache, Ernährung und kindlicher Entwicklung.',
+        },
+        {
+          title: 'Vernetzung',
+          text: 'Wir vernetzen Familien mit Hebammen, Frühförderung, Familienbildung und Behörden in Eisenach.',
+        },
+      ],
+      programs: [
+        'Bundesprogramm „Sprach-Kitas: Weil Sprache der Schlüssel zur Welt ist"',
+        'Landesprogramm „Vielfalt vor Ort begegnen — Professioneller Umgang mit Heterogenität"',
+        'Thüringer Bildungsplan bis 18 Jahre',
+      ],
+      cta: 'ThEKiZ kennenlernen',
+    },
     testimonials: {
       eyebrow: 'Stimmen von Eltern',
       title: 'Was Familien über uns sagen.',
@@ -263,7 +321,7 @@ export const translations = {
       description:
         'Unser engagiertes, multiprofessionelles Team begleitet Ihr Kind mit Herz, Erfahrung und stetiger Weiterbildung. Alle Fachkräfte mit erweitertem Führungszeugnis.',
       members: [
-        { name: 'Anna Schneider', role: 'Kita-Leitung', tag: '18 Jahre Erfahrung' },
+        { name: 'Anna Töpfer', role: 'ThEKiZ-Leitung', tag: 'Thüringer Eltern-Kind-Zentrum' },
         { name: 'Markus Weber', role: 'Stellv. Leitung', tag: 'Erzieher (B.A.)' },
         { name: 'Fatma Yilmaz', role: 'Erzieherin Krippe', tag: 'Eingewöhnungs-Profi' },
         { name: 'Jonas Becker', role: 'Erzieher Kindergarten', tag: 'Wald- & Naturpädagogik' },
@@ -352,7 +410,7 @@ export const translations = {
     },
     footer: {
       about:
-        'AWO Kita Sonnenschein — Träger ist der AWO Kreisverband Eisenach. Wir bieten Bildung, Erziehung und Betreuung für Kinder von 0 bis 6 Jahren in Eisenach.',
+        'AWO Kindergarten Haus Sonnenschein — Kindergarten und Thüringer Eltern-Kind-Zentrum (ThEKiZ). Träger ist der AWO Landesverband Thüringen. Wir begleiten Kinder ab dem ersten Lebensjahr in Eisenach.',
       contact: 'Kontakt',
       address: 'Am Amrichen Rasen 1, 99817 Eisenach',
       phone: '+49 30 1234 5678',
@@ -376,8 +434,8 @@ export const translations = {
   },
   en: {
     brand: {
-      name: 'AWO Kita Sunshine',
-      tagline: 'Workers’ Welfare · Eisenach',
+      name: 'AWO Kindergarten Haus Sonnenschein',
+      tagline: 'Thüringer Eltern-Kind-Zentrum · Eisenach',
     },
     common: {
       learnMore: 'Learn more',
@@ -417,7 +475,7 @@ export const translations = {
       },
       microQuoteAuthor: 'The Becker family',
       microQuote: '“Our daughter literally runs into the nursery every morning.”',
-      trustLine: 'Operated by AWO Kreisverband Eisenach · Recognized under SGB VIII',
+      trustLine: 'Operated by AWO Landesverband Thüringen · ThEKiZ · Recognized under SGB VIII',
       foodLabel: 'Lunch',
       foodValue: '90% organic · fresh',
       ratingLabel: 'Parent rating',
@@ -425,9 +483,9 @@ export const translations = {
     },
     about: {
       eyebrow: 'About us',
-      title: 'A nursery with heart and values.',
+      title: 'A place of encounter — for children and families.',
       description:
-        'Our nursery is run by the Arbeiterwohlfahrt (AWO). For more than 100 years the AWO has stood for social justice, tolerance, freedom, equality and solidarity — values we live every day with our children and families.',
+        'AWO Haus Sonnenschein is both a kindergarten and a Thüringer Eltern-Kind-Zentrum (ThEKiZ — Thuringian Parent-Child Center). We care for children from their first year of life to modern standards and are at the same time a place of encounter offering support, guidance and counseling for everyday and life questions. Operated by the Arbeiterwohlfahrt — since 1919 standing for freedom, equality, justice, solidarity, emancipation and tolerance.',
       cards: [
         {
           title: 'Opening hours',
@@ -533,6 +591,64 @@ export const translations = {
       durationLabel: '1:24 min',
       playCta: 'Watch video',
     },
+    awoValues: {
+      eyebrow: 'Our values',
+      title: 'The six core values of the AWO.',
+      description:
+        'Since 1919 the values of the Arbeiterwohlfahrt have been our compass — in our educational work as much as in our daily life with families and the neighbourhood.',
+      items: [
+        { name: 'Freedom', text: 'Every child may walk their own path and develop their own opinions.' },
+        { name: 'Equality', text: 'We meet every person with equal respect — regardless of origin, language or religion.' },
+        { name: 'Justice', text: 'We create fair educational opportunities — right from the start.' },
+        { name: 'Solidarity', text: 'We stand up for one another — as a team, as families, as a neighbourhood.' },
+        { name: 'Emancipation', text: 'We empower children and families to shape their lives in a self-determined way.' },
+        { name: 'Tolerance', text: 'Diversity is our normal. “Being different” is not a topic here — it is everyday life.' },
+      ],
+    },
+    careers: {
+      eyebrow: 'Work with us',
+      title: 'Become part of our team.',
+      description:
+        'With more than 13,000 employees, AWO Thüringen is one of the largest social providers in the state. Here in Eisenach we are looking for committed people to work with children and families.',
+      bullets: [
+        'Educators, special-needs teachers and social pedagogues (m/f/d)',
+        'Internships, FSJ and federal voluntary service — career changers welcome',
+        'Apprenticeships via the Institute for Vocational Training and Social Management (IBS)',
+      ],
+      primary: 'View open positions',
+      primaryHref: 'https://awothueringen.de/arbeiten-bei-der-awo/stellenangebote/',
+      secondary: 'Send a speculative application',
+    },
+    thekiz: {
+      eyebrow: 'ThEKiZ Haus Sonnenschein',
+      title: 'Thuringian Parent-Child Center.',
+      description:
+        'Beyond being a kindergarten, we are a place of encounter. At our ThEKiZ, families find support, guidance and counseling for everyday and life questions — open, free of charge and easy to reach in Eisenach.',
+      offers: [
+        {
+          title: 'Encounter',
+          text: 'Open parent meetups, breakfast and play groups for families from the neighbourhood.',
+        },
+        {
+          title: 'Counseling',
+          text: 'Confidential advice on parenting, family and everyday life — on request in several languages.',
+        },
+        {
+          title: 'Guidance',
+          text: 'Courses, workshops and events on settling-in, language, nutrition and child development.',
+        },
+        {
+          title: 'Network',
+          text: 'We connect families with midwives, early support, family education and authorities in Eisenach.',
+        },
+      ],
+      programs: [
+        'Federal program “Sprach-Kitas: Because language is the key to the world”',
+        'State pilot “Vielfalt vor Ort begegnen — Professional handling of heterogeneity”',
+        'Thüringer Bildungsplan up to age 18',
+      ],
+      cta: 'Discover the ThEKiZ',
+    },
     testimonials: {
       eyebrow: 'Parent voices',
       title: 'What families say about us.',
@@ -636,7 +752,7 @@ export const translations = {
       description:
         'Our dedicated, multi-professional team supports your child with heart, experience and continuous training. All staff hold an extended certificate of good conduct.',
       members: [
-        { name: 'Anna Schneider', role: 'Director', tag: '18 years of experience' },
+        { name: 'Anna Töpfer', role: 'ThEKiZ Director', tag: 'Thuringian Parent-Child Center' },
         { name: 'Markus Weber', role: 'Deputy Director', tag: 'Educator (B.A.)' },
         { name: 'Fatma Yilmaz', role: 'Nursery Educator', tag: 'Settling-in expert' },
         { name: 'Jonas Becker', role: 'Kindergarten Educator', tag: 'Forest & nature pedagogy' },
@@ -725,7 +841,7 @@ export const translations = {
     },
     footer: {
       about:
-        'AWO Kita Sunshine — operated by the AWO district association Eisenach. We offer education, upbringing and care for children aged 0 to 6 in Eisenach.',
+        'AWO Kindergarten Haus Sonnenschein — kindergarten and Thüringer Eltern-Kind-Zentrum (ThEKiZ). Operated by the AWO Landesverband Thüringen. We care for children from their first year of life in Eisenach.',
       contact: 'Contact',
       address: 'Am Amrichen Rasen 1, 99817 Eisenach',
       phone: '+49 30 1234 5678',

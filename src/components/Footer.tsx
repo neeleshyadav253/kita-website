@@ -190,6 +190,14 @@ export function Footer() {
           <span className="text-center md:text-left">
             © {year} EC Fabric Mind. {t.footer.rights}
           </span>
+          <a
+            href="https://awothueringen.de"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 font-semibold text-awo-red hover:text-awo-red-dark"
+          >
+            Teil des AWO Landesverbandes Thüringen →
+          </a>
           <span className="inline-flex items-center gap-1.5">
             Made with <Heart className="h-3 w-3 fill-current text-awo-red" /> · EC Fabric Mind
           </span>

@@ -5,9 +5,7 @@ import { useLanguage } from '../i18n/LanguageContext';
 import { SectionWrapper, itemVariants } from '../components/SectionWrapper';
 import { WaveDivider } from '../components/WaveDivider';
 import { NEWS_SLUGS, ROUTES } from '../routes';
-import { img, SEEDS } from '../lib/images';
-
-const SEED_LIST = [SEEDS.newsSommerfest, SEEDS.newsNaschgarten, SEEDS.newsPlaetze];
+import { NEWS_LOCAL } from '../lib/images';
 const TAG_TONE = ['bg-awo-red text-white', 'bg-awo-red-dark text-white', 'bg-awo-red text-white'];
 
 type Props = {
@@ -49,7 +47,7 @@ export function News({ linkTo, withWaves = true, bottomWaveTo = '#ffffff' }: Pro
             >
               <div className="relative h-52 overflow-hidden">
                 <img
-                  src={img.newsCard(SEED_LIST[i] ?? SEEDS.newsSommerfest)}
+                  src={NEWS_LOCAL[NEWS_SLUGS[i] ?? 'sommerfest']}
                   alt={item.title}
                   className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                   loading="lazy"
