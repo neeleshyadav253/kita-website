@@ -2,6 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
+/* AWO Corporate Design — house fonts.
+   Drop the licensed AWO Fago files into /public/fonts/awo-fago/ and they take effect.
+   Until then, font-display: swap renders with the next fallback (Inter). */
+@font-face {
+  font-family: 'AWO Fago Office';
+  src: local('AWO Fago Office'), url('/fonts/awo-fago/AWOFagoOffice-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'AWO Fago Office';
+  src: local('AWO Fago Office Italic'), url('/fonts/awo-fago/AWOFagoOffice-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'AWO Fago Office';
+  src: local('AWO Fago Office Bold'), url('/fonts/awo-fago/AWOFagoOffice-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'AWO Fago Condensed';
+  src: local('AWO Fago Condensed Italic'), url('/fonts/awo-fago/AWOFagoCondensed-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'AWO Fago Condensed';
+  src: local('AWO Fago Condensed Bold'), url('/fonts/awo-fago/AWOFagoCondensed-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer base {
   :root {
     color-scheme: light;

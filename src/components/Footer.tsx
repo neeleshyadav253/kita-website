@@ -50,18 +50,10 @@ export function Footer() {
         <div className="col-span-2 md:col-span-4">
           <Link
             to={ROUTES.home}
-            className="flex items-center gap-3"
+            className="inline-flex items-center"
             aria-label={t.brand.name}
           >
-            <Logo className="h-11 w-11 sm:h-12 sm:w-12" variant="color" />
-            <div className="leading-tight">
-              <div className="font-display text-base font-extrabold text-awo-ink sm:text-lg">
-                {t.brand.name}
-              </div>
-              <div className="text-[10px] font-semibold uppercase tracking-[0.2em] text-awo-red">
-                {t.brand.tagline}
-              </div>
-            </div>
+            <Logo size="md" lines={[t.brand.name, t.brand.tagline]} />
           </Link>
           <p className="mt-5 max-w-md text-sm leading-relaxed text-awo-grey">
             {t.footer.about}

@@ -73,26 +73,23 @@ export function Navbar() {
       transition={{ type: 'spring', stiffness: 280, damping: 30, mass: 0.6 }}
       className={`fixed inset-x-0 top-0 z-50 transition-colors duration-500 ease-out ${
         scrolled
-          ? 'bg-awo-fog/95 shadow-card backdrop-blur-md border-b border-awo-grey/10'
-          : 'bg-awo-fog/85 backdrop-blur border-b border-awo-grey/5'
+          ? 'bg-white shadow-card backdrop-blur-md border-b border-awo-grey/10'
+          : 'bg-white backdrop-blur border-b border-awo-grey/5'
       }`}
     >
       <nav className="mx-auto flex h-14 w-full max-w-7xl 2xl:max-w-[88rem] 3xl:max-w-[100rem] items-center justify-between gap-3 px-4 sm:h-16 sm:px-6 md:h-20 md:px-10">
         <Link
           to={ROUTES.home}
-          className="flex min-w-0 items-center gap-2 text-awo-grey sm:gap-3"
+          className="flex min-w-0 items-center text-awo-grey"
           aria-label={t.brand.name}
           onClick={() => setOpen(false)}
         >
-          <Logo className="h-9 w-9 shrink-0 sm:h-10 sm:w-10" />
-          <div className="hidden min-w-0 flex-col leading-tight sm:flex">
-            <span className="truncate text-sm font-extrabold tracking-tight md:text-base">
-              {t.brand.name}
-            </span>
-            <span className="truncate text-[9px] font-semibold uppercase tracking-[0.2em] text-awo-red md:text-[10px]">
-              {t.brand.tagline}
-            </span>
-          </div>
+          <Logo size="sm" className="sm:hidden" />
+          <Logo
+            size="sm"
+            className="hidden min-w-0 sm:inline-flex"
+            lines={[t.brand.name, t.brand.tagline]}
+          />
         </Link>
 
         <ul className="hidden items-center gap-0.5 lg:flex xl:gap-1">

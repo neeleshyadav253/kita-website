@@ -47,8 +47,8 @@ export default {
         },
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-        display: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', 'sans-serif'],
+        sans: ['"AWO Fago Office"', 'Inter', 'system-ui', '-apple-system', 'sans-serif'],
+        display: ['"AWO Fago Condensed"', '"AWO Fago Office"', '"Plus Jakarta Sans"', 'Inter', 'system-ui', 'sans-serif'],
         hand: ['Caveat', 'cursive'],
       },
       boxShadow: {
