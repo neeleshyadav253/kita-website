@@ -84,7 +84,7 @@ export function ContactPage() {
             <div className="relative overflow-hidden rounded-3xl shadow-card ring-1 ring-awo-grey/5">
               <iframe
                 title={p.contact.mapAlt}
-                src="https://www.openstreetmap.org/export/embed.html?bbox=13.396%2C52.524%2C13.412%2C52.532&amp;layer=mapnik&amp;marker=52.528%2C13.404"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=10.311%2C50.970%2C10.327%2C50.978&amp;layer=mapnik&amp;marker=50.974%2C10.319"
                 className="h-72 w-full sm:h-80 md:h-[420px]"
                 style={{ border: 0 }}
                 loading="lazy"
@@ -92,7 +92,7 @@ export function ContactPage() {
               />
               <span className="pointer-events-none absolute left-4 top-4 inline-flex items-center gap-2 rounded-full bg-white/95 px-3 py-1.5 text-xs font-bold text-awo-red shadow-card backdrop-blur">
                 <MapPin className="h-3.5 w-3.5" />
-                Sonnenstraße 12, Berlin-Mitte
+                Am Amrichen Rasen 1, Eisenach
               </span>
             </div>
 

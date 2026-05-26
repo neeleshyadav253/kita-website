@@ -57,7 +57,7 @@ export function PedagogyPage() {
 
       <Pedagogy withWaves={false} />
 
-      <WaveDivider fromColor="#EFF6FF" toColor="#ffffff" />
+      <WaveDivider fromColor="#FFFFFF" toColor="#ffffff" />
       <SectionWrapper className="bg-white">
         <div className="mx-auto max-w-3xl text-center">
           <motion.h2 variants={itemVariants} className="section-title">

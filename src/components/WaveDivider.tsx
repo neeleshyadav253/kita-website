@@ -7,7 +7,7 @@ type Props = {
 
 export function WaveDivider({
   fromColor = '#ffffff',
-  toColor = '#EFF6FF',
+  toColor = '#FFFFFF',
   flip = false,
   className = '',
 }: Props) {

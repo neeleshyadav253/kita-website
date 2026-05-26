@@ -32,7 +32,7 @@ export function EnrollmentPage() {
 
       <Enrollment />
 
-      <WaveDivider fromColor="#ffffff" toColor="#EFF6FF" />
+      <WaveDivider fromColor="#ffffff" toColor="#FFFFFF" />
       <SectionWrapper className="bg-awo-cream">
         <div className="mx-auto max-w-3xl text-center">
           <motion.h2 variants={itemVariants} className="section-title">
@@ -98,7 +98,7 @@ export function EnrollmentPage() {
           </ol>
         </motion.div>
       </SectionWrapper>
-      <WaveDivider fromColor="#EFF6FF" toColor="#ffffff" />
+      <WaveDivider fromColor="#FFFFFF" toColor="#ffffff" />
 
       <SectionWrapper className="bg-white">
         <div className="mx-auto max-w-3xl">
@@ -120,7 +120,7 @@ export function EnrollmentPage() {
         </div>
       </SectionWrapper>
 
-      <WaveDivider fromColor="#ffffff" toColor="#EFF6FF" />
+      <WaveDivider fromColor="#ffffff" toColor="#FFFFFF" />
       <SectionWrapper className="bg-awo-cream">
         <div className="mx-auto max-w-3xl">
           <motion.h2 variants={itemVariants} className="section-title">
@@ -135,7 +135,7 @@ export function EnrollmentPage() {
           </div>
         </div>
       </SectionWrapper>
-      <WaveDivider fromColor="#EFF6FF" toColor="#ffffff" />
+      <WaveDivider fromColor="#FFFFFF" toColor="#ffffff" />
     </>
   );
 }

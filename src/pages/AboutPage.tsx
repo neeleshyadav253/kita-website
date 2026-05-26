@@ -92,7 +92,7 @@ export function AboutPage() {
         </div>
       </SectionWrapper>
 
-      <WaveDivider fromColor="#ffffff" toColor="#EFF6FF" />
+      <WaveDivider fromColor="#ffffff" toColor="#FFFFFF" />
       <SectionWrapper className="bg-awo-cream">
         <div className="mx-auto max-w-3xl text-center">
           <motion.span variants={itemVariants} className="section-eyebrow">
@@ -136,7 +136,7 @@ export function AboutPage() {
           })}
         </div>
       </SectionWrapper>
-      <WaveDivider fromColor="#EFF6FF" toColor="#ffffff" />
+      <WaveDivider fromColor="#FFFFFF" toColor="#ffffff" />
 
       <SectionWrapper className="bg-gradient-to-b from-white via-awo-cream/30 to-white">
         <div className="mx-auto max-w-5xl">
@@ -240,7 +240,7 @@ export function AboutPage() {
 
       <About />
 
-      <WaveDivider fromColor="#ffffff" toColor="#EFF6FF" />
+      <WaveDivider fromColor="#ffffff" toColor="#FFFFFF" />
       <SectionWrapper className="bg-awo-cream">
         <div className="mx-auto max-w-3xl">
           <motion.h2 variants={itemVariants} className="section-title">
@@ -255,7 +255,7 @@ export function AboutPage() {
           </div>
         </div>
       </SectionWrapper>
-      <WaveDivider fromColor="#EFF6FF" toColor="#ffffff" />
+      <WaveDivider fromColor="#FFFFFF" toColor="#ffffff" />
     </>
   );
 }

@@ -118,7 +118,7 @@
   }
 
   .gradient-text {
-    background: linear-gradient(90deg, #2563EB 0%, #1E40AF 100%);
+    background: linear-gradient(90deg, #E2001A 0%, #B30015 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -126,7 +126,7 @@
   }
 
   .gradient-text-sun {
-    background: linear-gradient(90deg, #2563EB 0%, #1E40AF 100%);
+    background: linear-gradient(90deg, #EC7405 0%, #E2001A 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -143,7 +143,7 @@
 }
 
 ::selection {
-  background: #2563eb;
+  background: #e2001a;
   color: #fff;
 }
 
@@ -152,14 +152,14 @@
   height: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #eff6ff;
+  background: #ffffff;
 }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #2563eb 0%, #1e40af 100%);
+  background: linear-gradient(180deg, #e2001a 0%, #b30015 100%);
   border-radius: 6px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #1e40af 0%, #1e3a8a 100%);
+  background: linear-gradient(180deg, #b30015 0%, #8a0010 100%);
 }
 
 /* Decorative dotted grid for backgrounds */
@@ -171,16 +171,16 @@
 /* Soft gradient mesh */
 .bg-mesh {
   background:
-    radial-gradient(at 20% 20%, rgba(37, 99, 235, 0.12) 0px, transparent 50%),
-    radial-gradient(at 80% 0%, rgba(37, 99, 235, 0.10) 0px, transparent 45%),
-    radial-gradient(at 0% 80%, rgba(30, 64, 175, 0.10) 0px, transparent 45%),
-    radial-gradient(at 80% 90%, rgba(30, 64, 175, 0.08) 0px, transparent 45%);
+    radial-gradient(at 20% 20%, rgba(226, 0, 26, 0.12) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, rgba(236, 116, 5, 0.10) 0px, transparent 45%),
+    radial-gradient(at 0% 80%, rgba(0, 158, 224, 0.10) 0px, transparent 45%),
+    radial-gradient(at 80% 90%, rgba(121, 181, 48, 0.08) 0px, transparent 45%);
 }
 
 .bg-mesh-dark {
   background:
-    radial-gradient(at 20% 20%, rgba(37, 99, 235, 0.55) 0px, transparent 55%),
-    radial-gradient(at 80% 20%, rgba(30, 64, 175, 0.40) 0px, transparent 55%),
-    radial-gradient(at 50% 90%, rgba(37, 99, 235, 0.35) 0px, transparent 55%),
-    #0F172A;
+    radial-gradient(at 20% 20%, rgba(226, 0, 26, 0.55) 0px, transparent 55%),
+    radial-gradient(at 80% 20%, rgba(179, 0, 21, 0.40) 0px, transparent 55%),
+    radial-gradient(at 50% 90%, rgba(236, 116, 5, 0.35) 0px, transparent 55%),
+    #1F2937;
 }

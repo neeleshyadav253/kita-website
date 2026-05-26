@@ -44,7 +44,7 @@ export function TeamPage() {
 
       <Team withWaves={false} />
 
-      <WaveDivider fromColor="#EFF6FF" toColor="#ffffff" />
+      <WaveDivider fromColor="#FFFFFF" toColor="#ffffff" />
 
       <SectionWrapper className="bg-white">
         <div className="mx-auto max-w-3xl text-center">
@@ -80,7 +80,7 @@ export function TeamPage() {
         </div>
       </SectionWrapper>
 
-      <WaveDivider fromColor="#ffffff" toColor="#EFF6FF" />
+      <WaveDivider fromColor="#ffffff" toColor="#FFFFFF" />
       <SectionWrapper className="bg-awo-cream">
         <div className="mx-auto max-w-3xl">
           <motion.h2 variants={itemVariants} className="section-title">
@@ -100,7 +100,7 @@ export function TeamPage() {
           </ul>
         </div>
       </SectionWrapper>
-      <WaveDivider fromColor="#EFF6FF" toColor="#ffffff" />
+      <WaveDivider fromColor="#FFFFFF" toColor="#ffffff" />
     </>
   );
 }

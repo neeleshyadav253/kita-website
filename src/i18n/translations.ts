@@ -4,7 +4,7 @@ export const translations = {
   de: {
     brand: {
       name: 'AWO Kita Sonnenschein',
-      tagline: 'Arbeiterwohlfahrt · Berlin-Mitte',
+      tagline: 'Arbeiterwohlfahrt · Eisenach',
     },
     common: {
       learnMore: 'Mehr erfahren',
@@ -28,7 +28,7 @@ export const translations = {
       eyebrow: 'AWO Kindertagesstätte · seit 1998',
       title: 'Hier wachsen kleine Persönlichkeiten.',
       titleAccent: 'Mit Herz.',
-      subtitle: 'Ein Ort zum Entdecken, Wachsen und Wohlfühlen — mitten in Berlin.',
+      subtitle: 'Ein Ort zum Entdecken, Wachsen und Wohlfühlen — mitten in Eisenach.',
       description:
         'Krippe und Kindergarten unter einem Dach. Wir begleiten 32 Kinder im Alter von 0 bis 6 Jahren — mit einem festen, qualifizierten Team, frisch gekochter Bio-Küche und wöchentlichen Waldtagen.',
       primaryCta: 'Kita kennenlernen',
@@ -44,7 +44,7 @@ export const translations = {
       },
       microQuoteAuthor: 'Familie Becker',
       microQuote: '„Unsere Tochter rennt jeden Morgen in die Kita.“',
-      trustLine: 'Träger: AWO Kreisverband Berlin · Anerkannt nach SGB VIII',
+      trustLine: 'Träger: AWO Kreisverband Eisenach · Anerkannt nach SGB VIII',
       foodLabel: 'Mittagessen',
       foodValue: '90 % Bio · frisch',
       ratingLabel: 'Eltern-Bewertung',
@@ -68,8 +68,8 @@ export const translations = {
         },
         {
           title: 'Standort',
-          text: 'Sonnenstraße 12\n10115 Berlin-Mitte',
-          sub: '2 Min. zum Rosenthaler Platz · U8',
+          text: 'Am Amrichen Rasen 1\n99817 Eisenach',
+          sub: '5 Min. zum Stadtzentrum · Bushaltestelle',
         },
       ],
       imageCaptions: ['Unser Haus · Eingang', 'Eingang & Garten', 'Wandkunst · seit 1978'],
@@ -92,11 +92,11 @@ export const translations = {
         },
         {
           title: 'Waldtag jede Woche',
-          text: 'Bei jedem Wetter: ein ganzer Tag im Volkspark Humboldthain. Bewegung, Natur, freies Spiel.',
+          text: 'Bei jedem Wetter: ein ganzer Tag im Hainich-Nationalpark. Bewegung, Natur, freies Spiel.',
           pill: '52 Wochen',
         },
         {
-          title: 'Berliner Sprach-Kita',
+          title: 'Sprach-Kita',
           text: 'Zertifizierte Sprachfachkraft, alltagsintegrierte Sprachbildung und Mehrsprachigkeit auf Augenhöhe.',
           pill: 'Zertifiziert',
         },
@@ -136,7 +136,7 @@ export const translations = {
       description:
         'Ein paar Eindrücke aus dem Garten, der Werkstatt und unseren hellen Gruppenräumen.',
       captions: [
-        'Im Atelier',
+        'Spielen im Atelier',
         'Garten im Sommer',
         'Frühstücksbuffet',
         'Bauecke',
@@ -145,6 +145,20 @@ export const translations = {
       ],
       cta: 'Lust auf einen Rundgang? Wir zeigen Ihnen gerne alles persönlich.',
       locationsTag: 'Garten · Werkstatt · Wald',
+      videoBadge: 'Video',
+    },
+    lifeAtKita: {
+      eyebrow: 'Ein Tag bei uns',
+      title: 'Sehen Sie selbst, wie unser Kita-Alltag aussieht.',
+      description:
+        'Ein kurzer Einblick in unsere Gruppenräume, das freie Spiel im Garten und ruhige Momente im Atelier — gezeigt mit Einwilligung der Familien.',
+      bullets: [
+        'Freies Spiel und entdeckendes Lernen in kleinen Gruppen',
+        'Garten, Werkstatt und Bewegungsraum täglich nutzbar',
+        'Behutsame Eingewöhnung mit festen Bezugspersonen',
+      ],
+      durationLabel: '1:24 Min',
+      playCta: 'Video abspielen',
     },
     testimonials: {
       eyebrow: 'Stimmen von Eltern',
@@ -183,21 +197,21 @@ export const translations = {
       description:
         'Wir sind anerkannte Sprach-Kita, Mitglied im AWO-Verbund und kooperieren eng mit Schulen, Beratungsstellen und Therapeut:innen im Stadtteil.',
       logos: [
-        'AWO Berlin',
+        'AWO Eisenach',
         'Sprach-Kita',
-        'Berliner Bildungsprogramm',
+        'Thüringer Bildungsplan',
         'Bio-zertifiziert',
         'Frühförderzentrum',
-        'Familienzentrum Mitte',
+        'Familienzentrum Eisenach',
         'KitaApp',
-        'Bezirksamt Mitte',
+        'Stadtverwaltung Eisenach',
       ],
     },
     pedagogy: {
       eyebrow: 'Unsere Pädagogik',
       title: 'Innovative Lehrmethoden.',
       description:
-        'Unser pädagogisches Handeln orientiert sich an den Bedürfnissen, Interessen und Lebenswelten der Kinder — basierend auf dem Berliner Bildungsprogramm.',
+        'Unser pädagogisches Handeln orientiert sich an den Bedürfnissen, Interessen und Lebenswelten der Kinder — basierend auf dem Thüringer Bildungsplan.',
       cards: [
         {
           title: 'Situationsansatz',
@@ -331,16 +345,16 @@ export const translations = {
       secondary: 'Anrufen: +49 30 1234 5678',
       stats: [
         { value: '48 h', label: 'Antwortzeit' },
-        { value: '0 €', label: 'Beiträge in Berlin' },
+        { value: '0 €', label: 'Beiträge in Eisenach' },
         { value: '14 Tg', label: 'bis zum Erstgespräch' },
         { value: '4,9 ★', label: 'Eltern-Bewertung' },
       ],
     },
     footer: {
       about:
-        'AWO Kita Sonnenschein — Träger ist der AWO Kreisverband Berlin. Wir bieten Bildung, Erziehung und Betreuung für Kinder von 0 bis 6 Jahren in Berlin-Mitte.',
+        'AWO Kita Sonnenschein — Träger ist der AWO Kreisverband Eisenach. Wir bieten Bildung, Erziehung und Betreuung für Kinder von 0 bis 6 Jahren in Eisenach.',
       contact: 'Kontakt',
-      address: 'Sonnenstraße 12, 10115 Berlin',
+      address: 'Am Amrichen Rasen 1, 99817 Eisenach',
       phone: '+49 30 1234 5678',
       email: 'kontakt@awo-kita-sonnenschein.de',
       links: 'Rechtliches',
@@ -363,7 +377,7 @@ export const translations = {
   en: {
     brand: {
       name: 'AWO Kita Sunshine',
-      tagline: 'Workers’ Welfare · Berlin-Mitte',
+      tagline: 'Workers’ Welfare · Eisenach',
     },
     common: {
       learnMore: 'Learn more',
@@ -387,7 +401,7 @@ export const translations = {
       eyebrow: 'AWO Day Care Center · since 1998',
       title: 'Where little personalities grow.',
       titleAccent: 'With heart.',
-      subtitle: 'A place to discover, grow and feel at home — right in the heart of Berlin.',
+      subtitle: 'A place to discover, grow and feel at home — right in the heart of Eisenach.',
       description:
         'Nursery and kindergarten under one roof. We care for 32 children aged 0 to 6 — with a stable, qualified team, freshly cooked organic meals and weekly forest days.',
       primaryCta: 'Get to know us',
@@ -403,7 +417,7 @@ export const translations = {
       },
       microQuoteAuthor: 'The Becker family',
       microQuote: '“Our daughter literally runs into the nursery every morning.”',
-      trustLine: 'Operated by AWO Kreisverband Berlin · Recognized under SGB VIII',
+      trustLine: 'Operated by AWO Kreisverband Eisenach · Recognized under SGB VIII',
       foodLabel: 'Lunch',
       foodValue: '90% organic · fresh',
       ratingLabel: 'Parent rating',
@@ -427,8 +441,8 @@ export const translations = {
         },
         {
           title: 'Location',
-          text: 'Sonnenstraße 12\n10115 Berlin-Mitte',
-          sub: '2 min from Rosenthaler Platz · U8',
+          text: 'Am Amrichen Rasen 1\n99817 Eisenach',
+          sub: '5 min to the city center · bus stop',
         },
       ],
       imageCaptions: ['Our building · entrance', 'Entrance & garden', 'Wall art · since 1978'],
@@ -451,7 +465,7 @@ export const translations = {
         },
         {
           title: 'Forest day every week',
-          text: 'In any weather: a full day at Volkspark Humboldthain. Movement, nature and free play.',
+          text: 'In any weather: a full day at the Hainich National Park. Movement, nature and free play.',
           pill: '52 weeks',
         },
         {
@@ -495,7 +509,7 @@ export const translations = {
       description:
         'A few impressions from our garden, atelier and bright, sunlit group rooms.',
       captions: [
-        'In the atelier',
+        'Play in the atelier',
         'Summer garden',
         'Breakfast buffet',
         'Building corner',
@@ -504,6 +518,20 @@ export const translations = {
       ],
       cta: 'Want to see it in person? We’d love to show you around.',
       locationsTag: 'Garden · Workshop · Forest',
+      videoBadge: 'Video',
+    },
+    lifeAtKita: {
+      eyebrow: 'A day at our Kita',
+      title: 'See for yourself what daily life with us looks like.',
+      description:
+        'A short look at our group rooms, free play in the garden and quiet moments in the atelier — filmed with the consent of our families.',
+      bullets: [
+        'Free play and discovery learning in small groups',
+        'Garden, workshop and movement room available every day',
+        'Gentle settling-in with consistent key caregivers',
+      ],
+      durationLabel: '1:24 min',
+      playCta: 'Watch video',
     },
     testimonials: {
       eyebrow: 'Parent voices',
@@ -542,21 +570,21 @@ export const translations = {
       description:
         'We are a recognized Sprach-Kita, member of the AWO network, and cooperate closely with schools, counseling centers and therapists in our district.',
       logos: [
-        'AWO Berlin',
+        'AWO Eisenach',
         'Language Kita',
-        'Berlin Education Program',
+        'Thüringer Bildungsplan',
         'Organic certified',
         'Early Intervention',
-        'Family Center Mitte',
+        'Family Center Eisenach',
         'KitaApp',
-        'District Office Mitte',
+        'Eisenach City Office',
       ],
     },
     pedagogy: {
       eyebrow: 'Our pedagogy',
       title: 'Innovative Approaches to Teaching.',
       description:
-        'Our pedagogical work is oriented to the needs, interests and life worlds of the children — based on the Berlin Education Program.',
+        'Our pedagogical work is oriented to the needs, interests and life worlds of the children — based on the Thüringer Bildungsplan.',
       cards: [
         {
           title: 'Situational approach',
@@ -690,16 +718,16 @@ export const translations = {
       secondary: 'Call: +49 30 1234 5678',
       stats: [
         { value: '48 h', label: 'Response time' },
-        { value: '€0', label: 'Fees in Berlin' },
+        { value: '€0', label: 'Fees in Eisenach' },
         { value: '14 days', label: 'to first meeting' },
         { value: '4.9 ★', label: 'Parent rating' },
       ],
     },
     footer: {
       about:
-        'AWO Kita Sunshine — operated by the AWO district association Berlin. We offer education, upbringing and care for children aged 0 to 6 in Berlin-Mitte.',
+        'AWO Kita Sunshine — operated by the AWO district association Eisenach. We offer education, upbringing and care for children aged 0 to 6 in Eisenach.',
       contact: 'Contact',
-      address: 'Sonnenstraße 12, 10115 Berlin',
+      address: 'Am Amrichen Rasen 1, 99817 Eisenach',
       phone: '+49 30 1234 5678',
       email: 'contact@awo-kita-sunshine.de',
       links: 'Legal',

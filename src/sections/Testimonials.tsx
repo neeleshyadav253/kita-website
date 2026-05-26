@@ -12,7 +12,7 @@ export function Testimonials() {
 
   return (
     <>
-      <WaveDivider fromColor="#ffffff" toColor="#EFF6FF" />
+      <WaveDivider fromColor="#ffffff" toColor="#FFFFFF" />
       <SectionWrapper id="testimonials" className="bg-awo-cream">
         <div className="mx-auto max-w-3xl text-center">
           <motion.span variants={itemVariants} className="eyebrow-grass">
@@ -80,7 +80,7 @@ export function Testimonials() {
           <span className="text-sm text-awo-grey-light">{t.testimonials.ratingSubtitle}</span>
         </motion.div>
       </SectionWrapper>
-      <WaveDivider fromColor="#EFF6FF" toColor="#ffffff" />
+      <WaveDivider fromColor="#FFFFFF" toColor="#ffffff" />
     </>
   );
 }

@@ -21,7 +21,7 @@ export function News({ linkTo, withWaves = true, bottomWaveTo = '#ffffff' }: Pro
 
   return (
     <>
-      {withWaves ? <WaveDivider fromColor="#ffffff" toColor="#EFF6FF" /> : null}
+      {withWaves ? <WaveDivider fromColor="#ffffff" toColor="#FFFFFF" /> : null}
       <SectionWrapper id="news" className="bg-awo-cream">
         <div className="flex flex-col items-center text-center md:flex-row md:items-end md:justify-between md:text-left">
           <div className="max-w-2xl">
@@ -92,7 +92,7 @@ export function News({ linkTo, withWaves = true, bottomWaveTo = '#ffffff' }: Pro
           </motion.div>
         ) : null}
       </SectionWrapper>
-      {withWaves ? <WaveDivider fromColor="#EFF6FF" toColor={bottomWaveTo} /> : null}
+      {withWaves ? <WaveDivider fromColor="#FFFFFF" toColor={bottomWaveTo} /> : null}
     </>
   );
 }

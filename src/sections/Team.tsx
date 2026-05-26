@@ -13,7 +13,7 @@ export function Team({ linkTo, withWaves = true }: { linkTo?: string; withWaves?
 
   return (
     <>
-      {withWaves ? <WaveDivider fromColor="#ffffff" toColor="#EFF6FF" /> : null}
+      {withWaves ? <WaveDivider fromColor="#ffffff" toColor="#FFFFFF" /> : null}
       <SectionWrapper id="team" className="bg-awo-cream">
         <div className="mx-auto max-w-3xl text-center">
           <motion.span variants={itemVariants} className="section-eyebrow">
@@ -63,7 +63,7 @@ export function Team({ linkTo, withWaves = true }: { linkTo?: string; withWaves?
           </motion.div>
         ) : null}
       </SectionWrapper>
-      {withWaves ? <WaveDivider fromColor="#EFF6FF" toColor="#ffffff" /> : null}
+      {withWaves ? <WaveDivider fromColor="#FFFFFF" toColor="#ffffff" /> : null}
     </>
   );
 }

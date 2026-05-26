@@ -27,7 +27,7 @@ export function DailySchedule({ withWaves = true }: { withWaves?: boolean }) {
 
   return (
     <>
-      {withWaves ? <WaveDivider fromColor="#ffffff" toColor="#EFF6FF" /> : null}
+      {withWaves ? <WaveDivider fromColor="#ffffff" toColor="#FFFFFF" /> : null}
       <SectionWrapper id="schedule" className="bg-awo-cream">
         <div className="grid gap-10 lg:grid-cols-[1fr,1.4fr] lg:gap-16">
           <div className="lg:sticky lg:top-28 lg:self-start">
@@ -97,7 +97,7 @@ export function DailySchedule({ withWaves = true }: { withWaves?: boolean }) {
           </div>
         </div>
       </SectionWrapper>
-      {withWaves ? <WaveDivider fromColor="#EFF6FF" toColor="#ffffff" /> : null}
+      {withWaves ? <WaveDivider fromColor="#FFFFFF" toColor="#ffffff" /> : null}
     </>
   );
 }

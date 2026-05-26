@@ -97,7 +97,7 @@ export const pages: Record<Lang, PageBundle> = {
       story: {
         title: 'Unsere Geschichte',
         paragraphs: [
-          'Die AWO Kita Sonnenschein wurde 1998 gegründet — als Antwort auf den wachsenden Bedarf an liebevoller, professioneller Kinderbetreuung in Berlin-Mitte.',
+          'Die AWO Kita Sonnenschein wurde 1998 gegründet — als Antwort auf den wachsenden Bedarf an liebevoller, professioneller Kinderbetreuung in Eisenach.',
           'Seitdem haben mehr als 800 Kinder bei uns ihre ersten Schritte ins Leben gemacht. Wir sind stolz darauf, ein verlässlicher Ort für Familien zu sein — über Generationen hinweg.',
           'Heute betreuen wir 32 Kinder in zwei altersgerechten Gruppen, mit einem festen Team aus 12 erfahrenen pädagogischen Fachkräften — und einer hauseigenen Bio-Küche.',
         ],
@@ -125,7 +125,7 @@ export const pages: Record<Lang, PageBundle> = {
         { year: '2014', title: 'Sprach-Kita', text: 'Auszeichnung als „Sprach-Kita" im Bundesprogramm — bis heute zertifiziert.' },
         { year: '2019', title: 'Inklusion', text: 'Erweiterung um inklusive Plätze, enge Kooperation mit Frühförderzentren.' },
         { year: '2023', title: 'Bio-Küche', text: 'Eigene Bio-Küche mit Selma Akmann als Köchin — 90 % der Zutaten in Bio-Qualität.' },
-        { year: '2026', title: 'Heute', text: '32 Kinder, 12 Fachkräfte, ein fester Ort für Familien aus Berlin-Mitte.' },
+        { year: '2026', title: 'Heute', text: '32 Kinder, 12 Fachkräfte, ein fester Ort für Familien aus Eisenach.' },
       ],
       facts: [
         { label: 'Gegründet', value: '1998' },
@@ -138,7 +138,7 @@ export const pages: Record<Lang, PageBundle> = {
     },
     pedagogy: {
       intro:
-        'Unser pädagogisches Konzept basiert auf dem Berliner Bildungsprogramm und wird kontinuierlich weiterentwickelt. Im Zentrum steht das Kind als kompetenter Mitgestalter seiner Welt.',
+        'Unser pädagogisches Konzept basiert auf dem Thüringer Bildungsplan und wird kontinuierlich weiterentwickelt. Im Zentrum steht das Kind als kompetenter Mitgestalter seiner Welt.',
       daily: {
         title: 'Ein Tag bei uns',
         items: [
@@ -216,7 +216,7 @@ export const pages: Record<Lang, PageBundle> = {
         weekTitle: 'Unsere Woche im Überblick',
         week: [
           { day: 'Montag', activity: 'Projekttag — laufendes Gruppenprojekt' },
-          { day: 'Dienstag', activity: 'Waldtag im Humboldthain' },
+          { day: 'Dienstag', activity: 'Waldtag im Hainich' },
           { day: 'Mittwoch', activity: 'Atelier & Werkstatt' },
           { day: 'Donnerstag', activity: 'Vorschulgruppe „Schlaufüchse"' },
           { day: 'Freitag', activity: 'Musik, Tanz & Kinderkonferenz' },
@@ -285,14 +285,14 @@ export const pages: Record<Lang, PageBundle> = {
         { question: 'Wie lange dauert die Eingewöhnung?', answer: 'In der Regel zwei bis vier Wochen. Wir orientieren uns am Berliner Eingewöhnungsmodell und am Tempo Ihres Kindes.' },
         { question: 'Bieten Sie Plätze für Kinder mit Förderbedarf?', answer: 'Ja. Wir arbeiten integrativ und kooperieren eng mit Frühförderstellen, Therapeut:innen und der Sozialpädiatrie.' },
         { question: 'Wie sieht es mit dem Essen aus?', answer: 'Wir bieten ein frisch gekochtes Mittagessen, Snacks und Getränke. 90 % der Zutaten stammen aus biologischem Anbau. Sonderkostformen nach Absprache.' },
-        { question: 'Was kostet ein Platz?', answer: 'In Berlin sind Kita-Plätze ab dem ersten Lebensjahr kostenfrei. Es fällt lediglich der gesetzliche Verpflegungsanteil von 23 € im Monat an.' },
+        { question: 'Was kostet ein Platz?', answer: 'In Eisenach sind Kita-Plätze ab dem ersten Lebensjahr kostenfrei. Es fällt lediglich der gesetzliche Verpflegungsanteil von 23 € im Monat an.' },
         { question: 'Wie sind die Schließzeiten?', answer: '25 Tage im Jahr, meist 3 Wochen im Sommer und zwischen Weihnachten und Neujahr. Sie erhalten den Plan jeweils im Januar für das laufende Jahr.' },
       ],
       feesTitle: 'Kosten & Verpflegung',
       feesIntro:
-        'Die Betreuung in Berlin ist seit 2018 für Eltern beitragsfrei. Lediglich der gesetzliche Verpflegungsanteil wird erhoben.',
+        'Die Betreuung in Eisenach ist seit 2018 für Eltern beitragsfrei. Lediglich der gesetzliche Verpflegungsanteil wird erhoben.',
       fees: [
-        { label: 'Betreuungsbeitrag', price: '0 €', sub: 'Beitragsfrei in Berlin (ab Geburt)' },
+        { label: 'Betreuungsbeitrag', price: '0 €', sub: 'Beitragsfrei in Eisenach (ab Geburt)' },
         { label: 'Verpflegung', price: '23 € / Monat', sub: 'Frühstück, Mittagessen, Snack' },
         { label: 'Ausflüge & Materialien', price: 'inklusive', sub: 'Keine versteckten Kosten' },
       ],
@@ -348,9 +348,9 @@ export const pages: Record<Lang, PageBundle> = {
         'Wir freuen uns auf Ihre Nachricht — ob telefonisch, per E-Mail oder bei einem persönlichen Besuch.',
       visit: {
         title: 'Besuchen Sie uns',
-        address: 'AWO Kita Sonnenschein\nSonnenstraße 12\n10115 Berlin-Mitte',
+        address: 'AWO Kita Sonnenschein\nAm Amrichen Rasen 1\n99817 Eisenach',
         transport:
-          'U-Bahn: Rosenthaler Platz (U8)\nTram: M1, M8 bis Weinmeisterstraße\nFahrradabstellplätze direkt vor dem Haus',
+          'Bus: Linien zur Innenstadt\nBahnhof Eisenach: 10 Min.\nFahrradabstellplätze direkt vor dem Haus',
       },
       hoursTitle: 'Öffnungszeiten',
       hours: [
@@ -381,7 +381,7 @@ export const pages: Record<Lang, PageBundle> = {
       story: {
         title: 'Our story',
         paragraphs: [
-          'AWO Kita Sunshine was founded in 1998 — as a response to the growing need for loving, professional childcare in Berlin-Mitte.',
+          'AWO Kita Sunshine was founded in 1998 — as a response to the growing need for loving, professional childcare in Eisenach.',
           'Since then, more than 800 children have taken their first steps into life with us. We are proud to be a reliable place for families — across generations.',
           'Today we care for 32 children in two age-appropriate groups, with a stable team of 12 experienced educators — and an on-site organic kitchen.',
         ],
@@ -409,7 +409,7 @@ export const pages: Record<Lang, PageBundle> = {
         { year: '2014', title: 'Language Nursery', text: 'Awarded as a “Sprach-Kita” by the federal program — certified ever since.' },
         { year: '2019', title: 'Inclusion', text: 'Added inclusive places, closer cooperation with early intervention centers.' },
         { year: '2023', title: 'Organic kitchen', text: 'Our own kitchen led by chef Selma Akmann — 90 % organic ingredients.' },
-        { year: '2026', title: 'Today', text: '32 children, 12 staff, a stable place for families across Berlin-Mitte.' },
+        { year: '2026', title: 'Today', text: '32 children, 12 staff, a stable place for families across Eisenach.' },
       ],
       facts: [
         { label: 'Founded', value: '1998' },
@@ -422,7 +422,7 @@ export const pages: Record<Lang, PageBundle> = {
     },
     pedagogy: {
       intro:
-        'Our pedagogical concept is based on the Berlin Education Program and is continuously developed further. At the center is the child as a competent co-designer of their world.',
+        'Our pedagogical concept is based on the Thüringer Bildungsplan and is continuously developed further. At the center is the child as a competent co-designer of their world.',
       daily: {
         title: 'A day with us',
         items: [
@@ -500,7 +500,7 @@ export const pages: Record<Lang, PageBundle> = {
         weekTitle: 'Our week at a glance',
         week: [
           { day: 'Monday', activity: 'Project day — ongoing group project' },
-          { day: 'Tuesday', activity: 'Forest day at Humboldthain' },
+          { day: 'Tuesday', activity: 'Forest day at the Hainich' },
           { day: 'Wednesday', activity: 'Atelier & workshop' },
           { day: 'Thursday', activity: 'Pre-school group “Schlaufüchse”' },
           { day: 'Friday', activity: 'Music, dance & children’s conference' },
@@ -569,14 +569,14 @@ export const pages: Record<Lang, PageBundle> = {
         { question: 'How long does settling-in take?', answer: 'Usually two to four weeks. We follow the Berlin settling-in model and the pace of your child.' },
         { question: 'Do you offer places for children with special needs?', answer: 'Yes. We work inclusively and cooperate closely with early intervention centers, therapists and pediatric specialists.' },
         { question: 'What about meals?', answer: 'We offer a freshly cooked lunch, snacks and drinks. 90 % of ingredients are certified organic. Special diets possible by arrangement.' },
-        { question: 'What does a place cost?', answer: 'In Berlin nursery places are free from the first year of life. Only the statutory meal contribution of €23 per month applies.' },
+        { question: 'What does a place cost?', answer: 'In Eisenach nursery places are free from the first year of life. Only the statutory meal contribution of €23 per month applies.' },
         { question: 'What are the closure days?', answer: '25 days per year, mostly 3 weeks in summer and between Christmas and New Year. You receive the plan each January for the running year.' },
       ],
       feesTitle: 'Fees & meals',
       feesIntro:
-        'Childcare in Berlin has been free of charge for parents since 2018. Only the statutory meal contribution is collected.',
+        'Childcare in Eisenach has been free of charge for parents since 2018. Only the statutory meal contribution is collected.',
       fees: [
-        { label: 'Care contribution', price: '€0', sub: 'Free from birth (Berlin)' },
+        { label: 'Care contribution', price: '€0', sub: 'Free from birth (Eisenach)' },
         { label: 'Meals', price: '€23 / month', sub: 'Breakfast, lunch, snack' },
         { label: 'Excursions & materials', price: 'included', sub: 'No hidden costs' },
       ],
@@ -632,9 +632,9 @@ export const pages: Record<Lang, PageBundle> = {
         'We look forward to your message — by phone, by email, or with a personal visit.',
       visit: {
         title: 'Visit us',
-        address: 'AWO Kita Sunshine\nSonnenstraße 12\n10115 Berlin-Mitte',
+        address: 'AWO Kita Sunshine\nAm Amrichen Rasen 1\n99817 Eisenach',
         transport:
-          'Subway: Rosenthaler Platz (U8)\nTram: M1, M8 to Weinmeisterstraße\nBike parking right in front of the building',
+          'Bus: lines to the city center\nEisenach main station: 10 min.\nBike parking right in front of the building',
       },
       hoursTitle: 'Opening hours',
       hours: [

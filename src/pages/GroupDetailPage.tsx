@@ -83,7 +83,7 @@ export function GroupDetailPage() {
         </div>
       </SectionWrapper>
 
-      <WaveDivider fromColor="#ffffff" toColor="#EFF6FF" />
+      <WaveDivider fromColor="#ffffff" toColor="#FFFFFF" />
       <SectionWrapper className="bg-awo-cream">
         <div className="grid gap-6 md:grid-cols-3">
           {detail.highlights.map((h, i) => (
@@ -107,7 +107,7 @@ export function GroupDetailPage() {
           ))}
         </div>
       </SectionWrapper>
-      <WaveDivider fromColor="#EFF6FF" toColor="#ffffff" />
+      <WaveDivider fromColor="#FFFFFF" toColor="#ffffff" />
 
       <SectionWrapper className="bg-white">
         <div className="mx-auto max-w-4xl">

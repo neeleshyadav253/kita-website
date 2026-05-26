@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion';
-import { ArrowUpRight, Camera, ImageIcon, Sparkles } from 'lucide-react';
+import { ArrowUpRight, Camera, ImageIcon, Sparkles, Film } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageContext';
 import { SectionWrapper, itemVariants } from '../components/SectionWrapper';
+import { YouTubeEmbed } from '../components/YouTubeEmbed';
+import { KITA_VIDEO } from '../lib/videos';
 
 const GALLERY_IMAGES = [
   'https://www.elc.ac.th/wp-content/uploads/Atelier-1208x805.jpg',
@@ -98,35 +100,61 @@ export function Gallery() {
         <div className="grid grid-cols-6 gap-3 sm:gap-4">
           {captions.map((caption, i) => {
             const tile = TILES[i] ?? TILES[0];
+            const isVideo = i === 0;
             return (
               <motion.figure
                 key={caption}
                 variants={itemVariants}
                 className={`group relative overflow-hidden rounded-3xl shadow-card ring-1 ring-awo-red/10 transition duration-500 hover:-translate-y-1 hover:shadow-card-hover ${tile.span}`}
               >
-                <img
-                  src={GALLERY_IMAGES[i] ?? GALLERY_IMAGES[0]}
-                  alt={caption}
-                  className="h-full w-full object-cover transition duration-700 ease-out group-hover:scale-[1.08]"
-                  loading="lazy"
-                />
-                <div
-                  className={`pointer-events-none absolute inset-0 bg-gradient-to-t to-transparent ${tile.tint}`}
-                  aria-hidden="true"
-                />
-                <div
-                  className="pointer-events-none absolute inset-0 bg-gradient-to-t from-awo-ink/55 via-awo-ink/0 to-transparent"
-                  aria-hidden="true"
-                />
+                {isVideo ? (
+                  <YouTubeEmbed
+                    videoId={KITA_VIDEO.gallery.youtubeId}
+                    poster={KITA_VIDEO.gallery.poster}
+                    ariaLabel={caption}
+                  />
+                ) : (
+                  <img
+                    src={GALLERY_IMAGES[i] ?? GALLERY_IMAGES[0]}
+                    alt={caption}
+                    className="h-full w-full object-cover transition duration-700 ease-out group-hover:scale-[1.08]"
+                    loading="lazy"
+                  />
+                )}
+                {!isVideo ? (
+                  <>
+                    <div
+                      className={`pointer-events-none absolute inset-0 bg-gradient-to-t to-transparent ${tile.tint}`}
+                      aria-hidden="true"
+                    />
+                    <div
+                      className="pointer-events-none absolute inset-0 bg-gradient-to-t from-awo-ink/55 via-awo-ink/0 to-transparent"
+                      aria-hidden="true"
+                    />
+                  </>
+                ) : null}
 
-                <span className="absolute left-3 top-3 inline-flex h-7 w-7 items-center justify-center rounded-full bg-white/95 text-[10px] font-extrabold text-awo-red-dark shadow-card backdrop-blur">
-                  {String(i + 1).padStart(2, '0')}
+                <span className="pointer-events-none absolute left-3 top-3 inline-flex h-7 items-center justify-center gap-1 rounded-full bg-white/95 px-2 text-[10px] font-extrabold text-awo-red-dark shadow-card backdrop-blur">
+                  {isVideo ? (
+                    <>
+                      <Film className="h-3 w-3" />
+                      {t.gallery.videoBadge}
+                    </>
+                  ) : (
+                    <span className="w-3 text-center">{String(i + 1).padStart(2, '0')}</span>
+                  )}
                 </span>
 
-                <figcaption className="absolute inset-x-3 bottom-3 flex items-center justify-between gap-2 rounded-2xl bg-white/95 px-3 py-2 text-[11px] font-bold uppercase tracking-widest text-awo-red-dark shadow-card backdrop-blur transition duration-300 group-hover:bg-white">
-                  <span className="truncate">{caption}</span>
-                  <ArrowUpRight className="h-3.5 w-3.5 shrink-0 text-awo-red transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                </figcaption>
+                {!isVideo ? (
+                  <figcaption className="absolute inset-x-3 bottom-3 flex items-center justify-between gap-2 rounded-2xl bg-white/95 px-3 py-2 text-[11px] font-bold uppercase tracking-widest text-awo-red-dark shadow-card backdrop-blur transition duration-300 group-hover:bg-white">
+                    <span className="truncate">{caption}</span>
+                    <ArrowUpRight className="h-3.5 w-3.5 shrink-0 text-awo-red transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  </figcaption>
+                ) : (
+                  <figcaption className="pointer-events-none absolute inset-x-3 bottom-3 flex items-center justify-between gap-2 rounded-2xl bg-white/95 px-3 py-2 text-[11px] font-bold uppercase tracking-widest text-awo-red-dark shadow-card backdrop-blur">
+                    <span className="truncate">{caption}</span>
+                  </figcaption>
+                )}
               </motion.figure>
             );
           })}
