@@ -31,7 +31,7 @@ export function EnrollmentPage() {
       <Enrollment />
 
       <SectionWrapper className="bg-awo-cream">
-        <div className="mx-auto max-w-3xl text-center">
+        <div className="max-w-3xl">
           <motion.h2 variants={itemVariants} className="section-title">
             {p.enrollment.feesTitle}
           </motion.h2>

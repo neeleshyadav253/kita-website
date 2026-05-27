@@ -58,7 +58,7 @@ export function PedagogyPage() {
 
       <WaveDivider fromColor="#FFFFFF" toColor="#ffffff" />
       <SectionWrapper className="bg-white">
-        <div className="mx-auto max-w-3xl text-center">
+        <div className="max-w-3xl">
           <motion.h2 variants={itemVariants} className="section-title">
             {p.pedagogy.pillarsTitle}
           </motion.h2>

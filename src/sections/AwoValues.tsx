@@ -9,7 +9,7 @@ export function AwoValues() {
 
   return (
     <SectionWrapper id="awo-values" className="bg-white">
-      <div className="mx-auto max-w-3xl text-center">
+      <div className="max-w-3xl">
         <motion.span variants={itemVariants} className="section-eyebrow">
           <Compass className="h-3.5 w-3.5" />
           {copy.eyebrow}

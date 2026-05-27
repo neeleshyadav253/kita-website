@@ -42,7 +42,7 @@ export function WhyUs() {
   return (
     <SectionWrapper id="why-us" className="bg-white">
       <div className="relative">
-        <div className="mx-auto max-w-3xl text-center">
+        <div className="max-w-3xl">
           <motion.span variants={itemVariants} className="eyebrow-sun">
             <Sparkles className="h-3.5 w-3.5" />
             {t.whyUs.eyebrow}

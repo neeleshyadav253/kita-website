@@ -21,7 +21,7 @@ export function ThekizSection() {
 
   return (
     <SectionWrapper id="thekiz" className="bg-white">
-      <div className="mx-auto max-w-3xl text-center">
+      <div className="max-w-3xl">
         <motion.span variants={itemVariants} className="section-eyebrow">
           <HeartHandshake className="h-3.5 w-3.5" />
           {copy.eyebrow}

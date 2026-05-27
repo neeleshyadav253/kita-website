@@ -20,7 +20,7 @@ export function Pedagogy({ linkTo, withWaves = true }: { linkTo?: string; withWa
     <>
       {withWaves ? <WaveDivider fromColor="#ffffff" toColor="#FFFFFF" /> : null}
       <SectionWrapper id="pedagogy" className="bg-awo-cream">
-        <div className="mx-auto max-w-3xl text-center">
+        <div className="max-w-3xl">
           <motion.span variants={itemVariants} className="section-eyebrow">
             {t.pedagogy.eyebrow}
           </motion.span>

@@ -53,7 +53,7 @@ export function Enrollment({ linkTo, showForm = true }: Props) {
 
   return (
     <SectionWrapper id="enrollment" className="bg-white">
-      <div className="mx-auto max-w-3xl text-center">
+      <div className="max-w-3xl">
         <motion.span variants={itemVariants} className="section-eyebrow">
           {t.enrollment.eyebrow}
         </motion.span>

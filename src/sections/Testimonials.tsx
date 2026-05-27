@@ -14,7 +14,7 @@ export function Testimonials() {
     <>
       <WaveDivider fromColor="#ffffff" toColor="#FFFFFF" />
       <SectionWrapper id="testimonials" className="bg-awo-cream">
-        <div className="mx-auto max-w-3xl text-center">
+        <div className="max-w-3xl">
           <motion.span variants={itemVariants} className="eyebrow-grass">
             <Quote className="h-3.5 w-3.5" />
             {t.testimonials.eyebrow}

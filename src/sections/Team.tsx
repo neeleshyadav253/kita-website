@@ -15,7 +15,7 @@ export function Team({ linkTo, withWaves = true }: { linkTo?: string; withWaves?
     <>
       {withWaves ? <WaveDivider fromColor="#ffffff" toColor="#FFFFFF" /> : null}
       <SectionWrapper id="team" className="bg-awo-cream">
-        <div className="mx-auto max-w-3xl text-center">
+        <div className="max-w-3xl">
           <motion.span variants={itemVariants} className="section-eyebrow">
             {t.team.eyebrow}
           </motion.span>

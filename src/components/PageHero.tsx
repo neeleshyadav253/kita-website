@@ -41,7 +41,7 @@ export function PageHero({
     <section className="relative isolate overflow-hidden bg-white pt-20 md:pt-24">
       <div className="mx-auto w-full max-w-7xl 2xl:max-w-[88rem] 3xl:max-w-[100rem] px-6 pb-12 pt-4 text-awo-ink md:px-10 md:pb-16 md:pt-6">
         {resolvedImage ? (
-          <div className="grid items-center gap-10 lg:grid-cols-[1.1fr,1fr] lg:gap-16">
+          <div className="grid items-start gap-10 lg:grid-cols-[1.1fr,1fr] lg:gap-16">
             <div>{textBlock}</div>
             <figure className="relative overflow-hidden rounded-3xl shadow-card ring-1 ring-awo-grey/10">
               <img

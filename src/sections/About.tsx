@@ -55,7 +55,7 @@ export function About({
           </motion.figure>
         </div>
       ) : (
-        <div className="mx-auto max-w-3xl text-center">
+        <div className="max-w-3xl">
           <motion.span variants={itemVariants} className="section-eyebrow">
             {t.about.eyebrow}
           </motion.span>

@@ -22,7 +22,7 @@ export function Groups({ linkPerCard = false }: { linkPerCard?: boolean }) {
 
   return (
     <SectionWrapper id="groups" className="bg-white">
-      <div className="mx-auto max-w-3xl text-center">
+      <div className="max-w-3xl">
         <motion.span variants={itemVariants} className="section-eyebrow">
           {t.groups.eyebrow}
         </motion.span>

@@ -93,7 +93,7 @@ export function AboutPage() {
 
       <WaveDivider fromColor="#ffffff" toColor="#FFFFFF" />
       <SectionWrapper className="bg-awo-cream">
-        <div className="mx-auto max-w-3xl text-center">
+        <div className="max-w-3xl">
           <motion.span variants={itemVariants} className="section-eyebrow">
             {p.about.valuesEyebrow}
           </motion.span>
