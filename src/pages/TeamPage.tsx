@@ -20,7 +20,6 @@ export function TeamPage() {
         title={t.team.title}
         description={p.team.intro}
         image={pageHeroImage}
-        crumbs={[{ label: t.nav.team }]}
       />
 
       <SectionWrapper className="bg-white">

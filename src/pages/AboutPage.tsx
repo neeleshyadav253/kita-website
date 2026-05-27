@@ -48,7 +48,6 @@ export function AboutPage() {
         title={t.about.title}
         description={t.about.description}
         image={aboutHeroImage}
-        crumbs={[{ label: t.nav.about }]}
       />
 
       <SectionWrapper className="bg-white">

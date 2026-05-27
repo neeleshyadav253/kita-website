@@ -13,7 +13,6 @@ export function NewsPage() {
         title={t.news.title}
         description={t.news.description}
         image={pageHeroImage}
-        crumbs={[{ label: t.news.eyebrow }]}
       />
       <News withWaves={false} bottomWaveTo="#ffffff" />
     </>

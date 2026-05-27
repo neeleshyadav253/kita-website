@@ -26,7 +26,6 @@ export function EnrollmentPage() {
         title={t.enrollment.title}
         description={p.enrollment.fullIntro}
         image={pageHeroImage}
-        crumbs={[{ label: t.nav.enrollment }]}
       />
 
       <Enrollment />

@@ -26,10 +26,6 @@ export function NewsDetailPage() {
         title={detail.title}
         description={detail.lead}
         image={image}
-        crumbs={[
-          { label: t.news.eyebrow, to: ROUTES.news },
-          { label: detail.title },
-        ]}
       />
 
       <SectionWrapper className="bg-white">

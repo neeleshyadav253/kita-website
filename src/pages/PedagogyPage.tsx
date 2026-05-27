@@ -52,7 +52,6 @@ export function PedagogyPage() {
         title={t.pedagogy.title}
         description={p.pedagogy.intro}
         image={pageHeroImage}
-        crumbs={[{ label: t.nav.pedagogy }]}
       />
 
       <Pedagogy withWaves={false} />

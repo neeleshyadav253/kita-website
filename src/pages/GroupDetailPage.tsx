@@ -32,10 +32,6 @@ export function GroupDetailPage() {
         title={detail.hero}
         description={detail.intro}
         imageSeed={SEED_MAP[groupSlug]}
-        crumbs={[
-          { label: t.nav.groups, to: ROUTES.groups },
-          { label: summary.name },
-        ]}
       />
 
       <SectionWrapper className="bg-white">

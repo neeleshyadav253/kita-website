@@ -14,7 +14,6 @@ export function GroupsPage() {
         title={t.groups.title}
         description={t.groups.description}
         image={pageHeroImage}
-        crumbs={[{ label: t.nav.groups }]}
       />
       <Groups linkPerCard />
       <Pedagogy />

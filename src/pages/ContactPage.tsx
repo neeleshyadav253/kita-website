@@ -24,7 +24,6 @@ export function ContactPage() {
         title={p.contact.title}
         description={p.contact.intro}
         image={pageHeroImage}
-        crumbs={[{ label: t.nav.contact }]}
       />
 
       <SectionWrapper className="bg-white">
